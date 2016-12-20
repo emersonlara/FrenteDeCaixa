@@ -10,6 +10,7 @@ namespace FrenteDeCaixa.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
+            
         }
 
         protected override void Seed(FrenteDeCaixa.Context.EntidadesContext context)

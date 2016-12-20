@@ -31,7 +31,8 @@ namespace FrenteDeCaixa.Application
             usuarioAux.Login = usuario.Login;
             usuarioAux.Senha = usuario.Senha;
             usuarioAux.Nome  = usuario.Nome;
-            usuarioAux.Tipo  = usuario.Tipo;
+            usuarioAux.PerfilId = usuario.PerfilId;
+            usuarioAux.Perfil   = usuario.Perfil;
             Banco.SaveChanges();
         }
 

@@ -14,5 +14,7 @@ namespace FrenteDeCaixa.Context
         public DbSet<FormaDePagamento> FormasDePagamentos { get; set; }
         public DbSet<PerfilDeUsuario> PerfisDeUsuarios { get; set; }
         public DbSet<Cliente> Clientes { get; set; }
+        public DbSet<ItemVenda> ItensVendas { get; set; }
+        public DbSet<Produto> Produtos { get; set; }
     }
 }
