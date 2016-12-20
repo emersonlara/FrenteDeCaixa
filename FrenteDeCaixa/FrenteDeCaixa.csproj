@@ -69,14 +69,20 @@
       <SubType>Designer</SubType>
     </Page>
     <Compile Include="Application\FormaDePagamentoApplication.cs" />
+    <Compile Include="Application\PerfilDeUsuarioApplication.cs" />
     <Compile Include="Application\UsuarioApplication.cs" />
     <Compile Include="Context\EntidadesContext.cs" />
     <Compile Include="Migrations\201612181347440_Initial.cs" />
     <Compile Include="Migrations\201612181347440_Initial.Designer.cs">
       <DependentUpon>201612181347440_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201612192254058_AdicionadoFormaDePagamento.cs" />
+    <Compile Include="Migrations\201612192254058_AdicionadoFormaDePagamento.Designer.cs">
+      <DependentUpon>201612192254058_AdicionadoFormaDePagamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\FormaDePagamento.cs" />
+    <Compile Include="Model\PerfilDeUsuario.cs" />
     <Compile Include="Model\Usuario.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
@@ -103,6 +109,9 @@
     </Compile>
     <EmbeddedResource Include="Migrations\201612181347440_Initial.resx">
       <DependentUpon>201612181347440_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612192254058_AdicionadoFormaDePagamento.resx">
+      <DependentUpon>201612192254058_AdicionadoFormaDePagamento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
