@@ -75,23 +75,8 @@
     <Compile Include="Application\ProdutoApplication.cs" />
     <Compile Include="Application\UsuarioApplication.cs" />
     <Compile Include="Infrastructure\ContextConfigs\ClienteConfig.cs" />
+    <Compile Include="Infrastructure\ContextConfigs\ProdutoConfig.cs" />
     <Compile Include="Infrastructure\Context\EntidadesContext.cs" />
-    <Compile Include="Infrastructure\Migrations\201612181347440_Initial.cs" />
-    <Compile Include="Infrastructure\Migrations\201612181347440_Initial.Designer.cs">
-      <DependentUpon>201612181347440_Initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Infrastructure\Migrations\201612192254058_AdicionadoFormaDePagamento.cs" />
-    <Compile Include="Infrastructure\Migrations\201612192254058_AdicionadoFormaDePagamento.Designer.cs">
-      <DependentUpon>201612192254058_AdicionadoFormaDePagamento.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Infrastructure\Migrations\201612200018086_AdicionadoPerfilDeUsuario.cs" />
-    <Compile Include="Infrastructure\Migrations\201612200018086_AdicionadoPerfilDeUsuario.Designer.cs">
-      <DependentUpon>201612200018086_AdicionadoPerfilDeUsuario.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Infrastructure\Migrations\201612200038219_AdicionadoCliente.cs" />
-    <Compile Include="Infrastructure\Migrations\201612200038219_AdicionadoCliente.Designer.cs">
-      <DependentUpon>201612200038219_AdicionadoCliente.cs</DependentUpon>
-    </Compile>
     <Compile Include="Infrastructure\Migrations\Configuration.cs" />
     <Compile Include="Domain\Cliente.cs" />
     <Compile Include="Domain\FormaDePagamento.cs" />
@@ -109,6 +94,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Migrations\201612222313030_Initial.cs" />
+    <Compile Include="Migrations\201612222313030_Initial.Designer.cs">
+      <DependentUpon>201612222313030_Initial.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -122,17 +111,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Infrastructure\Migrations\201612181347440_Initial.resx">
-      <DependentUpon>201612181347440_Initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Infrastructure\Migrations\201612192254058_AdicionadoFormaDePagamento.resx">
-      <DependentUpon>201612192254058_AdicionadoFormaDePagamento.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Infrastructure\Migrations\201612200018086_AdicionadoPerfilDeUsuario.resx">
-      <DependentUpon>201612200018086_AdicionadoPerfilDeUsuario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Infrastructure\Migrations\201612200038219_AdicionadoCliente.resx">
-      <DependentUpon>201612200038219_AdicionadoCliente.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201612222313030_Initial.resx">
+      <DependentUpon>201612222313030_Initial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

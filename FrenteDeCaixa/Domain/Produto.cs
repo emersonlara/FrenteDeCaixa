@@ -8,5 +8,6 @@ namespace FrenteDeCaixa.Model
 {
     public class Produto
     {
+        public Guid Id { get; set; }
     }
 }

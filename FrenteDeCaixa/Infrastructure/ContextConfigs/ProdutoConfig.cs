@@ -8,16 +8,12 @@ using System.Threading.Tasks;
 
 namespace FrenteDeCaixa.Infrastructure.ContextConfigs
 {
-    public class ClienteConfig : EntityTypeConfiguration<Cliente>
+    public class ProdutoConfig : EntityTypeConfiguration<Produto>
     {
-        public ClienteConfig()
+        public ProdutoConfig()
         {
             HasKey(x => x.Id);
-            ToTable("Cliente");
-
-            Property(x => x.Nome).IsRequired();
-            Property(x => x.CpfCnpj).IsRequired();
-            Property(x => x.Tipo).IsRequired();
+            ToTable("Produto");
         }
     }
 }
