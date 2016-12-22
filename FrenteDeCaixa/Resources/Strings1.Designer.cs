@@ -70,6 +70,15 @@ namespace FrenteDeCaixa.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to FormaDePagamento.
+        /// </summary>
+        internal static string FormaDePagamentoDB {
+            get {
+                return ResourceManager.GetString("FormaDePagamentoDB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Usuario.
         /// </summary>
         internal static string UsuarioDB {

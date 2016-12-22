@@ -119,10 +119,14 @@
   </resheader>
   <data name="ClienteDB" xml:space="preserve">
     <value>Cliente</value>
-    <comment>Nome da tabela Cliente</comment>
+    <comment>Nome entidade Cliente</comment>
+  </data>
+  <data name="FormaDePagamentoDB" xml:space="preserve">
+    <value>FormaDePagamento</value>
+    <comment>Nome entidade FormaDePagamento</comment>
   </data>
   <data name="UsuarioDB" xml:space="preserve">
     <value>Usuario</value>
-    <comment>Nome da tabela Usuario</comment>
+    <comment>Nome entidade Usuario</comment>
   </data>
 </root>
