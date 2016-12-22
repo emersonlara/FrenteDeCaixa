@@ -74,30 +74,31 @@
     <Compile Include="Application\PerfilDeUsuarioApplication.cs" />
     <Compile Include="Application\ProdutoApplication.cs" />
     <Compile Include="Application\UsuarioApplication.cs" />
-    <Compile Include="Context\EntidadesContext.cs" />
-    <Compile Include="Migrations\201612181347440_Initial.cs" />
-    <Compile Include="Migrations\201612181347440_Initial.Designer.cs">
+    <Compile Include="Infrastructure\ContextConfigs\ClienteConfig.cs" />
+    <Compile Include="Infrastructure\Context\EntidadesContext.cs" />
+    <Compile Include="Infrastructure\Migrations\201612181347440_Initial.cs" />
+    <Compile Include="Infrastructure\Migrations\201612181347440_Initial.Designer.cs">
       <DependentUpon>201612181347440_Initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201612192254058_AdicionadoFormaDePagamento.cs" />
-    <Compile Include="Migrations\201612192254058_AdicionadoFormaDePagamento.Designer.cs">
+    <Compile Include="Infrastructure\Migrations\201612192254058_AdicionadoFormaDePagamento.cs" />
+    <Compile Include="Infrastructure\Migrations\201612192254058_AdicionadoFormaDePagamento.Designer.cs">
       <DependentUpon>201612192254058_AdicionadoFormaDePagamento.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201612200018086_AdicionadoPerfilDeUsuario.cs" />
-    <Compile Include="Migrations\201612200018086_AdicionadoPerfilDeUsuario.Designer.cs">
+    <Compile Include="Infrastructure\Migrations\201612200018086_AdicionadoPerfilDeUsuario.cs" />
+    <Compile Include="Infrastructure\Migrations\201612200018086_AdicionadoPerfilDeUsuario.Designer.cs">
       <DependentUpon>201612200018086_AdicionadoPerfilDeUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201612200038219_AdicionadoCliente.cs" />
-    <Compile Include="Migrations\201612200038219_AdicionadoCliente.Designer.cs">
+    <Compile Include="Infrastructure\Migrations\201612200038219_AdicionadoCliente.cs" />
+    <Compile Include="Infrastructure\Migrations\201612200038219_AdicionadoCliente.Designer.cs">
       <DependentUpon>201612200038219_AdicionadoCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Model\Cliente.cs" />
-    <Compile Include="Model\FormaDePagamento.cs" />
-    <Compile Include="Model\ItemVenda.cs" />
-    <Compile Include="Model\PerfilDeUsuario.cs" />
-    <Compile Include="Model\Produto.cs" />
-    <Compile Include="Model\Usuario.cs" />
+    <Compile Include="Infrastructure\Migrations\Configuration.cs" />
+    <Compile Include="Domain\Cliente.cs" />
+    <Compile Include="Domain\FormaDePagamento.cs" />
+    <Compile Include="Domain\ItemVenda.cs" />
+    <Compile Include="Domain\PerfilDeUsuario.cs" />
+    <Compile Include="Domain\Produto.cs" />
+    <Compile Include="Domain\Usuario.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -121,16 +122,16 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Migrations\201612181347440_Initial.resx">
+    <EmbeddedResource Include="Infrastructure\Migrations\201612181347440_Initial.resx">
       <DependentUpon>201612181347440_Initial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201612192254058_AdicionadoFormaDePagamento.resx">
+    <EmbeddedResource Include="Infrastructure\Migrations\201612192254058_AdicionadoFormaDePagamento.resx">
       <DependentUpon>201612192254058_AdicionadoFormaDePagamento.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201612200018086_AdicionadoPerfilDeUsuario.resx">
+    <EmbeddedResource Include="Infrastructure\Migrations\201612200018086_AdicionadoPerfilDeUsuario.resx">
       <DependentUpon>201612200018086_AdicionadoPerfilDeUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201612200038219_AdicionadoCliente.resx">
+    <EmbeddedResource Include="Infrastructure\Migrations\201612200038219_AdicionadoCliente.resx">
       <DependentUpon>201612200038219_AdicionadoCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

@@ -11,6 +11,7 @@ namespace FrenteDeCaixa.Model
         public Guid Id { get; set; }
         public string Nome { get; set; }
         public string CpfCnpj { get; set; }
-        public string Tipo { get; set; }
+        public Guid? PerfilID { get; set; }
+        public PerfilDeUsuario Perfil { get; set; }
     }
 }
