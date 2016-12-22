@@ -9,16 +9,17 @@ using System.Threading.Tasks;
 
 namespace FrenteDeCaixa.Infrastructure.ContextConfigs
 {
-    public class ClienteConfig : EntityTypeConfiguration<Cliente>
+    public class UsuarioConfig : EntityTypeConfiguration<Usuario>
     {
-        public ClienteConfig()
+        public UsuarioConfig()
         {
             HasKey(x => x.Id);
-            ToTable(Strings.ClienteDB);
+            ToTable(Strings.UsuarioDB);
 
+            Property(x => x.Login).IsRequired();
+            Property(x => x.Senha).IsRequired();
             Property(x => x.Nome).IsRequired();
-            Property(x => x.CpfCnpj).IsRequired();
-            Property(x => x.Tipo).IsRequired();
+            HasRequired(x => x.Perfil);
         }
     }
 }

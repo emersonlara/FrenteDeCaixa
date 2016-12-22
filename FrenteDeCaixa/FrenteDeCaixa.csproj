@@ -64,6 +64,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Migrations\201612222336518_Initial.cs" />
+    <Compile Include="Migrations\201612222336518_Initial.Designer.cs">
+      <DependentUpon>201612222336518_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Strings1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Strings.resx</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -76,6 +85,7 @@
     <Compile Include="Application\UsuarioApplication.cs" />
     <Compile Include="Infrastructure\ContextConfigs\ClienteConfig.cs" />
     <Compile Include="Infrastructure\ContextConfigs\ProdutoConfig.cs" />
+    <Compile Include="Infrastructure\ContextConfigs\UsuarioConfig.cs" />
     <Compile Include="Infrastructure\Context\EntidadesContext.cs" />
     <Compile Include="Infrastructure\Migrations\Configuration.cs" />
     <Compile Include="Domain\Cliente.cs" />
@@ -94,10 +104,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\201612222313030_Initial.cs" />
-    <Compile Include="Migrations\201612222313030_Initial.Designer.cs">
-      <DependentUpon>201612222313030_Initial.cs</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -111,12 +117,16 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Migrations\201612222313030_Initial.resx">
-      <DependentUpon>201612222313030_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201612222336518_Initial.resx">
+      <DependentUpon>201612222336518_Initial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Strings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Strings1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
