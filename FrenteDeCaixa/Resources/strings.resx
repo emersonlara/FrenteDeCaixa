@@ -125,6 +125,10 @@
     <value>FormaDePagamento</value>
     <comment>Nome entidade FormaDePagamento</comment>
   </data>
+  <data name="PerfilDeUsuarioDB" xml:space="preserve">
+    <value>PerfilDeUsuario</value>
+    <comment>Nome entidade PerfilDeUsuario</comment>
+  </data>
   <data name="UsuarioDB" xml:space="preserve">
     <value>Usuario</value>
     <comment>Nome entidade Usuario</comment>

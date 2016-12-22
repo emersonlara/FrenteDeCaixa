@@ -79,6 +79,15 @@ namespace FrenteDeCaixa.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to PerfilDeUsuario.
+        /// </summary>
+        internal static string PerfilDeUsuarioDB {
+            get {
+                return ResourceManager.GetString("PerfilDeUsuarioDB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Usuario.
         /// </summary>
         internal static string UsuarioDB {
