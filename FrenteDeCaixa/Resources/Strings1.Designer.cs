@@ -79,6 +79,15 @@ namespace FrenteDeCaixa.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ItemVenda.
+        /// </summary>
+        internal static string ItemVendaDB {
+            get {
+                return ResourceManager.GetString("ItemVendaDB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to PerfilDeUsuario.
         /// </summary>
         internal static string PerfilDeUsuarioDB {

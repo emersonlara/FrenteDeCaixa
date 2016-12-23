@@ -9,7 +9,7 @@ namespace FrenteDeCaixa.Model
     public class ItemVenda
     {
         public Guid Id { get; set; }
-        public Guid ProdutoId { get; set; }
+        public Guid? ProdutoId { get; set; }
         public Produto Produto { get; set; }
         public int Quantidade { get; set; }
     }
