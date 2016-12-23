@@ -9,5 +9,10 @@ namespace FrenteDeCaixa.Model
     public class Produto
     {
         public Guid Id { get; set; }
+        public string Nome { get; set; }
+        public Guid? FornecedorId { get; set; }
+        public Cliente Fornecedor { get; set; }
+        public int Quantidade { get; set; }
+        public decimal Preco { get; set; }
     }
 }
