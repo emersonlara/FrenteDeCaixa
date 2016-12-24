@@ -113,5 +113,14 @@ namespace FrenteDeCaixa.Resources {
                 return ResourceManager.GetString("UsuarioDB", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Venda.
+        /// </summary>
+        internal static string VendaDB {
+            get {
+                return ResourceManager.GetString("VendaDB", resourceCulture);
+            }
+        }
     }
 }

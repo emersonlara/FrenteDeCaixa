@@ -56,7 +56,7 @@
 
     mimetype: application/x-microsoft.net.object.bytearray.base64
     value   : The object must be serialized into a byte array 
-            : using a System.ComponentDomain.TypeConverter
+            : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
   <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
@@ -140,5 +140,9 @@
   <data name="UsuarioDB" xml:space="preserve">
     <value>Usuario</value>
     <comment>Nome entidade Usuario</comment>
+  </data>
+  <data name="VendaDB" xml:space="preserve">
+    <value>Venda</value>
+    <comment>Nome entidade Venda</comment>
   </data>
 </root>
