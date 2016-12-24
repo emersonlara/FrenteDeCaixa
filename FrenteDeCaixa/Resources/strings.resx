@@ -133,6 +133,10 @@
     <value>PerfilDeUsuario</value>
     <comment>Nome entidade PerfilDeUsuario</comment>
   </data>
+  <data name="ProdutoDB" xml:space="preserve">
+    <value>Produto</value>
+    <comment>Nome entidade Produto</comment>
+  </data>
   <data name="UsuarioDB" xml:space="preserve">
     <value>Usuario</value>
     <comment>Nome entidade Usuario</comment>
