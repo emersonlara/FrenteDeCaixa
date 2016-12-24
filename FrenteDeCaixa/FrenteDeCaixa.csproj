@@ -129,7 +129,7 @@
       <DependentUpon>201612240105114_Initial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Strings.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Strings1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="packages.config" />
@@ -146,7 +146,7 @@
     <Folder Include="Design\" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="posIcon.png" />
+    <Resource Include="Resources\Images\posIcon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -23,6 +23,7 @@ namespace FrenteDeCaixa
         public MainWindow()
         {
             InitializeComponent();
+            labelTotal.Content += "R$ 0,00";
         }
     }
 }

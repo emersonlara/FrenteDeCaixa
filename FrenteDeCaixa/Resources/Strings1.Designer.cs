@@ -22,7 +22,7 @@ namespace FrenteDeCaixa.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Strings {
+    public class Strings {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace FrenteDeCaixa.Resources {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("FrenteDeCaixa.Resources.Strings", typeof(Strings).Assembly);
@@ -51,7 +51,7 @@ namespace FrenteDeCaixa.Resources {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -61,9 +61,63 @@ namespace FrenteDeCaixa.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Clientes (F6).
+        /// </summary>
+        public static string ButtonClientes {
+            get {
+                return ResourceManager.GetString("ButtonClientes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Finalizar Venda (F3).
+        /// </summary>
+        public static string ButtonFinalizarVenda {
+            get {
+                return ResourceManager.GetString("ButtonFinalizarVenda", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Formas de Pagamento (F8).
+        /// </summary>
+        public static string ButtonFormasDePagamento {
+            get {
+                return ResourceManager.GetString("ButtonFormasDePagamento", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Produtos (F7).
+        /// </summary>
+        public static string ButtonProdutos {
+            get {
+                return ResourceManager.GetString("ButtonProdutos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Usuarios (F5).
+        /// </summary>
+        public static string ButtonUsuarios {
+            get {
+                return ResourceManager.GetString("ButtonUsuarios", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vendas (F9).
+        /// </summary>
+        public static string ButtonVendas {
+            get {
+                return ResourceManager.GetString("ButtonVendas", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cliente.
         /// </summary>
-        internal static string ClienteDB {
+        public static string ClienteDB {
             get {
                 return ResourceManager.GetString("ClienteDB", resourceCulture);
             }
@@ -72,25 +126,43 @@ namespace FrenteDeCaixa.Resources {
         /// <summary>
         ///   Looks up a localized string similar to FormaDePagamento.
         /// </summary>
-        internal static string FormaDePagamentoDB {
+        public static string FormaDePagamentoDB {
             get {
                 return ResourceManager.GetString("FormaDePagamentoDB", resourceCulture);
             }
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Frente de Caixa.
+        /// </summary>
+        public static string FrenteDeCaixa {
+            get {
+                return ResourceManager.GetString("FrenteDeCaixa", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ItemVenda.
         /// </summary>
-        internal static string ItemVendaDB {
+        public static string ItemVendaDB {
             get {
                 return ResourceManager.GetString("ItemVendaDB", resourceCulture);
             }
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Operador: .
+        /// </summary>
+        public static string Operador {
+            get {
+                return ResourceManager.GetString("Operador", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to PerfilDeUsuario.
         /// </summary>
-        internal static string PerfilDeUsuarioDB {
+        public static string PerfilDeUsuarioDB {
             get {
                 return ResourceManager.GetString("PerfilDeUsuarioDB", resourceCulture);
             }
@@ -99,16 +171,43 @@ namespace FrenteDeCaixa.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Produto.
         /// </summary>
-        internal static string ProdutoDB {
+        public static string ProdutoDB {
             get {
                 return ResourceManager.GetString("ProdutoDB", resourceCulture);
             }
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cliente (F4).
+        /// </summary>
+        public static string TextBoxCliente {
+            get {
+                return ResourceManager.GetString("TextBoxCliente", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Produto (F2).
+        /// </summary>
+        public static string TextBoxProduto {
+            get {
+                return ResourceManager.GetString("TextBoxProduto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Total: .
+        /// </summary>
+        public static string Total {
+            get {
+                return ResourceManager.GetString("Total", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Usuario.
         /// </summary>
-        internal static string UsuarioDB {
+        public static string UsuarioDB {
             get {
                 return ResourceManager.GetString("UsuarioDB", resourceCulture);
             }
@@ -117,7 +216,7 @@ namespace FrenteDeCaixa.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Venda.
         /// </summary>
-        internal static string VendaDB {
+        public static string VendaDB {
             get {
                 return ResourceManager.GetString("VendaDB", resourceCulture);
             }

@@ -117,6 +117,30 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ButtonClientes" xml:space="preserve">
+    <value>Clientes (F6)</value>
+    <comment>Nome no botão Clientes do frente de caixa</comment>
+  </data>
+  <data name="ButtonFinalizarVenda" xml:space="preserve">
+    <value>Finalizar Venda (F3)</value>
+    <comment>Nome no botão Finalizar Venda no frente de caixa</comment>
+  </data>
+  <data name="ButtonFormasDePagamento" xml:space="preserve">
+    <value>Formas de Pagamento (F8)</value>
+    <comment>Nome no botão Formas de Pagamento no frente de caixa</comment>
+  </data>
+  <data name="ButtonProdutos" xml:space="preserve">
+    <value>Produtos (F7)</value>
+    <comment>Nome no botão Produtos no frente de caixa</comment>
+  </data>
+  <data name="ButtonUsuarios" xml:space="preserve">
+    <value>Usuarios (F5)</value>
+    <comment>Nome no botão Usuarios no frente de caixa</comment>
+  </data>
+  <data name="ButtonVendas" xml:space="preserve">
+    <value>Vendas (F9)</value>
+    <comment>Nome no botão Vendas no frente de caixa</comment>
+  </data>
   <data name="ClienteDB" xml:space="preserve">
     <value>Cliente</value>
     <comment>Nome entidade Cliente</comment>
@@ -125,9 +149,17 @@
     <value>FormaDePagamento</value>
     <comment>Nome entidade FormaDePagamento</comment>
   </data>
+  <data name="FrenteDeCaixa" xml:space="preserve">
+    <value>Frente de Caixa</value>
+    <comment>Titulo Frente de Caixa</comment>
+  </data>
   <data name="ItemVendaDB" xml:space="preserve">
     <value>ItemVenda</value>
     <comment>Nome entidade ItemVenda</comment>
+  </data>
+  <data name="Operador" xml:space="preserve">
+    <value>Operador: </value>
+    <comment>Label Operador no frente de caixa</comment>
   </data>
   <data name="PerfilDeUsuarioDB" xml:space="preserve">
     <value>PerfilDeUsuario</value>
@@ -136,6 +168,18 @@
   <data name="ProdutoDB" xml:space="preserve">
     <value>Produto</value>
     <comment>Nome entidade Produto</comment>
+  </data>
+  <data name="TextBoxCliente" xml:space="preserve">
+    <value>Cliente (F4)</value>
+    <comment>TextBox de busca de cliente</comment>
+  </data>
+  <data name="TextBoxProduto" xml:space="preserve">
+    <value>Produto (F2)</value>
+    <comment>TextBox de busca de produto</comment>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>Total: </value>
+    <comment>Total da venda a ser finalizada</comment>
   </data>
   <data name="UsuarioDB" xml:space="preserve">
     <value>Usuario</value>
