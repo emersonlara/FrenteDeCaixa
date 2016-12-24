@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FrenteDeCaixa.Model
+namespace FrenteDeCaixa.Domain
 {
     public class ItemVenda
     {

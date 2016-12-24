@@ -64,7 +64,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Domain\Venda.cs" />
     <Compile Include="Infrastructure\ContextConfigs\FormaDePagamentoConfig.cs" />
+    <Compile Include="Infrastructure\ContextConfigs\ItemVendaConfig.cs" />
     <Compile Include="Infrastructure\ContextConfigs\PerfilDeUsuarioConfig.cs" />
     <Compile Include="Infrastructure\Migrations\201612222336518_Initial.cs" />
     <Compile Include="Infrastructure\Migrations\201612222336518_Initial.Designer.cs">
@@ -109,11 +111,6 @@
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -121,10 +118,6 @@
     </Compile>
     <EmbeddedResource Include="Infrastructure\Migrations\201612222336518_Initial.resx">
       <DependentUpon>201612222336518_Initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Strings.resx">
       <Generator>ResXFileCodeGenerator</Generator>

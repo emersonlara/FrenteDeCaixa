@@ -1,4 +1,4 @@
-﻿using FrenteDeCaixa.Model;
+﻿using FrenteDeCaixa.Domain;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
