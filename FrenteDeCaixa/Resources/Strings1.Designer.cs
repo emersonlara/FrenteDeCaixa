@@ -70,6 +70,15 @@ namespace FrenteDeCaixa.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Entrar.
+        /// </summary>
+        public static string ButtonEntrar {
+            get {
+                return ResourceManager.GetString("ButtonEntrar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Finalizar Venda (F3).
         /// </summary>
         public static string ButtonFinalizarVenda {
@@ -133,15 +142,6 @@ namespace FrenteDeCaixa.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Frente de Caixa.
-        /// </summary>
-        public static string FrenteDeCaixa {
-            get {
-                return ResourceManager.GetString("FrenteDeCaixa", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to ItemVenda.
         /// </summary>
         public static string ItemVendaDB {
@@ -178,6 +178,15 @@ namespace FrenteDeCaixa.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Senha:.
+        /// </summary>
+        public static string Senha {
+            get {
+                return ResourceManager.GetString("Senha", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cliente (F4).
         /// </summary>
         public static string TextBoxCliente {
@@ -196,11 +205,38 @@ namespace FrenteDeCaixa.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Frente de Caixa.
+        /// </summary>
+        public static string TitleCaixaWindow {
+            get {
+                return ResourceManager.GetString("TitleCaixaWindow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Frente de Caixa - Entrar.
+        /// </summary>
+        public static string TitleLoginWindow {
+            get {
+                return ResourceManager.GetString("TitleLoginWindow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Total: .
         /// </summary>
         public static string Total {
             get {
                 return ResourceManager.GetString("Total", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Usuário:.
+        /// </summary>
+        public static string Usuario {
+            get {
+                return ResourceManager.GetString("Usuario", resourceCulture);
             }
         }
         

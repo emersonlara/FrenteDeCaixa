@@ -22,7 +22,6 @@ namespace FrenteDeCaixa.Presentation
         public LoginWindow()
         {
             InitializeComponent();
-            new CaixaWindow().Show();
         }
     }
 }

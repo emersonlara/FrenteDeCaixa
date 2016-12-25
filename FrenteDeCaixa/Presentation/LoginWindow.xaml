@@ -4,13 +4,25 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FrenteDeCaixa.Presentation"
+        xmlns:p = "clr-namespace:FrenteDeCaixa.Resources"
         mc:Ignorable="d"
-        Title="LoginWindow" Height="360.902" Width="493.985">
+        Title="{x:Static p:Strings.TitleLoginWindow}" Height="360.902" Width="493.985">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="137*"/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="91*"/>
-            <RowDefinition Height="239*"/>
+            <RowDefinition Height="128*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="85*"/>
         </Grid.RowDefinitions>
-
+        <TextBox x:Name="textBoxLogin" Grid.Row="1" TextWrapping="Wrap" Margin="25,15" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin" Grid.Column="1"/>
+        <TextBox x:Name="textBoxSenha" Margin="25,15" Grid.Row="2" TextWrapping="Wrap" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin" Grid.Column="1"/>
+        <Button x:Name="buttonEntrar" Content="{x:Static p:Strings.ButtonEntrar}" Margin="25,14.998,25,15" Grid.Row="3" d:LayoutOverrides="Height, LeftMargin, RightMargin, TopMargin, BottomMargin" Grid.Column="1"/>
+        <Image x:Name="imageIcone" Margin="10,5" Source="/FrenteDeCaixa;component/Resources/Images/posIcon.png" Grid.ColumnSpan="2" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin"/>
+        <Label x:Name="labelUsuario" Content="{x:Static p:Strings.Usuario}" Grid.Row="1" d:LayoutOverrides="Width" VerticalAlignment="Center" HorizontalAlignment="Right" AutomationProperties.IsRequiredForForm="True"/>
+        <Label x:Name="labelSenha" Content="{x:Static p:Strings.Senha}" Grid.Row="2" d:LayoutOverrides="Width" VerticalAlignment="Center" HorizontalAlignment="Right"/>
     </Grid>
 </Window>

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:FrenteDeCaixa"
         xmlns:p = "clr-namespace:FrenteDeCaixa.Resources"
         mc:Ignorable="d"
-        Title="{x:Static p:Strings.FrenteDeCaixa}" Height="451.5" Width="799.5">
+        Title="{x:Static p:Strings.TitleCaixaWindow}" Height="451.5" Width="799.5">
     <Grid >
         <Grid.RowDefinitions>
             <RowDefinition Height="27*"/>
