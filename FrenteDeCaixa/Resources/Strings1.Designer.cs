@@ -61,7 +61,7 @@ namespace FrenteDeCaixa.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Clientes (F6).
+        ///   Looks up a localized string similar to Clientes (F7).
         /// </summary>
         public static string ButtonClientes {
             get {
@@ -88,7 +88,7 @@ namespace FrenteDeCaixa.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Formas de Pagamento (F8).
+        ///   Looks up a localized string similar to Formas de Pagamento (F9).
         /// </summary>
         public static string ButtonFormasDePagamento {
             get {
@@ -97,7 +97,16 @@ namespace FrenteDeCaixa.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Produtos (F7).
+        ///   Looks up a localized string similar to Perfis (F5).
+        /// </summary>
+        public static string ButtonPerfis {
+            get {
+                return ResourceManager.GetString("ButtonPerfis", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Produtos (F8).
         /// </summary>
         public static string ButtonProdutos {
             get {
@@ -106,7 +115,7 @@ namespace FrenteDeCaixa.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Usuarios (F5).
+        ///   Looks up a localized string similar to Usuarios (F6).
         /// </summary>
         public static string ButtonUsuarios {
             get {
@@ -115,7 +124,7 @@ namespace FrenteDeCaixa.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Vendas (F9).
+        ///   Looks up a localized string similar to Vendas (F10).
         /// </summary>
         public static string ButtonVendas {
             get {

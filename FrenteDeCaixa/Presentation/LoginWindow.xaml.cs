@@ -1,4 +1,6 @@
-﻿using System;
+﻿using FrenteDeCaixa.Context;
+using FrenteDeCaixa.Domain;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +21,27 @@ namespace FrenteDeCaixa.Presentation
     /// </summary>
     public partial class LoginWindow : Window
     {
+        private EntidadesContext Banco;
+
         public LoginWindow()
         {
             InitializeComponent();
+            Banco = new EntidadesContext();
+        }
+
+        private void buttonEntrar_Click(object sender, RoutedEventArgs e)
+        {
+            string login = textBoxLogin.Text;
+            string senha = textBoxSenha.Text;
+
+            int contem = Banco.Usuarios.
+                Where(x => x.Login == login && x.Senha == senha).Count();
+
+            if (contem > 0)
+            {
+                new CaixaWindow().Show();
+                this.Close();
+            }
         }
     }
 }

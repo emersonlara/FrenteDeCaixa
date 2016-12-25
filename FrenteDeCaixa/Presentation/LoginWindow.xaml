@@ -20,7 +20,7 @@
         </Grid.RowDefinitions>
         <TextBox x:Name="textBoxLogin" Grid.Row="1" TextWrapping="Wrap" Margin="25,15" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin" Grid.Column="1"/>
         <TextBox x:Name="textBoxSenha" Margin="25,15" Grid.Row="2" TextWrapping="Wrap" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin" Grid.Column="1"/>
-        <Button x:Name="buttonEntrar" Content="{x:Static p:Strings.ButtonEntrar}" Margin="25,14.998,25,15" Grid.Row="3" d:LayoutOverrides="Height, LeftMargin, RightMargin, TopMargin, BottomMargin" Grid.Column="1"/>
+        <Button x:Name="buttonEntrar" Content="{x:Static p:Strings.ButtonEntrar}" Margin="25,14.998,25,15" Grid.Row="3" d:LayoutOverrides="Height, LeftMargin, RightMargin, TopMargin, BottomMargin" Grid.Column="1" Click="buttonEntrar_Click"/>
         <Image x:Name="imageIcone" Margin="10,5" Source="/FrenteDeCaixa;component/Resources/Images/posIcon.png" Grid.ColumnSpan="2" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin"/>
         <Label x:Name="labelUsuario" Content="{x:Static p:Strings.Usuario}" Grid.Row="1" d:LayoutOverrides="Width" VerticalAlignment="Center" HorizontalAlignment="Right" AutomationProperties.IsRequiredForForm="True"/>
         <Label x:Name="labelSenha" Content="{x:Static p:Strings.Senha}" Grid.Row="2" d:LayoutOverrides="Width" VerticalAlignment="Center" HorizontalAlignment="Right"/>
