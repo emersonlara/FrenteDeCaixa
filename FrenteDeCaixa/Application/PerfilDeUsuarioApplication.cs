@@ -37,9 +37,9 @@ namespace FrenteDeCaixa.Application
             Banco.SaveChanges();
         }
 
-        public IEnumerable<PerfilDeUsuario> Listar()
+        public List<PerfilDeUsuario> Listar()
         {
-            return from c in Banco.PerfisDeUsuarios select c;
+            return (from c in Banco.PerfisDeUsuarios select c).ToList();
         }
     }
 }

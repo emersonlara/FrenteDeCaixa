@@ -38,9 +38,9 @@ namespace FrenteDeCaixa.Application
             Banco.SaveChanges();
         }
 
-        public IEnumerable<FormaDePagamento> Listar()
+        public List<FormaDePagamento> Listar()
         {
-            return from c in Banco.FormasDePagamentos select c;
+            return (from c in Banco.FormasDePagamentos select c).ToList();
         }
     }
 }

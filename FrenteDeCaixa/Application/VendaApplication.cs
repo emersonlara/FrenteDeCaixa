@@ -42,9 +42,9 @@ namespace FrenteDeCaixa.Application
             Banco.SaveChanges();
         }
 
-        public IEnumerable<Venda> Listar()
+        public List<Venda> Listar()
         {
-            return from c in Banco.Vendas select c;
+            return (from c in Banco.Vendas select c).ToList();
         }
     }
 }
