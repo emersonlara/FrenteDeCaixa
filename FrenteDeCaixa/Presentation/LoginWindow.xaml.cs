@@ -27,6 +27,7 @@ namespace FrenteDeCaixa.Presentation
         {
             InitializeComponent();
             Banco = new EntidadesContext();
+            new PerfisWindow().Show();
         }
 
         private void buttonEntrar_Click(object sender, RoutedEventArgs e)

@@ -61,6 +61,24 @@ namespace FrenteDeCaixa.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Alterar.
+        /// </summary>
+        public static string ButtonAlterar {
+            get {
+                return ResourceManager.GetString("ButtonAlterar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Buscar.
+        /// </summary>
+        public static string ButtonBuscar {
+            get {
+                return ResourceManager.GetString("ButtonBuscar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Clientes (F7).
         /// </summary>
         public static string ButtonClientes {
@@ -79,6 +97,15 @@ namespace FrenteDeCaixa.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Excluir.
+        /// </summary>
+        public static string ButtonExcluir {
+            get {
+                return ResourceManager.GetString("ButtonExcluir", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Finalizar Venda (F3).
         /// </summary>
         public static string ButtonFinalizarVenda {
@@ -93,6 +120,15 @@ namespace FrenteDeCaixa.Resources {
         public static string ButtonFormasDePagamento {
             get {
                 return ResourceManager.GetString("ButtonFormasDePagamento", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Novo.
+        /// </summary>
+        public static string ButtonNovo {
+            get {
+                return ResourceManager.GetString("ButtonNovo", resourceCulture);
             }
         }
         
@@ -228,6 +264,15 @@ namespace FrenteDeCaixa.Resources {
         public static string TitleLoginWindow {
             get {
                 return ResourceManager.GetString("TitleLoginWindow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Perfis.
+        /// </summary>
+        public static string TitlePerfis {
+            get {
+                return ResourceManager.GetString("TitlePerfis", resourceCulture);
             }
         }
         

@@ -117,6 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ButtonAlterar" xml:space="preserve">
+    <value>Alterar</value>
+    <comment>Nome no botão Alterar</comment>
+  </data>
+  <data name="ButtonBuscar" xml:space="preserve">
+    <value>Buscar</value>
+    <comment>Nome no botão Buscar</comment>
+  </data>
   <data name="ButtonClientes" xml:space="preserve">
     <value>Clientes (F7)</value>
     <comment>Nome no botão Clientes do frente de caixa</comment>
@@ -125,6 +133,10 @@
     <value>Entrar</value>
     <comment>Nome no botão Entrar</comment>
   </data>
+  <data name="ButtonExcluir" xml:space="preserve">
+    <value>Excluir</value>
+    <comment>Nome no botão Excluir</comment>
+  </data>
   <data name="ButtonFinalizarVenda" xml:space="preserve">
     <value>Finalizar Venda (F3)</value>
     <comment>Nome no botão Finalizar Venda no frente de caixa</comment>
@@ -132,6 +144,10 @@
   <data name="ButtonFormasDePagamento" xml:space="preserve">
     <value>Formas de Pagamento (F9)</value>
     <comment>Nome no botão Formas de Pagamento no frente de caixa</comment>
+  </data>
+  <data name="ButtonNovo" xml:space="preserve">
+    <value>Novo</value>
+    <comment>Nome no botão Novo</comment>
   </data>
   <data name="ButtonPerfis" xml:space="preserve">
     <value>Perfis (F5)</value>
@@ -192,6 +208,10 @@
   <data name="TitleLoginWindow" xml:space="preserve">
     <value>Frente de Caixa - Entrar</value>
     <comment>Titulo LoginWindow</comment>
+  </data>
+  <data name="TitlePerfis" xml:space="preserve">
+    <value>Perfis</value>
+    <comment>Titulo PerfisWindow</comment>
   </data>
   <data name="Total" xml:space="preserve">
     <value>Total: </value>
