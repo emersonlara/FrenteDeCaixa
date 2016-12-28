@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FrenteDeCaixa.Presentation;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,7 +24,13 @@ namespace FrenteDeCaixa
         public CaixaWindow()
         {
             InitializeComponent();
+            this.WindowState = WindowState.Maximized;
             labelTotal.Content += "R$ 0,00";
+        }
+
+        private void buttonPerfis_Click(object sender, RoutedEventArgs e)
+        {
+            new MainPerfisWindow().ShowDialog();
         }
     }
 }

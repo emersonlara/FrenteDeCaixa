@@ -1,4 +1,5 @@
 ﻿using FrenteDeCaixa.Application;
+using FrenteDeCaixa.Presentation.PerfilWindows;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,11 +19,12 @@ namespace FrenteDeCaixa.Presentation
     /// <summary>
     /// Interaction logic for PerfisWindow.xaml
     /// </summary>
-    public partial class PerfisWindow : Window
+    public partial class MainPerfisWindow : Window
     {
-        public PerfisWindow()
+        public MainPerfisWindow()
         {
             InitializeComponent();
+            WindowStartupLocation = WindowStartupLocation.CenterScreen;
             MontaTabela();
         }
 
@@ -32,6 +34,11 @@ namespace FrenteDeCaixa.Presentation
             dataGridPerfis.ItemsSource = perfilApp.Listar();
 
             
+        }
+
+        private void buttonNovo_Click(object sender, RoutedEventArgs e)
+        {
+            new NovoPerfilWindow().ShowDialog();
         }
     }
 }

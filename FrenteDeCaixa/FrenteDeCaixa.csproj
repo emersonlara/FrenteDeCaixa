@@ -74,8 +74,11 @@
     <Compile Include="Infrastructure\Migrations\201612240105114_Initial.Designer.cs">
       <DependentUpon>201612240105114_Initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentation\PerfisWindow.xaml.cs">
-      <DependentUpon>PerfisWindow.xaml</DependentUpon>
+    <Compile Include="Presentation\PerfilWindows\NovoPerfilWindow.xaml.cs">
+      <DependentUpon>NovoPerfilWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\PerfilWindows\MainPerfisWindow.xaml.cs">
+      <DependentUpon>MainPerfisWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Resources\Strings1.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -118,7 +121,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Presentation\PerfisWindow.xaml">
+    <Page Include="Presentation\PerfilWindows\NovoPerfilWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Presentation\PerfilWindows\MainPerfisWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

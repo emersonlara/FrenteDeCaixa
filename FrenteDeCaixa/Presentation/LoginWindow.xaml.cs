@@ -26,8 +26,8 @@ namespace FrenteDeCaixa.Presentation
         public LoginWindow()
         {
             InitializeComponent();
+            WindowStartupLocation = WindowStartupLocation.CenterScreen;
             Banco = new EntidadesContext();
-            new PerfisWindow().Show();
         }
 
         private void buttonEntrar_Click(object sender, RoutedEventArgs e)
