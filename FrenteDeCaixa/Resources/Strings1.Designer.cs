@@ -106,6 +106,15 @@ namespace FrenteDeCaixa.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Fechar.
+        /// </summary>
+        public static string ButtonFechar {
+            get {
+                return ResourceManager.GetString("ButtonFechar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Finalizar Venda (F3).
         /// </summary>
         public static string ButtonFinalizarVenda {
@@ -196,6 +205,15 @@ namespace FrenteDeCaixa.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Nome:.
+        /// </summary>
+        public static string Nome {
+            get {
+                return ResourceManager.GetString("Nome", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Operador: .
         /// </summary>
         public static string Operador {
@@ -264,6 +282,15 @@ namespace FrenteDeCaixa.Resources {
         public static string TitleLoginWindow {
             get {
                 return ResourceManager.GetString("TitleLoginWindow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Novo Perfil.
+        /// </summary>
+        public static string TitleNovoPerfil {
+            get {
+                return ResourceManager.GetString("TitleNovoPerfil", resourceCulture);
             }
         }
         

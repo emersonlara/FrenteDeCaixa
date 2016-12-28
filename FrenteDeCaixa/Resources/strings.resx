@@ -137,6 +137,10 @@
     <value>Excluir</value>
     <comment>Nome no botão Excluir</comment>
   </data>
+  <data name="ButtonFechar" xml:space="preserve">
+    <value>Fechar</value>
+    <comment>Nome no botão Fechar</comment>
+  </data>
   <data name="ButtonFinalizarVenda" xml:space="preserve">
     <value>Finalizar Venda (F3)</value>
     <comment>Nome no botão Finalizar Venda no frente de caixa</comment>
@@ -177,6 +181,10 @@
     <value>ItemVenda</value>
     <comment>Nome entidade ItemVenda</comment>
   </data>
+  <data name="Nome" xml:space="preserve">
+    <value>Nome:</value>
+    <comment>Nome</comment>
+  </data>
   <data name="Operador" xml:space="preserve">
     <value>Operador: </value>
     <comment>Label Operador no frente de caixa</comment>
@@ -208,6 +216,10 @@
   <data name="TitleLoginWindow" xml:space="preserve">
     <value>Frente de Caixa - Entrar</value>
     <comment>Titulo LoginWindow</comment>
+  </data>
+  <data name="TitleNovoPerfil" xml:space="preserve">
+    <value>Novo Perfil</value>
+    <comment>Titulo NovoPerfilWindow</comment>
   </data>
   <data name="TitlePerfis" xml:space="preserve">
     <value>Perfis</value>
