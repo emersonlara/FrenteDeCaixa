@@ -1,5 +1,8 @@
 namespace FrenteDeCaixa.Migrations
 {
+    using Application;
+    using Application.Service;
+    using Domain;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
@@ -14,18 +17,15 @@ namespace FrenteDeCaixa.Migrations
 
         protected override void Seed(FrenteDeCaixa.Context.EntidadesContext context)
         {
-            //  This method will be called after migrating to the latest version.
-
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data. E.g.
-            //
-            //    context.People.AddOrUpdate(
-            //      p => p.FullName,
-            //      new Person { FullName = "Andrew Peters" },
-            //      new Person { FullName = "Brice Lambson" },
-            //      new Person { FullName = "Rowan Miller" }
-            //    );
-            //
+            UsuarioService usuarioService = new UsuarioService();
+            Usuario usuario = new Usuario()
+            {
+                Id = Guid.NewGuid(),
+                Login = "jfrode",
+                Senha = "123",
+                Nome = "João Felipe Gonçalves"
+            };
+            usuarioService.Salvar(usuario);
         }
     }
 }
