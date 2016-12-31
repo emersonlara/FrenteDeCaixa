@@ -1,4 +1,5 @@
 ﻿using FrenteDeCaixa.Application;
+using FrenteDeCaixa.Application.Service;
 using FrenteDeCaixa.Presentation.PerfilWindows;
 using System;
 using System.Collections.Generic;
@@ -25,20 +26,19 @@ namespace FrenteDeCaixa.Presentation
         {
             InitializeComponent();
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
-            MontaTabela();
+            AtualizaTabela();
         }
 
-        public void MontaTabela()
+        public void AtualizaTabela()
         {
-            PerfilDeUsuarioApplication perfilApp = new PerfilDeUsuarioApplication();
-            dataGridPerfis.ItemsSource = perfilApp.Listar();
-
-            
+            PerfilDeUsuarioService perfilService = new PerfilDeUsuarioService();
+            dataGridPerfis.ItemsSource = perfilService.Listar();
         }
 
         private void buttonNovo_Click(object sender, RoutedEventArgs e)
         {
             new NovoPerfilWindow().ShowDialog();
+            AtualizaTabela();
         }
     }
 }

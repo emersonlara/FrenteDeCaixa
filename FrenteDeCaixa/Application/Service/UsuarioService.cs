@@ -8,13 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FrenteDeCaixa.Application
+namespace FrenteDeCaixa.Application.Service
 {
-    class UsuarioApplication
+    class UsuarioService
     {
         private EntidadesContext Banco { get; set; }
 
-        public UsuarioApplication()
+        public UsuarioService()
         {
             Banco = new EntidadesContext();
         }

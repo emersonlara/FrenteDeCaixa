@@ -2,6 +2,8 @@
 using FrenteDeCaixa.Resources;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Data.Entity.Infrastructure.Annotations;
 using System.Data.Entity.ModelConfiguration;
 using System.Linq;
 using System.Text;
@@ -16,7 +18,9 @@ namespace FrenteDeCaixa.Infrastructure.ContextConfigs
             HasKey(x => x.Id);
             ToTable(Strings.FormaDePagamentoDB);
 
-            Property(x => x.Nome).IsRequired();
+            Property(x => x.Nome)
+                .IsRequired();
+                //.HasColumnAnnotation("Index", new IndexAnnotation(new[] { new IndexAttribute("Index") { IsUnique = true } }));
         }
     }
 }

@@ -7,13 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FrenteDeCaixa.Application
+namespace FrenteDeCaixa.Application.Service
 {
-    class FormaDePagamentoApplication
+    class FormaDePagamentoService
     {
         private EntidadesContext Banco { get; set; }
 
-        public FormaDePagamentoApplication()
+        public FormaDePagamentoService()
         {
             Banco = new EntidadesContext();
         }

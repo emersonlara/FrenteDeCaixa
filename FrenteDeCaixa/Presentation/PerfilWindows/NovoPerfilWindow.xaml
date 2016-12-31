@@ -6,7 +6,10 @@
         xmlns:local="clr-namespace:FrenteDeCaixa.Presentation.PerfilWindows"
         xmlns:p = "clr-namespace:FrenteDeCaixa.Resources"
         mc:Ignorable="d"
-        Title="{x:Static p:Strings.TitleNovoPerfil}" Height="128.333" Width="378" Visibility="Visible">
+        Title="{x:Static p:Strings.TitleNovoPerfil}" Height="128.333" Width="378" Visibility="Visible" AllowsTransparency="True" WindowStyle="None">
+    <Window.Effect>
+        <DropShadowEffect/>
+    </Window.Effect>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="61*"/>

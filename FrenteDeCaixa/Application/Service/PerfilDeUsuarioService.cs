@@ -6,13 +6,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FrenteDeCaixa.Application
+namespace FrenteDeCaixa.Application.Service
 {
-    class PerfilDeUsuarioApplication
+    class PerfilDeUsuarioService
     {
         private EntidadesContext Banco;
 
-        public PerfilDeUsuarioApplication()
+        public PerfilDeUsuarioService()
         {
             Banco = new EntidadesContext();
         }

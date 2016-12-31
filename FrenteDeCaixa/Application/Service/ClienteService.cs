@@ -6,13 +6,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FrenteDeCaixa.Application
+namespace FrenteDeCaixa.Application.Service
 {
-    class ClienteApplication
+    class ClienteService
     {
         private EntidadesContext Banco;
 
-        public ClienteApplication()
+        public ClienteService()
         {
             Banco = new EntidadesContext();
         }
