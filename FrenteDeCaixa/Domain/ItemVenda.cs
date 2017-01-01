@@ -1,4 +1,5 @@
 ﻿using FrenteDeCaixa.Domain;
+using FrenteDeCaixa.Domain.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace FrenteDeCaixa.Domain
 {
-    public class ItemVenda
+    public class ItemVenda : IItemVenda
     {
         public Guid Id { get; set; }
         public Guid? VendaId { get; set; }
