@@ -1,4 +1,5 @@
-﻿using FrenteDeCaixa.Context;
+﻿using FrenteDeCaixa.Application.Service.Interface;
+using FrenteDeCaixa.Context;
 using FrenteDeCaixa.Domain;
 using System;
 using System.Collections;
@@ -10,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace FrenteDeCaixa.Application.Service
 {
-    class UsuarioService
+    class UsuarioService : IUsuarioService
     {
         private EntidadesContext Banco { get; set; }
 

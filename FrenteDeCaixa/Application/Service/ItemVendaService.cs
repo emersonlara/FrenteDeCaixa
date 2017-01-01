@@ -1,14 +1,15 @@
-﻿using FrenteDeCaixa.Context;
+﻿using FrenteDeCaixa.Application.Service.Interface;
+using FrenteDeCaixa.Context;
 using FrenteDeCaixa.Domain;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using FrenteDeCaixa.Domain.Interface;
 namespace FrenteDeCaixa.Application.Service
 {
-    class ItemVendaService
+    class ItemVendaService : IItemVendaService
     {
         private EntidadesContext Banco;
 
@@ -42,6 +43,31 @@ namespace FrenteDeCaixa.Application.Service
         public List<ItemVenda> Listar()
         {
             return (from c in Banco.ItensVendas select c).ToList();
+        }
+
+        public void Salvar(IItemVenda itemVenda)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Alterar(IItemVenda itemVenda)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Excluir(IItemVenda itemVenda)
+        {
+            throw new NotImplementedException();
+        }
+
+        List<IItemVenda> IItemVendaService.Listar()
+        {
+            throw new NotImplementedException();
+        }
+
+        List<IItemVenda> IItemVendaService.Listar()
+        {
+            throw new NotImplementedException();
         }
     }
 }
