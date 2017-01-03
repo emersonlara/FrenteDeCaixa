@@ -13,6 +13,6 @@ namespace FrenteDeCaixa.Application.Service.Interface
         void Salvar(ItemVenda itemVenda);
         void Alterar(ItemVenda itemVenda);
         void Excluir(ItemVenda itemVenda);
-        List<IItemVenda> Listar();
+        List<ItemVenda> Listar();
     }
 }

@@ -44,30 +44,5 @@ namespace FrenteDeCaixa.Application.Service
         {
             return (from c in Banco.ItensVendas select c).ToList();
         }
-
-        public void Salvar(IItemVenda itemVenda)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Alterar(IItemVenda itemVenda)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Excluir(IItemVenda itemVenda)
-        {
-            throw new NotImplementedException();
-        }
-
-        List<IItemVenda> IItemVendaService.Listar()
-        {
-            throw new NotImplementedException();
-        }
-
-        List<IItemVenda> IItemVendaService.Listar()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

@@ -64,7 +64,21 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Application\Service\Interface\IClienteService.cs" />
+    <Compile Include="Application\Service\Interface\IFormaDePagamentoService.cs" />
+    <Compile Include="Application\Service\Interface\IItemVendaService.cs" />
+    <Compile Include="Application\Service\Interface\IPerfilDeUsuarioService.cs" />
+    <Compile Include="Application\Service\Interface\IProdutosService.cs" />
+    <Compile Include="Application\Service\Interface\IUsuarioService.cs" />
+    <Compile Include="Application\Service\Interface\IVendaService.cs" />
     <Compile Include="Application\Service\VendaService.cs" />
+    <Compile Include="Domain\Interface\ICliente.cs" />
+    <Compile Include="Domain\Interface\IFormaDePagamento.cs" />
+    <Compile Include="Domain\Interface\IItemVenda.cs" />
+    <Compile Include="Domain\Interface\IPerfilDeUsuario.cs" />
+    <Compile Include="Domain\Interface\IProduto.cs" />
+    <Compile Include="Domain\Interface\IUsuario.cs" />
+    <Compile Include="Domain\Interface\IVenda.cs" />
     <Compile Include="Domain\Venda.cs" />
     <Compile Include="Infrastructure\ContextConfigs\FormaDePagamentoConfig.cs" />
     <Compile Include="Infrastructure\ContextConfigs\ItemVendaConfig.cs" />
