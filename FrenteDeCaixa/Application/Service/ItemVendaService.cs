@@ -1,12 +1,9 @@
 ﻿using FrenteDeCaixa.Application.Service.Interface;
 using FrenteDeCaixa.Context;
-using FrenteDeCaixa.Domain;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using FrenteDeCaixa.Domain.PerfilDeUsuario;
+using FrenteDeCaixa.Domain.ItemVenda;
+
 namespace FrenteDeCaixa.Application.Service
 {
     class ItemVendaService : IItemVendaService

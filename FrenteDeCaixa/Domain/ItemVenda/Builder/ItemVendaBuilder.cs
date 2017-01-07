@@ -1,4 +1,6 @@
-﻿using System;
+﻿using FrenteDeCaixa.Domain.Produto;
+using FrenteDeCaixa.Domain.Venda;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,9 +12,9 @@ namespace FrenteDeCaixa.Domain.ItemVenda.Builder
     {
         public Guid Id { get; set; }
         public Guid? VendaId { get; set; }
-        public Venda Venda { get; set; }
+        public VendaDomain Venda { get; set; }
         public Guid? ProdutoId { get; set; }
-        public Produto Produto { get; set; }
+        public ProdutoDomain Produto { get; set; }
         public int Quantidade { get; set; }
 
         public ItemVendaBuilder WithId(Guid Id)
@@ -21,7 +23,7 @@ namespace FrenteDeCaixa.Domain.ItemVenda.Builder
             return this;
         }
 
-        public ItemVendaBuilder WithProduto(Produto Produto)
+        public ItemVendaBuilder WithProduto(ProdutoDomain Produto)
         {
             this.Produto = Produto;
             return this;
@@ -39,7 +41,7 @@ namespace FrenteDeCaixa.Domain.ItemVenda.Builder
             return this;
         }
 
-        public ItemVendaBuilder WithVenda(Venda Venda)
+        public ItemVendaBuilder WithVenda(VendaDomain Venda)
         {
             this.Venda = Venda;
             return this;
@@ -53,7 +55,7 @@ namespace FrenteDeCaixa.Domain.ItemVenda.Builder
 
         public ItemVendaDomain Build()
         {
-            return new ItemVendaDomain();
+            return new ItemVendaDomain (Id, VendaId, Venda, ProdutoId, Produto, Quantidade);
         }
     }
 }

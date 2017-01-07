@@ -3,6 +3,8 @@ namespace FrenteDeCaixa.Migrations
     using Application;
     using Application.Service;
     using Domain;
+    using Domain.Usuario;
+    using Domain.Usuario.Builder;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
@@ -18,6 +20,8 @@ namespace FrenteDeCaixa.Migrations
         protected override void Seed(FrenteDeCaixa.Context.EntidadesContext context)
         {
             UsuarioService usuarioService = new UsuarioService();
+            UsuarioBuilder usuarioBuilder = new UsuarioBuilder();
+            /*
             UsuarioDomain usuario = new UsuarioDomain()
             {
                 Id = Guid.NewGuid(),
@@ -25,7 +29,7 @@ namespace FrenteDeCaixa.Migrations
                 Senha = "123",
                 Nome = "João Felipe Gonçalves"
             };
-            usuarioService.Salvar(usuario);
+            usuarioService.Salvar(usuario);*/
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using FrenteDeCaixa.Domain;
+using FrenteDeCaixa.Domain.Usuario;
 using FrenteDeCaixa.Resources;
 using System;
 using System.Collections.Generic;

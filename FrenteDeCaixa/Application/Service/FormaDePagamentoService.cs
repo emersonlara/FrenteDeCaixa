@@ -1,6 +1,7 @@
 ﻿using FrenteDeCaixa.Application.Service.Interface;
 using FrenteDeCaixa.Context;
 using FrenteDeCaixa.Domain;
+using FrenteDeCaixa.Domain.FormaDePagamento;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -19,27 +20,27 @@ namespace FrenteDeCaixa.Application.Service
             Banco = new EntidadesContext();
         }
 
-        public void Salvar(FormaDePagamento formaDePagamento)
+        public void Salvar(FormaDePagamentoDomain formaDePagamento)
         {
             Banco.FormasDePagamentos.Add(formaDePagamento);
             Banco.SaveChanges();
         }
 
-        public void Alterar(FormaDePagamento formaDePagamento)
+        public void Alterar(FormaDePagamentoDomain formaDePagamento)
         {
-            FormaDePagamento pagamentoAux = Banco.FormasDePagamentos
+            FormaDePagamentoDomain pagamentoAux = Banco.FormasDePagamentos
                 .Where(x => x.Id == formaDePagamento.Id).First();
             pagamentoAux.Nome = formaDePagamento.Nome;
             Banco.SaveChanges();
         }
 
-        public void Excluir(FormaDePagamento formaDePagamento)
+        public void Excluir(FormaDePagamentoDomain formaDePagamento)
         {
-            Banco.Set<FormaDePagamento>().Remove(formaDePagamento);
+            Banco.Set<FormaDePagamentoDomain>().Remove(formaDePagamento);
             Banco.SaveChanges();
         }
 
-        public List<FormaDePagamento> Listar()
+        public List<FormaDePagamentoDomain> Listar()
         {
             return (from c in Banco.FormasDePagamentos select c).ToList();
         }

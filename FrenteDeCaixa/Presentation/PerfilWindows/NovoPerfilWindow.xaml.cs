@@ -1,6 +1,7 @@
 ﻿using FrenteDeCaixa.Application;
 using FrenteDeCaixa.Application.Service;
 using FrenteDeCaixa.Domain;
+using FrenteDeCaixa.Domain.PerfilDeUsuario;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -35,12 +36,14 @@ namespace FrenteDeCaixa.Presentation.PerfilWindows
         {
             if (!textBoxNome.Text.Equals(null))
             {
+                /*
                 PerfilDeUsuarioDomain perfil = new PerfilDeUsuarioDomain()
                 {
                     Id = Guid.NewGuid(),
                     Nome = textBoxNome.Text
                 };
                 perfilService.Salvar(perfil);
+                */
                 this.Close();
             }
         }

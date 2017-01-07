@@ -1,4 +1,6 @@
-﻿using System;
+﻿using FrenteDeCaixa.Domain.Produto;
+using FrenteDeCaixa.Domain.Venda;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,9 +12,9 @@ namespace FrenteDeCaixa.Domain.ItemVenda.Builder
     {
         ItemVendaBuilder WithId(Guid Id);
         ItemVendaBuilder WithVendaId(Guid? VendaId);
-        ItemVendaBuilder WithVenda(Venda Venda);
+        ItemVendaBuilder WithVenda(VendaDomain Venda);
         ItemVendaBuilder WithProdutoId(Guid? ProdutoId);
-        ItemVendaBuilder WithProduto(Produto Produto);
+        ItemVendaBuilder WithProduto(ProdutoDomain Produto);
         ItemVendaBuilder WithQuantidade(int Quantidade);
         ItemVendaDomain Build();
     }

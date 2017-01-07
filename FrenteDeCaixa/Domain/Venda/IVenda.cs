@@ -1,11 +1,13 @@
 ﻿using FrenteDeCaixa.Domain.Cliente;
+using FrenteDeCaixa.Domain.FormaDePagamento;
+using FrenteDeCaixa.Domain.Usuario;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FrenteDeCaixa.Domain.PerfilDeUsuario
+namespace FrenteDeCaixa.Domain.Venda
 {
     interface IVenda
     {
@@ -15,7 +17,7 @@ namespace FrenteDeCaixa.Domain.PerfilDeUsuario
         Guid? ClienteId { get; set; }
         ClienteDomain Cliente { get; set; }
         Guid? FormaDePagamentoId { get; set; }
-        FormaDePagamento FormaDePagamento { get; set; }
+        FormaDePagamentoDomain FormaDePagamento { get; set; }
         decimal ValorTotal { get; set; }
     }
 }

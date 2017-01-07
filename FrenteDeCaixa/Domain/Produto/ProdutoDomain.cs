@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FrenteDeCaixa.Domain
+namespace FrenteDeCaixa.Domain.Produto
 {
     public class ProdutoDomain : IProduto
     {

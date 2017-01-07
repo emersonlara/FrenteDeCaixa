@@ -1,6 +1,7 @@
 ﻿using FrenteDeCaixa.Application.Service.Interface;
 using FrenteDeCaixa.Context;
 using FrenteDeCaixa.Domain;
+using FrenteDeCaixa.Domain.PerfilDeUsuario;
 using System;
 using System.Collections.Generic;
 using System.Linq;

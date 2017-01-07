@@ -1,4 +1,5 @@
 ﻿using FrenteDeCaixa.Domain;
+using FrenteDeCaixa.Domain.Produto;
 using FrenteDeCaixa.Resources;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace FrenteDeCaixa.Infrastructure.ContextConfigs
 {
-    public class ProdutoConfig : EntityTypeConfiguration<Produto>
+    public class ProdutoConfig : EntityTypeConfiguration<ProdutoDomain>
     {
         public ProdutoConfig()
         {

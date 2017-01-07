@@ -87,10 +87,16 @@
     <Compile Include="Domain\PerfilDeUsuario\Builder\IPerfilDeUsuarioBuilder.cs" />
     <Compile Include="Domain\PerfilDeUsuario\Builder\PerfilDeUsuarioBuilder.cs" />
     <Compile Include="Domain\PerfilDeUsuario\IPerfilDeUsuario.cs" />
-    <Compile Include="Domain\Interface\IProduto.cs" />
-    <Compile Include="Domain\Interface\IUsuario.cs" />
-    <Compile Include="Domain\Interface\IVenda.cs" />
-    <Compile Include="Domain\Venda.cs" />
+    <Compile Include="Domain\Produto\Builder\IProdutoBuilder.cs" />
+    <Compile Include="Domain\Produto\Builder\ProdutoBuilder.cs" />
+    <Compile Include="Domain\Produto\IProduto.cs" />
+    <Compile Include="Domain\Usuario\Builder\IUsuarioBuilder.cs" />
+    <Compile Include="Domain\Usuario\Builder\UsuarioBuilder.cs" />
+    <Compile Include="Domain\Usuario\IUsuario.cs" />
+    <Compile Include="Domain\Venda\Builder\IVendaBuilder.cs" />
+    <Compile Include="Domain\Venda\Builder\VendaBuilder.cs" />
+    <Compile Include="Domain\Venda\IVenda.cs" />
+    <Compile Include="Domain\Venda\VendaDomain.cs" />
     <Compile Include="Infrastructure\ContextConfigs\FormaDePagamentoConfig.cs" />
     <Compile Include="Infrastructure\ContextConfigs\ItemVendaConfig.cs" />
     <Compile Include="Infrastructure\ContextConfigs\PerfilDeUsuarioConfig.cs" />
@@ -132,8 +138,8 @@
     <Compile Include="Domain\FormaDePagamento\FormaDePagamentoDomain.cs" />
     <Compile Include="Domain\ItemVenda\ItemVendaDomain.cs" />
     <Compile Include="Domain\PerfilDeUsuario\PerfilDeUsuarioDomain.cs" />
-    <Compile Include="Domain\Produto.cs" />
-    <Compile Include="Domain\Usuario.cs" />
+    <Compile Include="Domain\Produto\ProdutoDomain.cs" />
+    <Compile Include="Domain\Usuario\UsuarioDomain.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>

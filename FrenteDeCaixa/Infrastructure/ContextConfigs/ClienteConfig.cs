@@ -18,8 +18,8 @@ namespace FrenteDeCaixa.Infrastructure.ContextConfigs
             ToTable(Strings.ClienteDB);
 
             Property(x => x.Nome).IsRequired();
-            Property(x => x.DocumentoDeIdentificacao).IsRequired();
             Property(x => x.Tipo).IsRequired();
+            HasRequired(x => x.DocumentoDeIdentificacao);
         }
     }
 }

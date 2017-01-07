@@ -1,4 +1,6 @@
-﻿using System;
+﻿using FrenteDeCaixa.Domain.Produto;
+using FrenteDeCaixa.Domain.Venda;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,9 +12,9 @@ namespace FrenteDeCaixa.Domain.ItemVenda
     {
         Guid Id { get; set; }
         Guid? VendaId { get; set; }
-        Venda Venda { get; set; }
+        VendaDomain Venda { get; set; }
         Guid? ProdutoId { get; set; }
-        Produto Produto { get; set; }
+        ProdutoDomain Produto { get; set; }
         int Quantidade { get; set; }
     }
 }

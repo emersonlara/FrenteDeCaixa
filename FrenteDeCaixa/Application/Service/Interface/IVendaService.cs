@@ -1,4 +1,5 @@
 ﻿using FrenteDeCaixa.Domain;
+using FrenteDeCaixa.Domain.Venda;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +10,9 @@ namespace FrenteDeCaixa.Application.Service.Interface
 {
     interface IVendaService
     {
-        void Salvar(Venda venda);
-        void Alterar(Venda venda);
-        void Excluir(Venda venda);
-        List<Venda> Listar();
+        void Salvar(VendaDomain venda);
+        void Alterar(VendaDomain venda);
+        void Excluir(VendaDomain venda);
+        List<VendaDomain> Listar();
     }
 }

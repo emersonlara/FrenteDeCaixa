@@ -1,4 +1,5 @@
 ﻿using FrenteDeCaixa.Domain;
+using FrenteDeCaixa.Domain.ItemVenda;
 using FrenteDeCaixa.Resources;
 using System;
 using System.Collections.Generic;

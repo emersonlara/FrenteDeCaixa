@@ -1,6 +1,7 @@
 ﻿using FrenteDeCaixa.Application.Service.Interface;
 using FrenteDeCaixa.Context;
 using FrenteDeCaixa.Domain;
+using FrenteDeCaixa.Domain.Produto;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,15 +19,15 @@ namespace FrenteDeCaixa.Application.Service
             Banco = new EntidadesContext();
         }
 
-        public void Salvar(Produto produto)
+        public void Salvar(ProdutoDomain produto)
         {
             Banco.Produtos.Add(produto);
             Banco.SaveChanges();
         }
 
-        public void Alterar(Produto produto)
+        public void Alterar(ProdutoDomain produto)
         {
-            Produto produtoAux = Banco.Produtos
+            ProdutoDomain produtoAux = Banco.Produtos
                 .Where(x => x.Id == produto.Id).First();
             produtoAux.Nome = produto.Nome;
             produtoAux.FornecedorId = produto.FornecedorId;
@@ -36,13 +37,13 @@ namespace FrenteDeCaixa.Application.Service
             Banco.SaveChanges();
         }
 
-        public void Excluir(Produto produto)
+        public void Excluir(ProdutoDomain produto)
         {
-            Banco.Set<Produto>().Remove(produto);
+            Banco.Set<ProdutoDomain>().Remove(produto);
             Banco.SaveChanges();
         }
 
-        public List<Produto> Listar()
+        public List<ProdutoDomain> Listar()
         {
             return (from c in Banco.Produtos select c).ToList();
         }
