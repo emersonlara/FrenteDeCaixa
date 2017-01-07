@@ -9,9 +9,9 @@ namespace FrenteDeCaixa.Application.Service.Interface
 {
     interface IUsuarioService
     {
-        void Salvar(Usuario usuario);
-        void Alterar(Usuario usuario);
-        void Excluir(Usuario usuario);
-        List<Usuario> Listar();
+        void Salvar(UsuarioDomain usuario);
+        void Alterar(UsuarioDomain usuario);
+        void Excluir(UsuarioDomain usuario);
+        List<UsuarioDomain> Listar();
     }
 }

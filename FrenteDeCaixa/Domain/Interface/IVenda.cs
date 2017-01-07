@@ -11,7 +11,7 @@ namespace FrenteDeCaixa.Domain.PerfilDeUsuario
     {
         Guid Id { get; set; }
         Guid? UsuarioId { get; set; }
-        Usuario Usuario { get; set; }
+        UsuarioDomain Usuario { get; set; }
         Guid? ClienteId { get; set; }
         ClienteDomain Cliente { get; set; }
         Guid? FormaDePagamentoId { get; set; }

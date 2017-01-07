@@ -1,10 +1,11 @@
-﻿using System;
+﻿using FrenteDeCaixa.Domain.PerfilDeUsuario;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FrenteDeCaixa.Domain.PerfilDeUsuario
+namespace FrenteDeCaixa.Domain.Usuario
 {
     interface IUsuario
     {

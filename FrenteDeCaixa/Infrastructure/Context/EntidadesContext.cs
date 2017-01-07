@@ -11,12 +11,12 @@ namespace FrenteDeCaixa.Context
 {
     class EntidadesContext : DbContext
     {
-        public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<UsuarioDomain> Usuarios { get; set; }
         public DbSet<FormaDePagamento> FormasDePagamentos { get; set; }
         public DbSet<PerfilDeUsuarioDomain> PerfisDeUsuarios { get; set; }
         public DbSet<ClienteDomain> Clientes { get; set; }
         public DbSet<Venda> Vendas { get; set; }
         public DbSet<ItemVendaDomain> ItensVendas { get; set; }
-        public DbSet<Produto> Produtos { get; set; }
+        public DbSet<ProdutoDomain> Produtos { get; set; }
     }
 }

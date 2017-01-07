@@ -18,7 +18,7 @@ namespace FrenteDeCaixa.Migrations
         protected override void Seed(FrenteDeCaixa.Context.EntidadesContext context)
         {
             UsuarioService usuarioService = new UsuarioService();
-            Usuario usuario = new Usuario()
+            UsuarioDomain usuario = new UsuarioDomain()
             {
                 Id = Guid.NewGuid(),
                 Login = "jfrode",

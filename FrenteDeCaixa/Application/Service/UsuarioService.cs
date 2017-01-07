@@ -20,15 +20,15 @@ namespace FrenteDeCaixa.Application.Service
             Banco = new EntidadesContext();
         }
 
-        public void Salvar(Usuario usuario)
+        public void Salvar(UsuarioDomain usuario)
         {
             Banco.Usuarios.Add(usuario);
             Banco.SaveChanges();
         }
 
-        public void Alterar(Usuario usuario)
+        public void Alterar(UsuarioDomain usuario)
         {
-            Usuario usuarioAux = Banco.Usuarios.Where(x => x.Id == usuario.Id).First();
+            UsuarioDomain usuarioAux = Banco.Usuarios.Where(x => x.Id == usuario.Id).First();
             usuarioAux.Login = usuario.Login;
             usuarioAux.Senha = usuario.Senha;
             usuarioAux.Nome  = usuario.Nome;
@@ -37,13 +37,13 @@ namespace FrenteDeCaixa.Application.Service
             Banco.SaveChanges();
         }
 
-        public void Excluir(Usuario usuario)
+        public void Excluir(UsuarioDomain usuario)
         {
-            Banco.Set<Usuario>().Remove(usuario);
+            Banco.Set<UsuarioDomain>().Remove(usuario);
             Banco.SaveChanges();
         }
 
-        public List<Usuario> Listar()
+        public List<UsuarioDomain> Listar()
         {
             return (from c in Banco.Usuarios select c).ToList();
         }

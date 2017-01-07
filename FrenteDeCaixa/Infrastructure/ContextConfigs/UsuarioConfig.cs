@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace FrenteDeCaixa.Infrastructure.ContextConfigs
 {
-    public class UsuarioConfig : EntityTypeConfiguration<Usuario>
+    public class UsuarioConfig : EntityTypeConfiguration<UsuarioDomain>
     {
         public UsuarioConfig()
         {

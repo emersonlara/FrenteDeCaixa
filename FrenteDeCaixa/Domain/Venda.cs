@@ -13,7 +13,7 @@ namespace FrenteDeCaixa.Domain
     {
         public Guid Id { get; set; }
         public Guid? UsuarioId { get; set; }
-        public Usuario Usuario { get; set; }
+        public UsuarioDomain Usuario { get; set; }
         public Guid? ClienteId { get; set; }
         public ClienteDomain Cliente { get; set; }
         public Guid? FormaDePagamentoId { get; set; }
