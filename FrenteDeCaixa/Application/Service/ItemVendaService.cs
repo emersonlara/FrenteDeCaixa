@@ -18,15 +18,15 @@ namespace FrenteDeCaixa.Application.Service
             Banco = new EntidadesContext();
         }
 
-        public void Salvar(ItemVenda item)
+        public void Salvar(ItemVendaDomain item)
         {
             Banco.ItensVendas.Add(item);
             Banco.SaveChanges();
         }
 
-        public void Alterar(ItemVenda item)
+        public void Alterar(ItemVendaDomain item)
         {
-            ItemVenda itemAux = Banco.ItensVendas
+            ItemVendaDomain itemAux = Banco.ItensVendas
                 .Where(x => x.Id == x.Id).First();
             itemAux.ProdutoId = item.ProdutoId;
             itemAux.Produto = item.Produto;
@@ -34,13 +34,13 @@ namespace FrenteDeCaixa.Application.Service
             Banco.SaveChanges();
         }
 
-        public void Excluir(ItemVenda item)
+        public void Excluir(ItemVendaDomain item)
         {
-            Banco.Set<ItemVenda>().Remove(item);
+            Banco.Set<ItemVendaDomain>().Remove(item);
             Banco.SaveChanges();
         }
 
-        public List<ItemVenda> Listar()
+        public List<ItemVendaDomain> Listar()
         {
             return (from c in Banco.ItensVendas select c).ToList();
         }

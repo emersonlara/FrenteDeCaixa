@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace FrenteDeCaixa.Infrastructure.ContextConfigs
 {
-    public class ItemVendaConfig : EntityTypeConfiguration<ItemVenda>
+    public class ItemVendaConfig : EntityTypeConfiguration<ItemVendaDomain>
     {
         public ItemVendaConfig()
         {

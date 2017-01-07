@@ -10,9 +10,9 @@ namespace FrenteDeCaixa.Application.Service.Interface
 {
     interface IItemVendaService
     {
-        void Salvar(ItemVenda itemVenda);
-        void Alterar(ItemVenda itemVenda);
-        void Excluir(ItemVenda itemVenda);
-        List<ItemVenda> Listar();
+        void Salvar(ItemVendaDomain itemVenda);
+        void Alterar(ItemVendaDomain itemVenda);
+        void Excluir(ItemVendaDomain itemVenda);
+        List<ItemVendaDomain> Listar();
     }
 }

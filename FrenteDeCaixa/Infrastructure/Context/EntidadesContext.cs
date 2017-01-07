@@ -16,7 +16,7 @@ namespace FrenteDeCaixa.Context
         public DbSet<PerfilDeUsuario> PerfisDeUsuarios { get; set; }
         public DbSet<ClienteDomain> Clientes { get; set; }
         public DbSet<Venda> Vendas { get; set; }
-        public DbSet<ItemVenda> ItensVendas { get; set; }
+        public DbSet<ItemVendaDomain> ItensVendas { get; set; }
         public DbSet<Produto> Produtos { get; set; }
     }
 }
