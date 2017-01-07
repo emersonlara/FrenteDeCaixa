@@ -1,4 +1,4 @@
-﻿using FrenteDeCaixa.Domain.Interface;
+﻿using FrenteDeCaixa.Domain.PerfilDeUsuario;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +14,6 @@ namespace FrenteDeCaixa.Domain
         public string Senha { get; set; }
         public string Nome { get; set; }
         public Guid? PerfilId { get; set; }
-        public PerfilDeUsuario Perfil { get; set; }
+        public PerfilDeUsuarioDomain Perfil { get; set; }
     }
 }

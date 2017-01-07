@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using FrenteDeCaixa.Domain.Interface;
+using FrenteDeCaixa.Domain.PerfilDeUsuario;
 namespace FrenteDeCaixa.Application.Service
 {
     class ItemVendaService : IItemVendaService

@@ -35,7 +35,7 @@ namespace FrenteDeCaixa.Presentation.PerfilWindows
         {
             if (!textBoxNome.Text.Equals(null))
             {
-                PerfilDeUsuario perfil = new PerfilDeUsuario()
+                PerfilDeUsuarioDomain perfil = new PerfilDeUsuarioDomain()
                 {
                     Id = Guid.NewGuid(),
                     Nome = textBoxNome.Text

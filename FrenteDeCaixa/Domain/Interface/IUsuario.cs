@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FrenteDeCaixa.Domain.Interface
+namespace FrenteDeCaixa.Domain.PerfilDeUsuario
 {
     interface IUsuario
     {
@@ -13,6 +13,6 @@ namespace FrenteDeCaixa.Domain.Interface
         string Senha { get; set; }
         string Nome { get; set; }
         Guid? PerfilId { get; set; }
-        PerfilDeUsuario Perfil { get; set; }
+        PerfilDeUsuarioDomain Perfil { get; set; }
     }
 }

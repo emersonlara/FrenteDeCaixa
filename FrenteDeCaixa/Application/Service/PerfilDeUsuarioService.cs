@@ -18,27 +18,27 @@ namespace FrenteDeCaixa.Application.Service
             Banco = new EntidadesContext();
         }
 
-        public void Salvar(PerfilDeUsuario perfil)
+        public void Salvar(PerfilDeUsuarioDomain perfil)
         {
             Banco.PerfisDeUsuarios.Add(perfil);
             Banco.SaveChanges();
         }
 
-        public void Alterar(PerfilDeUsuario perfil)
+        public void Alterar(PerfilDeUsuarioDomain perfil)
         {
-            PerfilDeUsuario perfilAux = Banco.PerfisDeUsuarios
+            PerfilDeUsuarioDomain perfilAux = Banco.PerfisDeUsuarios
                 .Where(x => x.Id == perfil.Id).First();
             perfilAux.Nome = perfil.Nome;
             Banco.SaveChanges();
         }
 
-        public void Excluir(PerfilDeUsuario perfil)
+        public void Excluir(PerfilDeUsuarioDomain perfil)
         {
-            Banco.Set<PerfilDeUsuario>().Remove(perfil);
+            Banco.Set<PerfilDeUsuarioDomain>().Remove(perfil);
             Banco.SaveChanges();
         }
 
-        public List<PerfilDeUsuario> Listar()
+        public List<PerfilDeUsuarioDomain> Listar()
         {
             return (from c in Banco.PerfisDeUsuarios select c).ToList();
         }

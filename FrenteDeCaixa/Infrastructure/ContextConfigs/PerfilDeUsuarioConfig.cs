@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace FrenteDeCaixa.Infrastructure.ContextConfigs
 {
-    public class PerfilDeUsuarioConfig : EntityTypeConfiguration<PerfilDeUsuario>
+    public class PerfilDeUsuarioConfig : EntityTypeConfiguration<PerfilDeUsuarioDomain>
     {
         public PerfilDeUsuarioConfig()
         {

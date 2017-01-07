@@ -1,5 +1,5 @@
 ﻿using FrenteDeCaixa.Domain;
-using FrenteDeCaixa.Domain.Interface;
+using FrenteDeCaixa.Domain.PerfilDeUsuario;
 using System;
 using System.Collections.Generic;
 using System.Linq;

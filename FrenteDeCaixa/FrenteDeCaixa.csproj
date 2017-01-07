@@ -84,7 +84,9 @@
     <Compile Include="Domain\ItemVenda\Builder\IItemVendaBuilder.cs" />
     <Compile Include="Domain\ItemVenda\Builder\ItemVendaBuilder.cs" />
     <Compile Include="Domain\ItemVenda\IItemVenda.cs" />
-    <Compile Include="Domain\Interface\IPerfilDeUsuario.cs" />
+    <Compile Include="Domain\PerfilDeUsuario\Builder\IPerfilDeUsuarioBuilder.cs" />
+    <Compile Include="Domain\PerfilDeUsuario\Builder\PerfilDeUsuarioBuilder.cs" />
+    <Compile Include="Domain\PerfilDeUsuario\IPerfilDeUsuario.cs" />
     <Compile Include="Domain\Interface\IProduto.cs" />
     <Compile Include="Domain\Interface\IUsuario.cs" />
     <Compile Include="Domain\Interface\IVenda.cs" />
@@ -129,7 +131,7 @@
     <Compile Include="Domain\Cliente\ClienteDomain.cs" />
     <Compile Include="Domain\FormaDePagamento\FormaDePagamentoDomain.cs" />
     <Compile Include="Domain\ItemVenda\ItemVendaDomain.cs" />
-    <Compile Include="Domain\PerfilDeUsuario.cs" />
+    <Compile Include="Domain\PerfilDeUsuario\PerfilDeUsuarioDomain.cs" />
     <Compile Include="Domain\Produto.cs" />
     <Compile Include="Domain\Usuario.cs" />
     <Compile Include="App.xaml.cs">
