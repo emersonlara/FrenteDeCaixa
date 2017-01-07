@@ -1,4 +1,5 @@
 ﻿using FrenteDeCaixa.Domain;
+using FrenteDeCaixa.Domain.Cliente;
 using FrenteDeCaixa.Domain.Interface;
 using System;
 using System.Collections.Generic;
@@ -14,7 +15,7 @@ namespace FrenteDeCaixa.Domain
         public Guid? UsuarioId { get; set; }
         public Usuario Usuario { get; set; }
         public Guid? ClienteId { get; set; }
-        public Cliente Cliente { get; set; }
+        public ClienteDomain Cliente { get; set; }
         public Guid? FormaDePagamentoId { get; set; }
         public FormaDePagamento FormaDePagamento { get; set; }
         public decimal ValorTotal { get; set; }

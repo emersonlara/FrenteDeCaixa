@@ -1,4 +1,5 @@
 ﻿using FrenteDeCaixa.Domain;
+using FrenteDeCaixa.Domain.Cliente;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -13,7 +14,7 @@ namespace FrenteDeCaixa.Context
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<FormaDePagamento> FormasDePagamentos { get; set; }
         public DbSet<PerfilDeUsuario> PerfisDeUsuarios { get; set; }
-        public DbSet<Cliente> Clientes { get; set; }
+        public DbSet<ClienteDomain> Clientes { get; set; }
         public DbSet<Venda> Vendas { get; set; }
         public DbSet<ItemVenda> ItensVendas { get; set; }
         public DbSet<Produto> Produtos { get; set; }

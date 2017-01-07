@@ -1,4 +1,5 @@
 ﻿using FrenteDeCaixa.Domain;
+using FrenteDeCaixa.Domain.Cliente;
 using FrenteDeCaixa.Resources;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace FrenteDeCaixa.Infrastructure.ContextConfigs
 {
-    public class ClienteConfig : EntityTypeConfiguration<Cliente>
+    public class ClienteConfig : EntityTypeConfiguration<ClienteDomain>
     {
         public ClienteConfig()
         {
@@ -17,7 +18,7 @@ namespace FrenteDeCaixa.Infrastructure.ContextConfigs
             ToTable(Strings.ClienteDB);
 
             Property(x => x.Nome).IsRequired();
-            Property(x => x.CpfCnpj).IsRequired();
+            Property(x => x.DocumentoDeIdentificacao).IsRequired();
             Property(x => x.Tipo).IsRequired();
         }
     }

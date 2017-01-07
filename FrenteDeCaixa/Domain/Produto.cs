@@ -1,4 +1,5 @@
-﻿using FrenteDeCaixa.Domain.Interface;
+﻿using FrenteDeCaixa.Domain.Cliente;
+using FrenteDeCaixa.Domain.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +13,7 @@ namespace FrenteDeCaixa.Domain
         public Guid Id { get; set; }
         public string Nome { get; set; }
         public Guid? FornecedorId { get; set; }
-        public Cliente Fornecedor { get; set; }
+        public ClienteDomain Fornecedor { get; set; }
         public int Quantidade { get; set; }
         public decimal Preco { get; set; }
     }

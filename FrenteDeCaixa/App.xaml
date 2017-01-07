@@ -3,11 +3,5 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:FrenteDeCaixa"
              StartupUri="Presentation/LoginWindow.xaml">
-    <Application.Resources>
-        <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="FrenteDeCaixa.Presentation.Style.Theme;component/Theme.xaml"/>
-            </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
-    </Application.Resources>
+
 </Application>

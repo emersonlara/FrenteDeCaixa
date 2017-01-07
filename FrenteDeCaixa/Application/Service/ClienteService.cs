@@ -1,6 +1,7 @@
 ﻿using FrenteDeCaixa.Application.Service.Interface;
 using FrenteDeCaixa.Context;
 using FrenteDeCaixa.Domain;
+using FrenteDeCaixa.Domain.Cliente;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,29 +19,29 @@ namespace FrenteDeCaixa.Application.Service
             Banco = new EntidadesContext();
         }
 
-        public void Salvar(Cliente cliente)
+        public void Salvar(ClienteDomain cliente)
         {
             Banco.Clientes.Add(cliente);
             Banco.SaveChanges();
         }
 
-        public void Alterar(Cliente cliente)
+        public void Alterar(ClienteDomain cliente)
         {
-            Cliente clienteAux = Banco.Clientes
+            ClienteDomain clienteAux = Banco.Clientes
                 .Where(x => x.Id == cliente.Id).First();
             clienteAux.Nome = cliente.Nome;
-            clienteAux.CpfCnpj = cliente.CpfCnpj;
+            clienteAux.DocumentoDeIdentificacao = cliente.DocumentoDeIdentificacao;
             clienteAux.Tipo = cliente.Tipo;
             Banco.SaveChanges();
         }
 
-        public void Excluir(Cliente cliente)
+        public void Excluir(ClienteDomain cliente)
         {
-            Banco.Set<Cliente>().Remove(cliente);
+            Banco.Set<ClienteDomain>().Remove(cliente);
             Banco.SaveChanges();
         }
 
-        public List<Cliente> Listar()
+        public List<ClienteDomain> Listar()
         {
             return (from c in Banco.Clientes select c).ToList();
         }
