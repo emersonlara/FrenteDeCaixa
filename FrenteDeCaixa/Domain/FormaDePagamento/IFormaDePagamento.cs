@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FrenteDeCaixa.Domain.Interface
+namespace FrenteDeCaixa.Domain.FormaDePagamento
 {
     interface IFormaDePagamento
     {

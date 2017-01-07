@@ -75,7 +75,10 @@
     <Compile Include="Domain\Cliente\Builder\ClienteBuilder.cs" />
     <Compile Include="Domain\Cliente\Builder\IClienteBuilder.cs" />
     <Compile Include="Domain\Cliente\ICliente.cs" />
-    <Compile Include="Domain\Interface\IFormaDePagamento.cs" />
+    <Compile Include="Domain\DocumentoDeIdentificacao\Cnpj.cs" />
+    <Compile Include="Domain\DocumentoDeIdentificacao\Cpf.cs" />
+    <Compile Include="Domain\DocumentoDeIdentificacao\DocumentoDeIdentificacaoDomain.cs" />
+    <Compile Include="Domain\FormaDePagamento\IFormaDePagamento.cs" />
     <Compile Include="Domain\Interface\IItemVenda.cs" />
     <Compile Include="Domain\Interface\IPerfilDeUsuario.cs" />
     <Compile Include="Domain\Interface\IProduto.cs" />
@@ -120,7 +123,7 @@
     <Compile Include="Infrastructure\Context\EntidadesContext.cs" />
     <Compile Include="Infrastructure\Migrations\Configuration.cs" />
     <Compile Include="Domain\Cliente\ClienteDomain.cs" />
-    <Compile Include="Domain\FormaDePagamento.cs" />
+    <Compile Include="Domain\FormaDePagamento\FormaDePagamento.cs" />
     <Compile Include="Domain\ItemVenda.cs" />
     <Compile Include="Domain\PerfilDeUsuario.cs" />
     <Compile Include="Domain\Produto.cs" />
@@ -173,6 +176,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Domain\FormaDePagamento\Builder\" />
     <Folder Include="Presentation\Style\" />
   </ItemGroup>
   <ItemGroup>

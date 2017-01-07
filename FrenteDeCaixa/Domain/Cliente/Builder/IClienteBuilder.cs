@@ -14,5 +14,6 @@ namespace FrenteDeCaixa.Domain.Cliente.Builder
         ClienteBuilder WithDocumentoDeIdentificacao(
             DocumentoDeIdentificacaoDomain DocumentoDeIdentificacao);
         ClienteBuilder WithTipo(string Tipo);
+        ClienteDomain Build();
     }
 }
