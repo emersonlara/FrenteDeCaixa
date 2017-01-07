@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace FrenteDeCaixa.Domain
 {
-    public class Produto : IProduto
+    public class ProdutoDomain : IProduto
     {
         public Guid Id { get; set; }
         public string Nome { get; set; }
@@ -16,5 +16,15 @@ namespace FrenteDeCaixa.Domain
         public ClienteDomain Fornecedor { get; set; }
         public int Quantidade { get; set; }
         public decimal Preco { get; set; }
+
+        public ProdutoDomain(Guid Id, string Nome, Guid? FornecedorId, ClienteDomain Fornecedor, int Quantidade, decimal Preco)
+        {
+            this.Id = Id;
+            this.Nome = Nome;
+            this.FornecedorId = FornecedorId;
+            this.Fornecedor = Fornecedor;
+            this.Quantidade = Quantidade;
+            this.Preco = Preco;
+        }
     }
 }
