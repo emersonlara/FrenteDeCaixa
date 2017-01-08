@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FrenteDeCaixa.Domain.PerfilDeUsuario.Builder
 {
@@ -11,15 +7,15 @@ namespace FrenteDeCaixa.Domain.PerfilDeUsuario.Builder
         public Guid Id { get; set; }
         public string Nome { get; set; }
 
-        public PerfilDeUsuarioBuilder WithId(Guid Id)
+        public PerfilDeUsuarioBuilder WithId(Guid id)
         {
-            this.Id = Id;
+            Id = id;
             return this;
         }
 
-        public PerfilDeUsuarioBuilder WithNome(string Nome)
+        public PerfilDeUsuarioBuilder WithNome(string nome)
         {
-            this.Nome = Nome;
+            Nome = nome;
             return this;
         }
 

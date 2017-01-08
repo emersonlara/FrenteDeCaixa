@@ -1,12 +1,6 @@
-﻿using FrenteDeCaixa.Domain;
-using FrenteDeCaixa.Domain.Venda;
+﻿using FrenteDeCaixa.Domain.Venda;
 using FrenteDeCaixa.Resources;
-using System;
-using System.Collections.Generic;
 using System.Data.Entity.ModelConfiguration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FrenteDeCaixa.Infrastructure.ContextConfigs
 {

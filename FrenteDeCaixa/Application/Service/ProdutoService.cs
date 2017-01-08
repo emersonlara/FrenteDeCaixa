@@ -1,18 +1,14 @@
 ﻿using FrenteDeCaixa.Application.Service.Interface;
-using FrenteDeCaixa.Context;
-using FrenteDeCaixa.Domain;
 using FrenteDeCaixa.Domain.Produto;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using FrenteDeCaixa.Infrastructure.Context;
 
 namespace FrenteDeCaixa.Application.Service
 {
     class ProdutoService : IProdutosService
     {
-        private EntidadesContext Banco;
+        private EntidadesContext Banco { get; }
 
         public ProdutoService()
         {
@@ -27,8 +23,7 @@ namespace FrenteDeCaixa.Application.Service
 
         public void Alterar(ProdutoDomain produto)
         {
-            ProdutoDomain produtoAux = Banco.Produtos
-                .Where(x => x.Id == produto.Id).First();
+            var produtoAux = Banco.Produtos.First(x => x.Id == produto.Id);
             produtoAux.Nome = produto.Nome;
             produtoAux.FornecedorId = produto.FornecedorId;
             produtoAux.Fornecedor = produto.Fornecedor;

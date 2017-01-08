@@ -1,4 +1,4 @@
-﻿
+﻿using System.Data.Entity;
 using FrenteDeCaixa.Domain.Cliente;
 using FrenteDeCaixa.Domain.FormaDePagamento;
 using FrenteDeCaixa.Domain.ItemVenda;
@@ -6,14 +6,8 @@ using FrenteDeCaixa.Domain.PerfilDeUsuario;
 using FrenteDeCaixa.Domain.Produto;
 using FrenteDeCaixa.Domain.Usuario;
 using FrenteDeCaixa.Domain.Venda;
-using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace FrenteDeCaixa.Context
+namespace FrenteDeCaixa.Infrastructure.Context
 {
     class EntidadesContext : DbContext
     {

@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FrenteDeCaixa.Domain.FormaDePagamento.Builder
 {
@@ -11,15 +7,15 @@ namespace FrenteDeCaixa.Domain.FormaDePagamento.Builder
         public Guid Id { get; set; }
         public string Nome { get; set; }
 
-        public FormaDePagamentoBuilder WithId(Guid Id)
+        public FormaDePagamentoBuilder WithId(Guid id)
         {
-            this.Id = Id;
+            Id = id;
             return this;
         }
 
-        public FormaDePagamentoBuilder WithNome(string Nome)
+        public FormaDePagamentoBuilder WithNome(string nome)
         {
-            this.Nome = Nome;
+            Nome = nome;
             return this;
         }
 

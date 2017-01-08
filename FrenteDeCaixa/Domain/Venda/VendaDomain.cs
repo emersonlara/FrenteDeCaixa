@@ -2,10 +2,6 @@
 using FrenteDeCaixa.Domain.FormaDePagamento;
 using FrenteDeCaixa.Domain.Usuario;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FrenteDeCaixa.Domain.Venda
 {
@@ -20,17 +16,17 @@ namespace FrenteDeCaixa.Domain.Venda
         public FormaDePagamentoDomain FormaDePagamento { get; set; }
         public decimal ValorTotal { get; set; }
 
-        public VendaDomain(Guid Id, Guid? UsuarioId, UsuarioDomain Usuario, Guid? ClienteId, 
-            ClienteDomain Cliente, Guid? FormaDePagamentoId, FormaDePagamentoDomain FormaDePagamento, decimal ValorTotal)
+        public VendaDomain(Guid id, Guid? usuarioId, UsuarioDomain usuario, Guid? clienteId, 
+            ClienteDomain cliente, Guid? formaDePagamentoId, FormaDePagamentoDomain formaDePagamento, decimal valorTotal)
         {
-            this.Id = Id;
-            this.UsuarioId = UsuarioId;
-            this.Usuario = Usuario;
-            this.ClienteId = ClienteId;
-            this.Cliente = Cliente;
-            this.FormaDePagamentoId = FormaDePagamentoId;
-            this.FormaDePagamento = FormaDePagamento;
-            this.ValorTotal = ValorTotal;
+            Id = id;
+            UsuarioId = usuarioId;
+            Usuario = usuario;
+            ClienteId = clienteId;
+            Cliente = cliente;
+            FormaDePagamentoId = formaDePagamentoId;
+            FormaDePagamento = formaDePagamento;
+            ValorTotal = valorTotal;
         }
     }
 }

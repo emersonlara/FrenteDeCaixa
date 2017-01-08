@@ -1,14 +1,14 @@
 ﻿using FrenteDeCaixa.Application.Service.Interface;
-using FrenteDeCaixa.Context;
 using System.Collections.Generic;
 using System.Linq;
 using FrenteDeCaixa.Domain.ItemVenda;
+using FrenteDeCaixa.Infrastructure.Context;
 
 namespace FrenteDeCaixa.Application.Service
 {
     class ItemVendaService : IItemVendaService
     {
-        private EntidadesContext Banco;
+        private EntidadesContext Banco { get; }
 
         public ItemVendaService()
         {
@@ -23,8 +23,7 @@ namespace FrenteDeCaixa.Application.Service
 
         public void Alterar(ItemVendaDomain item)
         {
-            ItemVendaDomain itemAux = Banco.ItensVendas
-                .Where(x => x.Id == x.Id).First();
+            var itemAux = Banco.ItensVendas.First(x => x.Id == item.Id);
             itemAux.ProdutoId = item.ProdutoId;
             itemAux.Produto = item.Produto;
             itemAux.Quantidade = item.Quantidade;

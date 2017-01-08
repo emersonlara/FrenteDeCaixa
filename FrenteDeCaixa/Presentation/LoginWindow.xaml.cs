@@ -1,5 +1,4 @@
-﻿using FrenteDeCaixa.Context;
-using FrenteDeCaixa.Domain;
+﻿using FrenteDeCaixa.Domain;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using FrenteDeCaixa.Infrastructure.Context;
 
 namespace FrenteDeCaixa.Presentation
 {

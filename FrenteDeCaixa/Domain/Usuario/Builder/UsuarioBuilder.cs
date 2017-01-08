@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using FrenteDeCaixa.Domain.PerfilDeUsuario;
 
 namespace FrenteDeCaixa.Domain.Usuario.Builder
@@ -16,39 +12,39 @@ namespace FrenteDeCaixa.Domain.Usuario.Builder
         public Guid? PerfilId { get; set; }
         public PerfilDeUsuarioDomain Perfil { get; set; }
 
-        public UsuarioBuilder WithId(Guid Id)
+        public UsuarioBuilder WithId(Guid id)
         {
-            this.Id = Id;
+            Id = id;
             return this;
         }
 
-        public UsuarioBuilder WithLogin(string Login)
+        public UsuarioBuilder WithLogin(string login)
         {
-            this.Login = Login;
+            Login = login;
             return this;
         }
 
-        public UsuarioBuilder WithSenha(string Senha)
+        public UsuarioBuilder WithSenha(string senha)
         {
-            this.Senha = Senha;
+            Senha = senha;
             return this;
         }
 
-        public UsuarioBuilder WithNome(string Nome)
+        public UsuarioBuilder WithNome(string nome)
         {
-            this.Nome = Nome;
+            Nome = nome;
             return this;
         }
 
-        public UsuarioBuilder WithPerfilId(Guid? PerfilId)
+        public UsuarioBuilder WithPerfilId(Guid? perfilId)
         {
-            this.PerfilId = PerfilId;
+            PerfilId = perfilId;
             return this;
         }
 
-        public UsuarioBuilder WithPerfil(PerfilDeUsuarioDomain Perfil)
+        public UsuarioBuilder WithPerfil(PerfilDeUsuarioDomain perfil)
         {
-            this.Perfil = Perfil;
+            Perfil = perfil;
             return this;
         }
 

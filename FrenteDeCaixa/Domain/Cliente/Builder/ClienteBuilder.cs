@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using FrenteDeCaixa.Domain.DocumentoDeIdentificacao;
 
 namespace FrenteDeCaixa.Domain.Cliente.Builder
@@ -14,27 +10,27 @@ namespace FrenteDeCaixa.Domain.Cliente.Builder
         public DocumentoDeIdentificacaoDomain DocumentoDeIdentificacao { get; set; }
         public string Tipo { get; set; }
 
-        public ClienteBuilder WithId(Guid Id)
+        public ClienteBuilder WithId(Guid id)
         {
-            this.Id = Id;
+            Id = id;
             return this;
         }
 
-        public ClienteBuilder WithNome(string Nome)
+        public ClienteBuilder WithNome(string nome)
         {
-            this.Nome = Nome;
+            Nome = nome;
             return this;
         }
 
-        public ClienteBuilder WithDocumentoDeIdentificacao(DocumentoDeIdentificacaoDomain DocumentoDeIdentificacao)
+        public ClienteBuilder WithDocumentoDeIdentificacao(DocumentoDeIdentificacaoDomain documentoDeIdentificacao)
         {
-            this.DocumentoDeIdentificacao = DocumentoDeIdentificacao;
+            DocumentoDeIdentificacao = documentoDeIdentificacao;
             return this;
         }
 
-        public ClienteBuilder WithTipo(string Tipo)
+        public ClienteBuilder WithTipo(string tipo)
         {
-            this.Tipo = Tipo;
+            Tipo = tipo;
             return this;
         }
 

@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using FrenteDeCaixa.Domain.Cliente;
 
 namespace FrenteDeCaixa.Domain.Produto.Builder
@@ -16,39 +12,39 @@ namespace FrenteDeCaixa.Domain.Produto.Builder
         public int Quantidade { get; set; }
         public decimal Preco { get; set; }
 
-        public ProdutoBuilder WithId(Guid Id)
+        public ProdutoBuilder WithId(Guid id)
         {
-            this.Id = Id;
+            Id = id;
             return this;
         }
 
-        public ProdutoBuilder WithNome(string Nome)
+        public ProdutoBuilder WithNome(string nome)
         {
-            this.Nome = Nome;
+            Nome = nome;
             return this;
         }
 
-        public ProdutoBuilder WithFornecedorId(Guid? FornecedorId)
+        public ProdutoBuilder WithFornecedorId(Guid? fornecedorId)
         {
-            this.FornecedorId = FornecedorId;
+            FornecedorId = fornecedorId;
             return this;
         }
 
-        public ProdutoBuilder WithFornecedor(ClienteDomain Fornecedor)
+        public ProdutoBuilder WithFornecedor(ClienteDomain fornecedor)
         {
-            this.Fornecedor = Fornecedor;
+            Fornecedor = fornecedor;
             return this;
         }
 
-        public ProdutoBuilder WithQuantidade(int Quantidade)
+        public ProdutoBuilder WithQuantidade(int quantidade)
         {
-            this.Quantidade = Quantidade;
+            Quantidade = quantidade;
             return this;
         }
 
-        public ProdutoBuilder WithPreco(decimal Preco)
+        public ProdutoBuilder WithPreco(decimal preco)
         {
-            this.Preco = Preco;
+            Preco = preco;
             return this;
         }
 

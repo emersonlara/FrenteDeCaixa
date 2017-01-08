@@ -13,7 +13,7 @@
             <RowDefinition Height="191*"/>
             <RowDefinition Height="30*"/>
         </Grid.RowDefinitions>
-        <DataGrid x:Name="dataGridPerfis" Grid.Row="1" Margin="5" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin"/>
+        <DataGrid x:Name="DataGridPerfis" Grid.Row="1" Margin="5" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin"/>
         <Grid Grid.Row="2" Margin="0" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="166*"/>
@@ -21,17 +21,17 @@
                 <ColumnDefinition Width="90*"/>
                 <ColumnDefinition Width="90*"/>
             </Grid.ColumnDefinitions>
-            <Button x:Name="buttonExcluir" Content="{x:Static p:Strings.ButtonExcluir}" Grid.Column="3" BorderThickness="1" Margin="5"/>
-            <Button x:Name="buttonAlterar" Content="{x:Static p:Strings.ButtonAlterar}" Grid.Column="2" Margin="5"/>
-            <Button x:Name="buttonNovo" Content="{x:Static p:Strings.ButtonNovo}" Grid.Column="1" Margin="5" Click="buttonNovo_Click"/>
+            <Button x:Name="ButtonExcluir" Content="{x:Static p:Strings.ButtonExcluir}" Grid.Column="3" BorderThickness="1" Margin="5"/>
+            <Button x:Name="ButtonAlterar" Content="{x:Static p:Strings.ButtonAlterar}" Grid.Column="2" Margin="5"/>
+            <Button x:Name="ButtonNovo" Content="{x:Static p:Strings.ButtonNovo}" Grid.Column="1" Margin="5" Click="buttonNovo_Click"/>
         </Grid>
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="343*"/>
                 <ColumnDefinition Width="90*"/>
             </Grid.ColumnDefinitions>
-            <Button x:Name="buttonBuscar" Content="{x:Static p:Strings.ButtonBuscar}" Grid.Column="1" Margin="5"/>
-            <TextBox x:Name="textBoxBuscar" TextWrapping="Wrap" Margin="5"/>
+            <Button x:Name="ButtonBuscar" Content="{x:Static p:Strings.ButtonBuscar}" Grid.Column="1" Margin="5"/>
+            <TextBox x:Name="TextBoxBuscar" TextWrapping="Wrap" Margin="5"/>
         </Grid>
     </Grid>
 </Window>

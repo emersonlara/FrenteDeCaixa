@@ -1,10 +1,5 @@
-﻿using FrenteDeCaixa.Domain;
-using FrenteDeCaixa.Domain.Venda;
-using System;
+﻿using FrenteDeCaixa.Domain.Venda;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FrenteDeCaixa.Application.Service.Interface
 {

@@ -32,7 +32,7 @@ namespace FrenteDeCaixa.Presentation
         public void AtualizaTabela()
         {
             PerfilDeUsuarioService perfilService = new PerfilDeUsuarioService();
-            dataGridPerfis.ItemsSource = perfilService.Listar();
+            DataGridPerfis.ItemsSource = perfilService.Listar();
         }
 
         private void buttonNovo_Click(object sender, RoutedEventArgs e)

@@ -1,18 +1,14 @@
 ﻿using FrenteDeCaixa.Application.Service.Interface;
-using FrenteDeCaixa.Context;
-using FrenteDeCaixa.Domain;
 using FrenteDeCaixa.Domain.Cliente;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using FrenteDeCaixa.Infrastructure.Context;
 
 namespace FrenteDeCaixa.Application.Service
 {
     class ClienteService : IClienteService
     {
-        private EntidadesContext Banco;
+        private EntidadesContext Banco { get; }
 
         public ClienteService()
         {
@@ -27,8 +23,7 @@ namespace FrenteDeCaixa.Application.Service
 
         public void Alterar(ClienteDomain cliente)
         {
-            ClienteDomain clienteAux = Banco.Clientes
-                .Where(x => x.Id == cliente.Id).First();
+            var clienteAux = Banco.Clientes.First(x => x.Id == cliente.Id);
             clienteAux.Nome = cliente.Nome;
             clienteAux.DocumentoDeIdentificacao = cliente.DocumentoDeIdentificacao;
             clienteAux.Tipo = cliente.Tipo;

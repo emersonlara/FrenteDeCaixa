@@ -1,27 +1,21 @@
-namespace FrenteDeCaixa.Migrations
-{
-    using Application;
-    using Application.Service;
-    using Domain;
-    using Domain.Usuario;
-    using Domain.Usuario.Builder;
-    using System;
-    using System.Data.Entity;
-    using System.Data.Entity.Migrations;
-    using System.Linq;
+using System.Data.Entity.Migrations;
+using FrenteDeCaixa.Infrastructure.Context;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<FrenteDeCaixa.Context.EntidadesContext>
+namespace FrenteDeCaixa.Infrastructure.Migrations
+{
+    internal sealed class Configuration : DbMigrationsConfiguration<EntidadesContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(FrenteDeCaixa.Context.EntidadesContext context)
+        protected override void Seed(EntidadesContext context)
         {
+            /*
             UsuarioService usuarioService = new UsuarioService();
             UsuarioBuilder usuarioBuilder = new UsuarioBuilder();
-            /*
+            
             UsuarioDomain usuario = new UsuarioDomain()
             {
                 Id = Guid.NewGuid(),

@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FrenteDeCaixa.Domain.FormaDePagamento
 {
@@ -11,10 +7,10 @@ namespace FrenteDeCaixa.Domain.FormaDePagamento
         public Guid Id { get; set; }
         public string Nome { get; set; }
 
-        public FormaDePagamentoDomain(Guid Id, string Nome)
+        public FormaDePagamentoDomain(Guid id, string nome)
         {
-            this.Id = Id;
-            this.Nome = Nome;
+            Id = id;
+            Nome = nome;
         }
     }
 }

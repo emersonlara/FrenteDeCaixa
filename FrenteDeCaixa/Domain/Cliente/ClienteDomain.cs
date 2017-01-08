@@ -1,9 +1,5 @@
 ﻿using FrenteDeCaixa.Domain.DocumentoDeIdentificacao;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FrenteDeCaixa.Domain.Cliente
 {
@@ -14,12 +10,12 @@ namespace FrenteDeCaixa.Domain.Cliente
         public DocumentoDeIdentificacaoDomain DocumentoDeIdentificacao { get; set; }
         public string Tipo { get; set; }
 
-        public ClienteDomain(Guid Id, string Nome, DocumentoDeIdentificacaoDomain DocumentoDeIdentificacao, string Tipo)
+        public ClienteDomain(Guid id, string nome, DocumentoDeIdentificacaoDomain documentoDeIdentificacao, string tipo)
         {
-            this.Id = Id;
-            this.Nome = Nome;
-            this.DocumentoDeIdentificacao = DocumentoDeIdentificacao;
-            this.Tipo = Tipo;
+            Id = id;
+            Nome = nome;
+            DocumentoDeIdentificacao = documentoDeIdentificacao;
+            Tipo = tipo;
         }
     }
 }

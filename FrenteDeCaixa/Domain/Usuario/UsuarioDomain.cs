@@ -1,9 +1,5 @@
 ﻿using FrenteDeCaixa.Domain.PerfilDeUsuario;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FrenteDeCaixa.Domain.Usuario
 {
@@ -16,14 +12,14 @@ namespace FrenteDeCaixa.Domain.Usuario
         public Guid? PerfilId { get; set; }
         public PerfilDeUsuarioDomain Perfil { get; set; }
 
-        public UsuarioDomain(Guid Id, string Login, string Senha, string Nome, Guid? PerfilId, PerfilDeUsuarioDomain Perfil)
+        public UsuarioDomain(Guid id, string login, string senha, string nome, Guid? perfilId, PerfilDeUsuarioDomain perfil)
         {
-            this.Id = Id;
-            this.Login = Login;
-            this.Senha = Senha;
-            this.Nome = Nome;
-            this.PerfilId = PerfilId;
-            this.Perfil = Perfil;
+            Id = id;
+            Login = login;
+            Senha = senha;
+            Nome = nome;
+            PerfilId = perfilId;
+            Perfil = perfil;
         }
     }
 }

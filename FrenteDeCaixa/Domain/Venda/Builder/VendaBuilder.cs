@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using FrenteDeCaixa.Domain.Cliente;
 using FrenteDeCaixa.Domain.FormaDePagamento;
 using FrenteDeCaixa.Domain.Usuario;
@@ -20,51 +16,51 @@ namespace FrenteDeCaixa.Domain.Venda.Builder
         public FormaDePagamentoDomain FormaDePagamento { get; set; }
         public decimal ValorTotal { get; set; }
 
-        public VendaBuilder WithId(Guid Id)
+        public VendaBuilder WithId(Guid id)
         {
-            this.Id = Id;
+            Id = id;
             return this;
         }
 
-        public VendaBuilder WithUsuarioId(Guid? UsuarioId)
+        public VendaBuilder WithUsuarioId(Guid? usuarioId)
         {
-            this.UsuarioId = UsuarioId;
+            UsuarioId = usuarioId;
             return this;
         }
 
-        public VendaBuilder WithUsuario(UsuarioDomain Usuario)
+        public VendaBuilder WithUsuario(UsuarioDomain usuario)
         {
-            this.Usuario = Usuario;
+            Usuario = usuario;
             return this;
         }
 
-        public VendaBuilder WithClienteId(Guid? ClienteId)
+        public VendaBuilder WithClienteId(Guid? clienteId)
         {
-            this.ClienteId = ClienteId;
+            ClienteId = clienteId;
             return this;
         }
 
-        public VendaBuilder WithCliente(ClienteDomain Cliente)
+        public VendaBuilder WithCliente(ClienteDomain cliente)
         {
-            this.Cliente = Cliente;
+            Cliente = cliente;
             return this;
         }
 
-        public VendaBuilder WithFormaDePagamentoId(Guid? FormaDePagamentoId)
+        public VendaBuilder WithFormaDePagamentoId(Guid? formaDePagamentoId)
         {
-            this.FormaDePagamentoId = FormaDePagamentoId;
+            FormaDePagamentoId = formaDePagamentoId;
             return this;
         }
 
-        public VendaBuilder WithFormaDePagamento(FormaDePagamentoDomain FormaDePagamento)
+        public VendaBuilder WithFormaDePagamento(FormaDePagamentoDomain formaDePagamento)
         {
-            this.FormaDePagamento = FormaDePagamento;
+            FormaDePagamento = formaDePagamento;
             return this;
         }
 
-        public VendaBuilder WithValorTotal(decimal ValorTotal)
+        public VendaBuilder WithValorTotal(decimal valorTotal)
         {
-            this.ValorTotal = ValorTotal;
+            ValorTotal = valorTotal;
             return this;
         }
 

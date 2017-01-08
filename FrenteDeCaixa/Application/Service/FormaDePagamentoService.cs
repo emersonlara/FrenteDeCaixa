@@ -1,19 +1,14 @@
 ﻿using FrenteDeCaixa.Application.Service.Interface;
-using FrenteDeCaixa.Context;
-using FrenteDeCaixa.Domain;
 using FrenteDeCaixa.Domain.FormaDePagamento;
-using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using FrenteDeCaixa.Infrastructure.Context;
 
 namespace FrenteDeCaixa.Application.Service
 {
     class FormaDePagamentoService : IFormaDePagamentoService
     {
-        private EntidadesContext Banco { get; set; }
+        private EntidadesContext Banco { get; }
 
         public FormaDePagamentoService()
         {
@@ -28,8 +23,7 @@ namespace FrenteDeCaixa.Application.Service
 
         public void Alterar(FormaDePagamentoDomain formaDePagamento)
         {
-            FormaDePagamentoDomain pagamentoAux = Banco.FormasDePagamentos
-                .Where(x => x.Id == formaDePagamento.Id).First();
+            FormaDePagamentoDomain pagamentoAux = Banco.FormasDePagamentos.First(x => x.Id == formaDePagamento.Id);
             pagamentoAux.Nome = formaDePagamento.Nome;
             Banco.SaveChanges();
         }
