@@ -3,7 +3,7 @@ using System;
 
 namespace FrenteDeCaixa.Domain.Cliente.Builder
 {
-    interface IClienteBuilder
+    public interface IClienteBuilder
     {
         ClienteBuilder WithId(Guid id);
         ClienteBuilder WithNome(string nome);

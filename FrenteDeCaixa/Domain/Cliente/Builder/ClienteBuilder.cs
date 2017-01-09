@@ -3,7 +3,7 @@ using FrenteDeCaixa.Domain.DocumentoDeIdentificacao;
 
 namespace FrenteDeCaixa.Domain.Cliente.Builder
 {
-    class ClienteBuilder : IClienteBuilder
+    public class ClienteBuilder : IClienteBuilder
     {
         public Guid Id { get; set; }
         public string Nome { get; set; }
