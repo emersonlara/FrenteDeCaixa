@@ -1,10 +1,13 @@
-﻿using FrenteDeCaixa.Application.Service.Interface;
-using FrenteDeCaixa.Domain.Cliente;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using FrenteDeCaixa.Application.Service.Cliente.Dto;
+using FrenteDeCaixa.Application.Service.Interface;
+using FrenteDeCaixa.Domain.Cliente;
+using FrenteDeCaixa.Domain.Cliente.Builder;
 using FrenteDeCaixa.Infrastructure.Context;
 
-namespace FrenteDeCaixa.Application.Service
+namespace FrenteDeCaixa.Application.Service.Cliente
 {
     class ClienteService : IClienteService
     {
@@ -15,10 +18,33 @@ namespace FrenteDeCaixa.Application.Service
             Banco = new EntidadesContext();
         }
 
-        public void Salvar(ClienteDomain cliente)
+        public IClienteDto Salvar(ClienteDto clienteDto)
         {
+            if (clienteDto == null)
+            {
+                return new ClienteDto();
+            }
+
+            // TODO aqui chamar o validator do Dto
+
+            var cliente = CriarParaSalvar(clienteDto);
+
             Banco.Clientes.Add(cliente);
             Banco.SaveChanges();
+
+            return clienteDto;
+        }
+
+        private ClienteDomain CriarParaSalvar(ClienteDto clienteDto)
+        {
+            var cliente = new ClienteBuilder()
+                .WithNome(clienteDto.Nome)
+                .WithDocumentoDeIdentificacao(clienteDto.DocumentoDeIdentificacao)
+                .WithId(Guid.NewGuid())
+                .WithTipo(clienteDto.Tipo)
+                .Build();
+
+            return cliente;
         }
 
         public void Alterar(ClienteDomain cliente)

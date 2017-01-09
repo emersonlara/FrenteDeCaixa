@@ -64,7 +64,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Application\Service\Interface\IClienteService.cs" />
+    <Compile Include="Application\Service\Cliente\Dto\ClienteDto.cs" />
+    <Compile Include="Application\Service\Cliente\Dto\IClienteDto.cs" />
+    <Compile Include="Application\Service\Cliente\IClienteService.cs" />
     <Compile Include="Application\Service\Interface\IFormaDePagamentoService.cs" />
     <Compile Include="Application\Service\Interface\IItemVendaService.cs" />
     <Compile Include="Application\Service\Interface\IPerfilDeUsuarioService.cs" />
@@ -72,8 +74,8 @@
     <Compile Include="Application\Service\Interface\IUsuarioService.cs" />
     <Compile Include="Application\Service\Interface\IVendaService.cs" />
     <Compile Include="Application\Service\VendaService.cs" />
-    <Compile Include="Domain\Cliente\Builder\ClienteBuilder.cs" />
-    <Compile Include="Domain\Cliente\Builder\IClienteBuilder.cs" />
+    <Compile Include="Domain\Cliente\Factory\ClienteBuilder.cs" />
+    <Compile Include="Domain\Cliente\Factory\IClienteBuilder.cs" />
     <Compile Include="Domain\Cliente\ICliente.cs" />
     <Compile Include="Domain\DocumentoDeIdentificacao\Cnpj.cs" />
     <Compile Include="Domain\DocumentoDeIdentificacao\Cpf.cs" />
@@ -123,7 +125,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Application\Service\ClienteService.cs" />
+    <Compile Include="Application\Service\Cliente\ClienteService.cs" />
     <Compile Include="Application\Service\FormaDePagamentoService.cs" />
     <Compile Include="Application\Service\ItemVendaService.cs" />
     <Compile Include="Application\Service\PerfilDeUsuarioService.cs" />
