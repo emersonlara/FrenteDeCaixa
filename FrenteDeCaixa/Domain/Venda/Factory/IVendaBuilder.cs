@@ -1,9 +1,9 @@
-﻿using FrenteDeCaixa.Domain.Cliente;
+﻿using System;
+using FrenteDeCaixa.Domain.Cliente;
 using FrenteDeCaixa.Domain.FormaDePagamento;
 using FrenteDeCaixa.Domain.Usuario;
-using System;
 
-namespace FrenteDeCaixa.Domain.Venda.Builder
+namespace FrenteDeCaixa.Domain.Venda.Factory
 {
     interface IVendaBuilder
     {

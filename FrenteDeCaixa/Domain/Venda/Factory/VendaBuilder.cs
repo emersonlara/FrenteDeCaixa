@@ -3,7 +3,7 @@ using FrenteDeCaixa.Domain.Cliente;
 using FrenteDeCaixa.Domain.FormaDePagamento;
 using FrenteDeCaixa.Domain.Usuario;
 
-namespace FrenteDeCaixa.Domain.Venda.Builder
+namespace FrenteDeCaixa.Domain.Venda.Factory
 {
     class VendaBuilder : IVendaBuilder
     {

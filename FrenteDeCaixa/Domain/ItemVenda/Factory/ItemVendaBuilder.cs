@@ -1,8 +1,8 @@
-﻿using FrenteDeCaixa.Domain.Produto;
+﻿using System;
+using FrenteDeCaixa.Domain.Produto;
 using FrenteDeCaixa.Domain.Venda;
-using System;
 
-namespace FrenteDeCaixa.Domain.ItemVenda.Builder
+namespace FrenteDeCaixa.Domain.ItemVenda.Factory
 {
     class ItemVendaBuilder : IItemVendaBuilder
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using FrenteDeCaixa.Domain.Cliente;
 
-namespace FrenteDeCaixa.Domain.Produto.Builder
+namespace FrenteDeCaixa.Domain.Produto.Factory
 {
     class ProdutoBuilder : IProdutoBuilder
     {

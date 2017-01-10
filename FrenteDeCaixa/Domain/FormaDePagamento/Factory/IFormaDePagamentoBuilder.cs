@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace FrenteDeCaixa.Domain.FormaDePagamento.Builder
+namespace FrenteDeCaixa.Domain.FormaDePagamento.Factory
 {
     interface IFormaDePagamentoBuilder
     {

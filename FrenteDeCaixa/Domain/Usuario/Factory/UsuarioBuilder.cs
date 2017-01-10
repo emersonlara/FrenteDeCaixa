@@ -1,7 +1,7 @@
 ﻿using System;
 using FrenteDeCaixa.Domain.PerfilDeUsuario;
 
-namespace FrenteDeCaixa.Domain.Usuario.Builder
+namespace FrenteDeCaixa.Domain.Usuario.Factory
 {
     class UsuarioBuilder : IUsuarioBuilder
     {

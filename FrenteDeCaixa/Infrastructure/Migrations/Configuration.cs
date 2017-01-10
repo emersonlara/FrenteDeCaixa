@@ -1,8 +1,8 @@
 using System;
 using System.Data.Entity.Migrations;
 using System.Linq;
-using FrenteDeCaixa.Domain.PerfilDeUsuario.Builder;
-using FrenteDeCaixa.Domain.Usuario.Builder;
+using FrenteDeCaixa.Domain.PerfilDeUsuario.Factory;
+using FrenteDeCaixa.Domain.Usuario.Factory;
 using FrenteDeCaixa.Infrastructure.Context;
 
 namespace FrenteDeCaixa.Infrastructure.Migrations

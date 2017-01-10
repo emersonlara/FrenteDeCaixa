@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace FrenteDeCaixa.Domain.PerfilDeUsuario.Builder
+namespace FrenteDeCaixa.Domain.PerfilDeUsuario.Factory
 {
     class PerfilDeUsuarioBuilder : IPerfilDeUsuarioBuilder
     {
