@@ -3,7 +3,7 @@ using System;
 
 namespace FrenteDeCaixa.Domain.Produto
 {
-    interface IProduto
+    public interface IProduto
     {
         Guid Id { get; set; }
         string Nome { get; set; }

@@ -1,10 +1,12 @@
-﻿using FrenteDeCaixa.Application.Service.Interface;
-using FrenteDeCaixa.Domain.Venda;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using FrenteDeCaixa.Application.Service.Venda.Dto;
+using FrenteDeCaixa.Domain.Venda;
+using FrenteDeCaixa.Domain.Venda.Factory;
 using FrenteDeCaixa.Infrastructure.Context;
 
-namespace FrenteDeCaixa.Application.Service
+namespace FrenteDeCaixa.Application.Service.Venda
 {
     class VendaService : IVendaService
     {
@@ -15,10 +17,18 @@ namespace FrenteDeCaixa.Application.Service
             Banco = new EntidadesContext();
         }
 
-        public void Salvar(VendaDomain venda)
+        public IVendaDto Salvar(VendaDto vendaDto)
         {
+            if (vendaDto == null)
+            {
+                return new VendaDto();
+            }
+            var venda = CriarParaSalvar(vendaDto);
+
             Banco.Vendas.Add(venda);
             Banco.SaveChanges();
+
+            return vendaDto;
         }
 
         public void Alterar(VendaDomain venda)
@@ -42,6 +52,22 @@ namespace FrenteDeCaixa.Application.Service
         public List<VendaDomain> Listar()
         {
             return (from c in Banco.Vendas select c).ToList();
+        }
+
+        public VendaDomain CriarParaSalvar(VendaDto vendaDto)
+        {
+            var venda = new VendaBuilder()
+                .WithId(Guid.NewGuid())
+                .WithCliente(vendaDto.Cliente)
+                .WithClienteId(vendaDto.ClienteId)
+                .WithFormaDePagamento(vendaDto.FormaDePagamento)
+                .WithFormaDePagamentoId(vendaDto.FormaDePagamentoId)
+                .WithUsuario(vendaDto.Usuario)
+                .WithUsuarioId(vendaDto.UsuarioId)
+                .WithValorTotal(vendaDto.ValorTotal)
+                .Build();
+
+            return venda;
         }
     }
 }

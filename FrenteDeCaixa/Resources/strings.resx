@@ -203,7 +203,7 @@
   </data>
   <data name="TextBoxCliente" xml:space="preserve">
     <value>Cliente (F4)</value>
-    <comment>TextBox de busca de cliente</comment>
+    <comment>TextBox de busca de clienteDto</comment>
   </data>
   <data name="TextBoxProduto" xml:space="preserve">
     <value>Produto (F2)</value>

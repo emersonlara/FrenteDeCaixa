@@ -1,10 +1,13 @@
-﻿using FrenteDeCaixa.Application.Service.Interface;
-using FrenteDeCaixa.Domain.FormaDePagamento;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using FrenteDeCaixa.Application.Service.Cliente.Dto;
+using FrenteDeCaixa.Application.Service.FormaDePagamento.Dto;
+using FrenteDeCaixa.Domain.FormaDePagamento;
+using FrenteDeCaixa.Domain.FormaDePagamento.Factory;
 using FrenteDeCaixa.Infrastructure.Context;
 
-namespace FrenteDeCaixa.Application.Service
+namespace FrenteDeCaixa.Application.Service.FormaDePagamento
 {
     class FormaDePagamentoService : IFormaDePagamentoService
     {
@@ -15,10 +18,21 @@ namespace FrenteDeCaixa.Application.Service
             Banco = new EntidadesContext();
         }
 
-        public void Salvar(FormaDePagamentoDomain formaDePagamento)
+        public IFormaDePagamentoDto Salvar(FormaDePagamentoDto formaDePagamentoDto)
         {
+            if (formaDePagamentoDto == null)
+            {
+                return new FormaDePagamentoDto();
+            }
+
+            // TODO aqui chamar o validator do Dto
+
+            var formaDePagamento = CriarParaSalvar(formaDePagamentoDto);
+
             Banco.FormasDePagamentos.Add(formaDePagamento);
             Banco.SaveChanges();
+
+            return formaDePagamentoDto;
         }
 
         public void Alterar(FormaDePagamentoDomain formaDePagamento)
@@ -37,6 +51,16 @@ namespace FrenteDeCaixa.Application.Service
         public List<FormaDePagamentoDomain> Listar()
         {
             return (from c in Banco.FormasDePagamentos select c).ToList();
+        }
+
+        public FormaDePagamentoDomain CriarParaSalvar(FormaDePagamentoDto formaDePagamentoDto)
+        {
+            var formaDePagamento = new FormaDePagamentoBuilder()
+                .WithId(Guid.NewGuid())
+                .WithNome(formaDePagamentoDto.Nome)
+                .Build();
+
+            return formaDePagamento;
         }
     }
 }

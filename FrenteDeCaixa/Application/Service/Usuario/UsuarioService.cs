@@ -1,10 +1,12 @@
-﻿using FrenteDeCaixa.Application.Service.Interface;
-using FrenteDeCaixa.Domain.Usuario;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using FrenteDeCaixa.Application.Service.Usuario.Dto;
+using FrenteDeCaixa.Domain.Usuario;
+using FrenteDeCaixa.Domain.Usuario.Factory;
 using FrenteDeCaixa.Infrastructure.Context;
 
-namespace FrenteDeCaixa.Application.Service
+namespace FrenteDeCaixa.Application.Service.Usuario
 {
     class UsuarioService : IUsuarioService
     {
@@ -15,10 +17,18 @@ namespace FrenteDeCaixa.Application.Service
             Banco = new EntidadesContext();
         }
 
-        public void Salvar(UsuarioDomain usuario)
+        public IUsuarioDto Salvar(UsuarioDto usuarioDto)
         {
+            if (usuarioDto == null)
+            {
+                return new UsuarioDto();
+            }
+            var usuario = CriarParaSalvar(usuarioDto);
+
             Banco.Usuarios.Add(usuario);
             Banco.SaveChanges();
+
+            return usuarioDto;
         }
 
         public void Alterar(UsuarioDomain usuario)
@@ -41,6 +51,20 @@ namespace FrenteDeCaixa.Application.Service
         public List<UsuarioDomain> Listar()
         {
             return (from c in Banco.Usuarios select c).ToList();
+        }
+
+        public UsuarioDomain CriarParaSalvar(UsuarioDto usuarioDto)
+        {
+            var usuario = new UsuarioBuilder()
+                .WithId(Guid.NewGuid())
+                .WithLogin(usuarioDto.Login)
+                .WithNome(usuarioDto.Nome)
+                .WithPerfil(usuarioDto.Perfil)
+                .WithPerfilId(usuarioDto.PerfilId)
+                .WithSenha(usuarioDto.Senha)
+                .Build();
+
+            return usuario;
         }
     }
 }

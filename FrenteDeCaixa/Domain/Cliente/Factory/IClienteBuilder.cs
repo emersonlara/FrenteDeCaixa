@@ -1,7 +1,7 @@
-﻿using FrenteDeCaixa.Domain.DocumentoDeIdentificacao;
-using System;
+﻿using System;
+using FrenteDeCaixa.Domain.DocumentoDeIdentificacao;
 
-namespace FrenteDeCaixa.Domain.Cliente.Builder
+namespace FrenteDeCaixa.Domain.Cliente.Factory
 {
     public interface IClienteBuilder
     {

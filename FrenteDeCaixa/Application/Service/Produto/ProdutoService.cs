@@ -1,12 +1,14 @@
-﻿using FrenteDeCaixa.Application.Service.Interface;
-using FrenteDeCaixa.Domain.Produto;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using FrenteDeCaixa.Application.Service.Produto.Dto;
+using FrenteDeCaixa.Domain.Produto;
+using FrenteDeCaixa.Domain.Produto.Factory;
 using FrenteDeCaixa.Infrastructure.Context;
 
-namespace FrenteDeCaixa.Application.Service
+namespace FrenteDeCaixa.Application.Service.Produto
 {
-    class ProdutoService : IProdutosService
+    class ProdutoService : IProdutoService
     {
         private EntidadesContext Banco { get; }
 
@@ -15,10 +17,19 @@ namespace FrenteDeCaixa.Application.Service
             Banco = new EntidadesContext();
         }
 
-        public void Salvar(ProdutoDomain produto)
+        public IProdutoDto Salvar(ProdutoDto produtoDto)
         {
+            if (produtoDto == null)
+            {
+                return new ProdutoDto();
+            }
+
+            var produto = CriarParaSalvar(produtoDto);
+
             Banco.Produtos.Add(produto);
             Banco.SaveChanges();
+
+            return produtoDto;
         }
 
         public void Alterar(ProdutoDomain produto)
@@ -41,6 +52,20 @@ namespace FrenteDeCaixa.Application.Service
         public List<ProdutoDomain> Listar()
         {
             return (from c in Banco.Produtos select c).ToList();
+        }
+
+        public ProdutoDomain CriarParaSalvar(ProdutoDto produtoDto)
+        {
+            var produto = new ProdutoBuilder()
+                .WithId(Guid.NewGuid())
+                .WithNome(produtoDto.Nome)
+                .WithFornecedor(produtoDto.Fornecedor)
+                .WithFornecedorId(produtoDto.FornecedorId)
+                .WithPreco(produtoDto.Preco)
+                .WithQuantidade(produtoDto.Quantidade)
+                .Build();
+
+            return produto;
         }
     }
 }

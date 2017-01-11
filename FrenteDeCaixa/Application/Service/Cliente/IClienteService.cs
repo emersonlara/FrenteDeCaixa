@@ -7,7 +7,7 @@ namespace FrenteDeCaixa.Application.Service.Cliente
     interface IClienteService
     {
         IClienteDto Salvar(ClienteDto clienteDto);
-        void Alterar(ClienteDomain cliente);
+        IClienteDto Alterar(ClienteDto clienteDto);
         void Excluir(ClienteDomain cliente);
         List<ClienteDomain> Listar();
     }
