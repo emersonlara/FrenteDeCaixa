@@ -5,64 +5,104 @@ using FrenteDeCaixa.Application.Service.Cliente.Dto;
 using FrenteDeCaixa.Domain.Cliente;
 using FrenteDeCaixa.Domain.Cliente.Factory;
 using FrenteDeCaixa.Infrastructure.Context;
+using System.Data.Entity;
 
 namespace FrenteDeCaixa.Application.Service.Cliente
 {
-    class ClienteService : IClienteService
+    public class ClienteService : IClienteService
     {
-        private EntidadesContext Banco { get; }
+        private EntidadesContext Context { get; }
 
         public ClienteService()
         {
-            Banco = new EntidadesContext();
+            Context = new EntidadesContext();
         }
 
         public IClienteDto Salvar(ClienteDto clienteDto)
         {
-            if (clienteDto == null)
-            {
-                return new ClienteDto();
-            }
+            if (clienteDto == null) return new ClienteDto();
 
             // TODO aqui chamar o validator do Dto
 
             var cliente = CriarParaSalvar(clienteDto);
 
-            Banco.Clientes.Add(cliente);
-            Banco.SaveChanges();
+            Context.Clientes.Add(cliente);
+            Context.SaveChanges();
 
             return clienteDto;
         }
 
         public IClienteDto Alterar(ClienteDto clienteDto)
         {
-            var clienteAux = Banco.Clientes.First(x => x.Id == clienteDto.Id);
-            clienteAux.Nome = clienteDto.Nome;
-            clienteAux.DocumentoDeIdentificacao = clienteDto.DocumentoDeIdentificacao;
-            clienteAux.Tipo = clienteDto.Tipo;
-            Banco.SaveChanges();
+            if (clienteDto == null) return new ClienteDto();
+
+            // TODO aqui chamar o validator do Dto
+
+            var cliente = CriarParaAlterar(clienteDto);
+
+            // TODO valida a instancia
+
+            Context.Entry(cliente).State = EntityState.Modified;
+            Context.SaveChanges();
 
             return clienteDto;
         }
 
-        public void Excluir(ClienteDomain cliente)
+        public IClienteDto Excluir(ClienteDto clienteDto)
         {
-            Banco.Set<ClienteDomain>().Remove(cliente);
-            Banco.SaveChanges();
+            if (clienteDto == null) return new ClienteDto();
+
+            var cliente = CriarParaExcluir(clienteDto);
+
+            Context.Entry(cliente).State = EntityState.Modified;
+            Context.SaveChanges();
+
+            return clienteDto;
         }
 
         public List<ClienteDomain> Listar()
         {
-            return (from c in Banco.Clientes select c).ToList();
+            return (from c in Context.Clientes select c).ToList();
         }
 
-        private ClienteDomain CriarParaSalvar(ClienteDto clienteDto)
+        public ClienteDomain CriarParaSalvar(ClienteDto clienteDto)
         {
             var cliente = new ClienteBuilder()
                 .WithNome(clienteDto.Nome)
                 .WithDocumentoDeIdentificacao(clienteDto.DocumentoDeIdentificacao)
                 .WithId(Guid.NewGuid())
                 .WithTipo(clienteDto.Tipo)
+                .WithExcluido(false)
+                .Build();
+
+            return cliente;
+        }
+
+        public ClienteDomain CriarParaAlterar(ClienteDto clienteDto)
+        {
+            var _cliente = Context.Clientes.FirstOrDefault(x => x.Id == clienteDto.Id);
+
+            var cliente = new ClienteBuilder()
+                .WithNome(_cliente.Nome)
+                .WithDocumentoDeIdentificacao(_cliente.DocumentoDeIdentificacao)
+                .WithId(_cliente.Id)
+                .WithTipo(_cliente.Tipo)
+                .WithExcluido(clienteDto.Excluido)
+                .Build();
+
+            return cliente;
+        }
+
+        public ClienteDomain CriarParaExcluir(ClienteDto clienteDto)
+        {
+            var _cliente = Context.Clientes.FirstOrDefault(x => x.Id == clienteDto.Id);
+
+            var cliente = new ClienteBuilder()
+                .WithNome(clienteDto.Nome)
+                .WithDocumentoDeIdentificacao(clienteDto.DocumentoDeIdentificacao)
+                .WithId(clienteDto.Id)
+                .WithTipo(clienteDto.Tipo)
+                .WithExcluido(true)
                 .Build();
 
             return cliente;

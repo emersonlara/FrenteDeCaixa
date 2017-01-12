@@ -10,6 +10,7 @@ namespace FrenteDeCaixa.Domain.Cliente.Factory
         ClienteBuilder WithDocumentoDeIdentificacao(
             DocumentoDeIdentificacaoDomain documentoDeIdentificacao);
         ClienteBuilder WithTipo(string tipo);
+        ClienteBuilder WithExcluido(bool excluido);
         ClienteDomain Build();
     }
 }

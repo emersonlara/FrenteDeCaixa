@@ -9,6 +9,7 @@ namespace FrenteDeCaixa.Domain.Cliente.Factory
         public string Nome { get; set; }
         public DocumentoDeIdentificacaoDomain DocumentoDeIdentificacao { get; set; }
         public string Tipo { get; set; }
+        public bool Excluido { get; set; }
 
         public ClienteBuilder WithId(Guid id)
         {
@@ -34,9 +35,14 @@ namespace FrenteDeCaixa.Domain.Cliente.Factory
             return this;
         }
 
+        public ClienteBuilder WithExcluido(bool excluido)
+        {
+            Excluido = excluido;
+        }
+
         public ClienteDomain Build()
         {
-            return new ClienteDomain(Id, Nome, DocumentoDeIdentificacao, Tipo);
+            return new ClienteDomain(Id, Nome, DocumentoDeIdentificacao, Tipo, Excluido);
         }
     }
 }

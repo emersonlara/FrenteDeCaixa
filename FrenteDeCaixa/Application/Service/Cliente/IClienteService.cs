@@ -4,11 +4,13 @@ using FrenteDeCaixa.Domain.Cliente;
 
 namespace FrenteDeCaixa.Application.Service.Cliente
 {
-    interface IClienteService
+    public interface IClienteService
     {
         IClienteDto Salvar(ClienteDto clienteDto);
         IClienteDto Alterar(ClienteDto clienteDto);
-        void Excluir(ClienteDomain cliente);
+        IClienteDto Excluir(ClienteDto cliente);
         List<ClienteDomain> Listar();
+        ClienteDomain CriarParaSalvar(ClienteDto clienteDto);
+        ClienteDomain CriarParaAlterar(ClienteDto clienteDto);
     }
 }

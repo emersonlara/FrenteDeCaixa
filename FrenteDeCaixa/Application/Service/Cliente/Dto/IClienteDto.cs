@@ -1,5 +1,4 @@
 ﻿using System;
-using FrenteDeCaixa.Domain.Cliente;
 using FrenteDeCaixa.Domain.DocumentoDeIdentificacao;
 
 namespace FrenteDeCaixa.Application.Service.Cliente.Dto
@@ -10,6 +9,6 @@ namespace FrenteDeCaixa.Application.Service.Cliente.Dto
         string Nome { get; }
         DocumentoDeIdentificacaoDomain DocumentoDeIdentificacao { get; }
         string Tipo { get; }
-        ClienteDomain CriarParaSalvar(ClienteDto clienteDto);
+        bool Excluido { get; }
     }
 }
