@@ -3,7 +3,7 @@ using FrenteDeCaixa.Domain.Cliente;
 
 namespace FrenteDeCaixa.Domain.Produto.Factory
 {
-    class ProdutoBuilder : IProdutoBuilder
+    public class ProdutoBuilder : IProdutoBuilder
     {
         public Guid Id { get; set; }
         public string Nome { get; set; }
@@ -11,6 +11,7 @@ namespace FrenteDeCaixa.Domain.Produto.Factory
         public ClienteDomain Fornecedor { get; set; }
         public int Quantidade { get; set; }
         public decimal Preco { get; set; }
+        public bool Excluido { get; set; }
 
         public ProdutoBuilder WithId(Guid id)
         {
@@ -48,9 +49,15 @@ namespace FrenteDeCaixa.Domain.Produto.Factory
             return this;
         }
 
+        public ProdutoBuilder WithExcluido(bool excluido)
+        {
+            Excluido = excluido;
+            return this;
+        }
+
         public ProdutoDomain Build()
         {
-            return new ProdutoDomain(Id, Nome, FornecedorId, Fornecedor, Quantidade, Preco);
+            return new ProdutoDomain(Id, Nome, FornecedorId, Fornecedor, Quantidade, Preco, Excluido);
         }
     }
 }

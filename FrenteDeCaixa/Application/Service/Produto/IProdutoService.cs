@@ -4,12 +4,14 @@ using FrenteDeCaixa.Domain.Produto;
 
 namespace FrenteDeCaixa.Application.Service.Produto
 {
-    interface IProdutoService
+    public interface IProdutoService
     {
         IProdutoDto Salvar(ProdutoDto produto);
-        void Alterar(ProdutoDomain produto);
-        void Excluir(ProdutoDomain produto);
+        IProdutoDto Alterar(ProdutoDto produto);
+        IProdutoDto Excluir(ProdutoDto produto);
         List<ProdutoDomain> Listar();
         ProdutoDomain CriarParaSalvar(ProdutoDto produtoDto);
+        ProdutoDomain CriarParaAlterar(ProdutoDto produtoDto);
+        ProdutoDomain CriarParaExcluir(ProdutoDto produtoDto);
     }
 }

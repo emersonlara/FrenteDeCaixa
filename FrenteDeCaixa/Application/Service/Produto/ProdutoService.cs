@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using FrenteDeCaixa.Application.Service.Produto.Dto;
 using FrenteDeCaixa.Domain.Produto;
@@ -8,50 +9,54 @@ using FrenteDeCaixa.Infrastructure.Context;
 
 namespace FrenteDeCaixa.Application.Service.Produto
 {
-    class ProdutoService : IProdutoService
+    public class ProdutoService : IProdutoService
     {
-        private EntidadesContext Banco { get; }
+        private EntidadesContext Context { get; }
 
         public ProdutoService()
         {
-            Banco = new EntidadesContext();
+            Context = new EntidadesContext();
         }
 
         public IProdutoDto Salvar(ProdutoDto produtoDto)
         {
-            if (produtoDto == null)
-            {
-                return new ProdutoDto();
-            }
+            if (produtoDto == null) return new ProdutoDto();
 
             var produto = CriarParaSalvar(produtoDto);
 
-            Banco.Produtos.Add(produto);
-            Banco.SaveChanges();
+            Context.Produtos.Add(produto);
+            Context.SaveChanges();
 
             return produtoDto;
         }
 
-        public void Alterar(ProdutoDomain produto)
+        public IProdutoDto Alterar(ProdutoDto produtoDto)
         {
-            var produtoAux = Banco.Produtos.First(x => x.Id == produto.Id);
-            produtoAux.Nome = produto.Nome;
-            produtoAux.FornecedorId = produto.FornecedorId;
-            produtoAux.Fornecedor = produto.Fornecedor;
-            produtoAux.Quantidade = produto.Quantidade;
-            produtoAux.Preco = produto.Preco;
-            Banco.SaveChanges();
+            if (produtoDto == null) return new ProdutoDto();
+
+            var produto = CriarParaAlterar(produtoDto);
+
+            Context.Entry(produto).State = EntityState.Modified;
+            Context.SaveChanges();
+
+            return produtoDto;
         }
 
-        public void Excluir(ProdutoDomain produto)
+        public IProdutoDto Excluir(ProdutoDto produtoDto)
         {
-            Banco.Set<ProdutoDomain>().Remove(produto);
-            Banco.SaveChanges();
+            if (produtoDto == null) return new ProdutoDto();
+
+            var produto = CriarParaExcluir(produtoDto);
+
+            Context.Entry(produto).State = EntityState.Modified;
+            Context.SaveChanges();
+
+            return produtoDto;
         }
 
         public List<ProdutoDomain> Listar()
         {
-            return (from c in Banco.Produtos select c).ToList();
+            return (from c in Context.Produtos select c).ToList();
         }
 
         public ProdutoDomain CriarParaSalvar(ProdutoDto produtoDto)
@@ -63,6 +68,45 @@ namespace FrenteDeCaixa.Application.Service.Produto
                 .WithFornecedorId(produtoDto.FornecedorId)
                 .WithPreco(produtoDto.Preco)
                 .WithQuantidade(produtoDto.Quantidade)
+                .WithExcluido(false)
+                .Build();
+
+            return produto;
+        }
+
+        public ProdutoDomain CriarParaAlterar(ProdutoDto produtoDto)
+        {
+            var _produto = Context.Produtos.FirstOrDefault(x => x.Id == produtoDto.Id);
+
+            if (_produto == null) throw new ArgumentNullException(nameof(_produto));
+
+            var produto = new ProdutoBuilder()
+                .WithId(_produto.Id)
+                .WithFornecedor(_produto.Fornecedor)
+                .WithFornecedorId(_produto.FornecedorId)
+                .WithNome(_produto.Nome)
+                .WithPreco(_produto.Preco)
+                .WithQuantidade(_produto.Quantidade)
+                .WithExcluido(_produto.Excluido)
+                .Build();
+
+            return produto;
+        }
+
+        public ProdutoDomain CriarParaExcluir(ProdutoDto produtoDto)
+        {
+            var _produto = Context.Produtos.FirstOrDefault(x => x.Id == produtoDto.Id);
+
+            if (_produto == null) throw new ArgumentNullException(nameof(_produto));
+
+            var produto = new ProdutoBuilder()
+                .WithId(_produto.Id)
+                .WithFornecedor(_produto.Fornecedor)
+                .WithFornecedorId(_produto.FornecedorId)
+                .WithNome(_produto.Nome)
+                .WithPreco(_produto.Preco)
+                .WithQuantidade(_produto.Quantidade)
+                .WithExcluido(true)
                 .Build();
 
             return produto;

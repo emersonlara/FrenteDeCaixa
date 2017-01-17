@@ -3,7 +3,7 @@ using FrenteDeCaixa.Domain.Cliente;
 
 namespace FrenteDeCaixa.Domain.Produto.Factory
 {
-    interface IProdutoBuilder
+    public interface IProdutoBuilder
     {
         ProdutoBuilder WithId(Guid id);
         ProdutoBuilder WithNome(string nome);
@@ -11,6 +11,7 @@ namespace FrenteDeCaixa.Domain.Produto.Factory
         ProdutoBuilder WithFornecedor(ClienteDomain fornecedor);
         ProdutoBuilder WithQuantidade(int quantidade);
         ProdutoBuilder WithPreco(decimal preco);
+        ProdutoBuilder WithExcluido(bool excluido);
         ProdutoDomain Build();
     }
 }
