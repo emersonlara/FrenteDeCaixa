@@ -4,7 +4,7 @@ using System;
 
 namespace FrenteDeCaixa.Domain.ItemVenda
 {
-    interface IItemVenda
+    public interface IItemVenda
     {
         Guid Id { get; set; }
         Guid? VendaId { get; set; }
@@ -12,5 +12,6 @@ namespace FrenteDeCaixa.Domain.ItemVenda
         Guid? ProdutoId { get; set; }
         ProdutoDomain Produto { get; set; }
         int Quantidade { get; set; }
+        bool Excluido { get; set; }
     }
 }

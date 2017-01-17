@@ -4,7 +4,7 @@ using FrenteDeCaixa.Domain.Venda;
 
 namespace FrenteDeCaixa.Domain.ItemVenda.Factory
 {
-    interface IItemVendaBuilder
+    public interface IItemVendaBuilder
     {
         ItemVendaBuilder WithId(Guid id);
         ItemVendaBuilder WithVendaId(Guid? vendaId);
@@ -12,6 +12,7 @@ namespace FrenteDeCaixa.Domain.ItemVenda.Factory
         ItemVendaBuilder WithProdutoId(Guid? produtoId);
         ItemVendaBuilder WithProduto(ProdutoDomain produto);
         ItemVendaBuilder WithQuantidade(int quantidade);
+        ItemVendaBuilder WithExcluido(bool excluido);
         ItemVendaDomain Build();
     }
 }

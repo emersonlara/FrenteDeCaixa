@@ -7,9 +7,11 @@ namespace FrenteDeCaixa.Application.Service.ItemVenda
     public interface IItemVendaService
     {
         IItemVendaDto Salvar(ItemVendaDto itemVenda);
-        void Alterar(ItemVendaDomain itemVenda);
-        void Excluir(ItemVendaDomain itemVenda);
+        IItemVendaDto Alterar(ItemVendaDto itemVenda);
+        IItemVendaDto Excluir(ItemVendaDto itemVenda);
         List<ItemVendaDomain> Listar();
         ItemVendaDomain CriarParaSalvar(ItemVendaDto itemVendaDto);
+        ItemVendaDomain CriarParaAlterar(ItemVendaDto itemVendaDto);
+        ItemVendaDomain CriarParaExcluir(ItemVendaDto itemVendaDto);
     }
 }
