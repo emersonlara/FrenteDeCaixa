@@ -2,10 +2,11 @@
 
 namespace FrenteDeCaixa.Domain.PerfilDeUsuario.Factory
 {
-    class PerfilDeUsuarioBuilder : IPerfilDeUsuarioBuilder
+    public class PerfilDeUsuarioBuilder : IPerfilDeUsuarioBuilder
     {
         public Guid Id { get; set; }
         public string Nome { get; set; }
+        public bool Excluido { get; set; }
 
         public PerfilDeUsuarioBuilder WithId(Guid id)
         {
@@ -19,9 +20,14 @@ namespace FrenteDeCaixa.Domain.PerfilDeUsuario.Factory
             return this;
         }
 
+        public PerfilDeUsuarioBuilder WithExcluido(bool excluido)
+        {
+            Excluido = excluido;
+        }
+
         public PerfilDeUsuarioDomain Build()
         {
-            return new PerfilDeUsuarioDomain(Id, Nome);
+            return new PerfilDeUsuarioDomain(Id, Nome, Excluido);
         }
     }
 }

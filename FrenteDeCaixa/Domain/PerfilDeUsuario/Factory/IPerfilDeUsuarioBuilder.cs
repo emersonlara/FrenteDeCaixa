@@ -2,10 +2,11 @@
 
 namespace FrenteDeCaixa.Domain.PerfilDeUsuario.Factory
 {
-    interface IPerfilDeUsuarioBuilder
+    public interface IPerfilDeUsuarioBuilder
     {
         PerfilDeUsuarioBuilder WithId(Guid id);
         PerfilDeUsuarioBuilder WithNome(string nome);
+        PerfilDeUsuarioBuilder WithExcluido(bool excluido);
         PerfilDeUsuarioDomain Build();
     }
 }

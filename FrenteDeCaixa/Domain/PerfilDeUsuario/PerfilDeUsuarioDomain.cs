@@ -6,11 +6,13 @@ namespace FrenteDeCaixa.Domain.PerfilDeUsuario
     {
         public Guid Id { get; set; }
         public string Nome { get; set; }
+        public bool Excluido { get; set; }
 
-        public PerfilDeUsuarioDomain(Guid id, string nome)
+        public PerfilDeUsuarioDomain(Guid id, string nome, bool excluido)
         {
             Id = id;
             Nome = nome;
+            Excluido = excluido;
         }
     }
 }

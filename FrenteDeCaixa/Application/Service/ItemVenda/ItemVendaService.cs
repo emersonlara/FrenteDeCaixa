@@ -72,6 +72,7 @@ namespace FrenteDeCaixa.Application.Service.ItemVenda
                 .WithProdutoId(itemVendaDto.ProdutoId)
                 .WithQuantidade(itemVendaDto.Quantidade)
                 .WithVendaId(itemVendaDto.VendaId)
+                .WithExcluido(false)
                 .Build();
 
             return itemVenda;
