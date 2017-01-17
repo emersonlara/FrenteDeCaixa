@@ -11,8 +11,9 @@ namespace FrenteDeCaixa.Domain.Usuario
         public string Nome { get; set; }
         public Guid? PerfilId { get; set; }
         public PerfilDeUsuarioDomain Perfil { get; set; }
+        public bool Excluido { get; set; }
 
-        public UsuarioDomain(Guid id, string login, string senha, string nome, Guid? perfilId, PerfilDeUsuarioDomain perfil)
+        public UsuarioDomain(Guid id, string login, string senha, string nome, Guid? perfilId, PerfilDeUsuarioDomain perfil, bool excluido)
         {
             Id = id;
             Login = login;
@@ -20,6 +21,7 @@ namespace FrenteDeCaixa.Domain.Usuario
             Nome = nome;
             PerfilId = perfilId;
             Perfil = perfil;
+            Excluido = excluido;
         }
     }
 }

@@ -4,12 +4,14 @@ using FrenteDeCaixa.Domain.Usuario;
 
 namespace FrenteDeCaixa.Application.Service.Usuario
 {
-    interface IUsuarioService
+    public interface IUsuarioService
     {
         IUsuarioDto Salvar(UsuarioDto usuario);
-        void Alterar(UsuarioDomain usuario);
-        void Excluir(UsuarioDomain usuario);
+        IUsuarioDto Alterar(UsuarioDto usuario);
+        IUsuarioDto Excluir(UsuarioDto usuario);
         List<UsuarioDomain> Listar();
         UsuarioDomain CriarParaSalvar(UsuarioDto usuarioDto);
+        UsuarioDomain CriarParaAlterar(UsuarioDto usuarioDto);
+        UsuarioDomain CriarParaExcluir(UsuarioDto usuarioDto);
     }
 }

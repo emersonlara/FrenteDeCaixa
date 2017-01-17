@@ -3,7 +3,7 @@ using System;
 
 namespace FrenteDeCaixa.Domain.Usuario
 {
-    interface IUsuario
+    public interface IUsuario
     {
         Guid Id { get; set; }
         string Login { get; set; }
@@ -11,5 +11,6 @@ namespace FrenteDeCaixa.Domain.Usuario
         string Nome { get; set; }
         Guid? PerfilId { get; set; }
         PerfilDeUsuarioDomain Perfil { get; set; }
+        bool Excluido { get; set; }
     }
 }
