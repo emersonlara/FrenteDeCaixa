@@ -5,7 +5,7 @@ using FrenteDeCaixa.Domain.Usuario;
 
 namespace FrenteDeCaixa.Domain.Venda.Factory
 {
-    interface IVendaBuilder
+    public interface IVendaBuilder
     {
         VendaBuilder WithId(Guid id);
         VendaBuilder WithUsuarioId(Guid? usuarioId);
@@ -15,6 +15,7 @@ namespace FrenteDeCaixa.Domain.Venda.Factory
         VendaBuilder WithFormaDePagamentoId(Guid? formaDePagamentoId);
         VendaBuilder WithFormaDePagamento(FormaDePagamentoDomain formaDePagamento);
         VendaBuilder WithValorTotal(decimal valorTotal);
+        VendaBuilder WithExcluido(bool excluido);
         VendaDomain Build();
     }
 }

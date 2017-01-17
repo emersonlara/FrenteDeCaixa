@@ -5,7 +5,7 @@ using System;
 
 namespace FrenteDeCaixa.Domain.Venda
 {
-    interface IVenda
+    public interface IVenda
     {
         Guid Id { get; set; }
         Guid? UsuarioId { get; set; }
@@ -15,5 +15,6 @@ namespace FrenteDeCaixa.Domain.Venda
         Guid? FormaDePagamentoId { get; set; }
         FormaDePagamentoDomain FormaDePagamento { get; set; }
         decimal ValorTotal { get; set; }
+        bool Excluido { get; set; }
     }
 }

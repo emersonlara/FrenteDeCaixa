@@ -5,7 +5,7 @@ using FrenteDeCaixa.Domain.Usuario;
 
 namespace FrenteDeCaixa.Domain.Venda.Factory
 {
-    class VendaBuilder : IVendaBuilder
+    public class VendaBuilder : IVendaBuilder
     {
         public Guid Id { get; set; }
         public Guid? UsuarioId { get; set; }
@@ -15,6 +15,7 @@ namespace FrenteDeCaixa.Domain.Venda.Factory
         public Guid? FormaDePagamentoId { get; set; }
         public FormaDePagamentoDomain FormaDePagamento { get; set; }
         public decimal ValorTotal { get; set; }
+        public bool Excluido { get; set; }
 
         public VendaBuilder WithId(Guid id)
         {
@@ -64,10 +65,16 @@ namespace FrenteDeCaixa.Domain.Venda.Factory
             return this;
         }
 
+        public VendaBuilder WithExcluido(bool excluido)
+        {
+            Excluido = excluido;
+            return this;
+        }
+
         public VendaDomain Build()
         {
             return new VendaDomain(Id, UsuarioId, Usuario, ClienteId,
-            Cliente, FormaDePagamentoId, FormaDePagamento, ValorTotal);
+            Cliente, FormaDePagamentoId, FormaDePagamento, ValorTotal, Excluido);
         }
     }
 }

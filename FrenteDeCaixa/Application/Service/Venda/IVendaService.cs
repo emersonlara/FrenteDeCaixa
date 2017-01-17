@@ -4,12 +4,14 @@ using FrenteDeCaixa.Domain.Venda;
 
 namespace FrenteDeCaixa.Application.Service.Venda
 {
-    interface IVendaService
+    public interface IVendaService
     {
         IVendaDto Salvar(VendaDto venda);
-        void Alterar(VendaDomain venda);
-        void Excluir(VendaDomain venda);
+        IVendaDto Alterar(VendaDto venda);
+        IVendaDto Excluir(VendaDto venda);
         List<VendaDomain> Listar();
         VendaDomain CriarParaSalvar(VendaDto vendaDto);
+        VendaDomain CriarParaAlterar(VendaDto vendaDto);
+        VendaDomain CriarParaExcluir(VendaDto vendaDto);
     }
 }

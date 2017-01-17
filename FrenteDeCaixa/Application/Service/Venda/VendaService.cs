@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using FrenteDeCaixa.Application.Service.Venda.Dto;
 using FrenteDeCaixa.Domain.Venda;
@@ -8,13 +9,13 @@ using FrenteDeCaixa.Infrastructure.Context;
 
 namespace FrenteDeCaixa.Application.Service.Venda
 {
-    class VendaService : IVendaService
+    public class VendaService : IVendaService
     {
-        private EntidadesContext Banco { get; }
+        private EntidadesContext Context { get; }
 
         public VendaService()
         {
-            Banco = new EntidadesContext();
+            Context = new EntidadesContext();
         }
 
         public IVendaDto Salvar(VendaDto vendaDto)
@@ -25,33 +26,39 @@ namespace FrenteDeCaixa.Application.Service.Venda
             }
             var venda = CriarParaSalvar(vendaDto);
 
-            Banco.Vendas.Add(venda);
-            Banco.SaveChanges();
+            Context.Vendas.Add(venda);
+            Context.SaveChanges();
 
             return vendaDto;
         }
 
-        public void Alterar(VendaDomain venda)
+        public IVendaDto Alterar(VendaDto vendaDto)
         {
-            var vendaAux = Banco.Vendas.First(x => x.Id == venda.Id);
-            vendaAux.UsuarioId = venda.UsuarioId;
-            vendaAux.Usuario = venda.Usuario;
-            vendaAux.ClienteId = venda.ClienteId;
-            vendaAux.Cliente = venda.Cliente;
-            vendaAux.FormaDePagamentoId = venda.FormaDePagamentoId;
-            vendaAux.FormaDePagamento = venda.FormaDePagamento;
-            vendaAux.ValorTotal = venda.ValorTotal;
+            if (vendaDto == null) return new VendaDto();
+
+            var venda = CriarParaAlterar(vendaDto);
+
+            Context.Entry(venda).State = EntityState.Modified;
+            Context.SaveChanges();
+
+            return vendaDto;
         }
 
-        public void Excluir(VendaDomain venda)
+        public IVendaDto Excluir(VendaDto vendaDto)
         {
-            Banco.Set<VendaDomain>().Remove(venda);
-            Banco.SaveChanges();
+            if (vendaDto == null) return new VendaDto();
+
+            var venda = CriarParaExcluir(vendaDto);
+
+            Context.Entry(venda).State = EntityState.Modified;
+            Context.SaveChanges();
+
+            return vendaDto;
         }
 
         public List<VendaDomain> Listar()
         {
-            return (from c in Banco.Vendas select c).ToList();
+            return (from c in Context.Vendas select c).ToList();
         }
 
         public VendaDomain CriarParaSalvar(VendaDto vendaDto)
@@ -65,6 +72,49 @@ namespace FrenteDeCaixa.Application.Service.Venda
                 .WithUsuario(vendaDto.Usuario)
                 .WithUsuarioId(vendaDto.UsuarioId)
                 .WithValorTotal(vendaDto.ValorTotal)
+                .WithExcluido(false)
+                .Build();
+
+            return venda;
+        }
+
+        public VendaDomain CriarParaAlterar(VendaDto vendaDto)
+        {
+            var _venda = Context.Vendas.FirstOrDefault(x => x.Id == vendaDto.Id);
+
+            if (_venda == null) throw new ArgumentNullException(nameof(_venda));
+
+            var venda = new VendaBuilder()
+                .WithId(_venda.Id)
+                .WithCliente(_venda.Cliente)
+                .WithClienteId(_venda.ClienteId)
+                .WithFormaDePagamento(_venda.FormaDePagamento)
+                .WithFormaDePagamentoId(_venda.FormaDePagamentoId)
+                .WithUsuario(_venda.Usuario)
+                .WithUsuarioId(_venda.UsuarioId)
+                .WithValorTotal(_venda.ValorTotal)
+                .WithExcluido(_venda.Excluido)
+                .Build();
+
+            return venda;
+        }
+
+        public VendaDomain CriarParaExcluir(VendaDto vendaDto)
+        {
+            var _venda = Context.Vendas.FirstOrDefault(x => x.Id == vendaDto.Id);
+
+            if (_venda == null) throw new ArgumentNullException(nameof(_venda));
+
+            var venda = new VendaBuilder()
+                .WithId(_venda.Id)
+                .WithCliente(_venda.Cliente)
+                .WithClienteId(_venda.ClienteId)
+                .WithFormaDePagamento(_venda.FormaDePagamento)
+                .WithFormaDePagamentoId(_venda.FormaDePagamentoId)
+                .WithUsuario(_venda.Usuario)
+                .WithUsuarioId(_venda.UsuarioId)
+                .WithValorTotal(_venda.ValorTotal)
+                .WithExcluido(true)
                 .Build();
 
             return venda;
