@@ -2,10 +2,11 @@
 
 namespace FrenteDeCaixa.Domain.FormaDePagamento.Factory
 {
-    class FormaDePagamentoBuilder : IFormaDePagamentoBuilder
+    public class FormaDePagamentoBuilder : IFormaDePagamentoBuilder
     {
         public Guid Id { get; set; }
         public string Nome { get; set; }
+        public bool Excluido { get; set; }
 
         public FormaDePagamentoBuilder WithId(Guid id)
         {
@@ -19,9 +20,15 @@ namespace FrenteDeCaixa.Domain.FormaDePagamento.Factory
             return this;
         }
 
+        public FormaDePagamentoBuilder WithExcluido(bool excluido)
+        {
+            Excluido = excluido;
+            return this;
+        }
+
         public FormaDePagamentoDomain Build()
         {
-            return new FormaDePagamentoDomain(Id, Nome);
+            return new FormaDePagamentoDomain(Id, Nome, Excluido);
         }
     }
 }

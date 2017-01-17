@@ -12,5 +12,6 @@ namespace FrenteDeCaixa.Application.Service.Cliente
         List<ClienteDomain> Listar();
         ClienteDomain CriarParaSalvar(ClienteDto clienteDto);
         ClienteDomain CriarParaAlterar(ClienteDto clienteDto);
+        ClienteDomain CriarParaExcluir(ClienteDto clienteDto);
     }
 }

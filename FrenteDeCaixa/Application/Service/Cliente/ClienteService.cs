@@ -82,12 +82,14 @@ namespace FrenteDeCaixa.Application.Service.Cliente
         {
             var _cliente = Context.Clientes.FirstOrDefault(x => x.Id == clienteDto.Id);
 
+            if (_cliente == null) throw new ArgumentNullException(nameof(_cliente));
+
             var cliente = new ClienteBuilder()
                 .WithNome(_cliente.Nome)
                 .WithDocumentoDeIdentificacao(_cliente.DocumentoDeIdentificacao)
                 .WithId(_cliente.Id)
                 .WithTipo(_cliente.Tipo)
-                .WithExcluido(clienteDto.Excluido)
+                .WithExcluido(_cliente.Excluido)
                 .Build();
 
             return cliente;
@@ -97,11 +99,13 @@ namespace FrenteDeCaixa.Application.Service.Cliente
         {
             var _cliente = Context.Clientes.FirstOrDefault(x => x.Id == clienteDto.Id);
 
+            if (_cliente == null) throw new ArgumentNullException(nameof(_cliente));
+
             var cliente = new ClienteBuilder()
-                .WithNome(clienteDto.Nome)
-                .WithDocumentoDeIdentificacao(clienteDto.DocumentoDeIdentificacao)
-                .WithId(clienteDto.Id)
-                .WithTipo(clienteDto.Tipo)
+                .WithNome(_cliente.Nome)
+                .WithDocumentoDeIdentificacao(_cliente.DocumentoDeIdentificacao)
+                .WithId(_cliente.Id)
+                .WithTipo(_cliente.Tipo)
                 .WithExcluido(true)
                 .Build();
 

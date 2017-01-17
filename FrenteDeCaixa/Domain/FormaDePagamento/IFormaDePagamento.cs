@@ -2,9 +2,10 @@
 
 namespace FrenteDeCaixa.Domain.FormaDePagamento
 {
-    interface IFormaDePagamento
+    public interface IFormaDePagamento
     {
         Guid Id { get; set; }
         string Nome { get; set; }
+        bool Excluido { get; set; }
     }
 }

@@ -2,10 +2,11 @@
 
 namespace FrenteDeCaixa.Domain.FormaDePagamento.Factory
 {
-    interface IFormaDePagamentoBuilder
+    public interface IFormaDePagamentoBuilder
     {
         FormaDePagamentoBuilder WithId(Guid id);
         FormaDePagamentoBuilder WithNome(string nome);
+        FormaDePagamentoBuilder WithExcluido(bool excluido);
         FormaDePagamentoDomain Build();
     }
 }
