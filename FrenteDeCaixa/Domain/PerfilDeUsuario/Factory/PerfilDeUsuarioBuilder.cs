@@ -23,6 +23,7 @@ namespace FrenteDeCaixa.Domain.PerfilDeUsuario.Factory
         public PerfilDeUsuarioBuilder WithExcluido(bool excluido)
         {
             Excluido = excluido;
+            return this;
         }
 
         public PerfilDeUsuarioDomain Build()

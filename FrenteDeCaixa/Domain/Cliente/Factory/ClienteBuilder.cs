@@ -38,6 +38,7 @@ namespace FrenteDeCaixa.Domain.Cliente.Factory
         public ClienteBuilder WithExcluido(bool excluido)
         {
             Excluido = excluido;
+            return this;
         }
 
         public ClienteDomain Build()

@@ -1,9 +1,8 @@
-﻿<Window x:Class="FrenteDeCaixa.Presentation.LoginWindow"
+﻿<Window x:Class="FrenteDeCaixa.Presentation.View.LoginWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:FrenteDeCaixa.Presentation"
         xmlns:p = "clr-namespace:FrenteDeCaixa.Resources"
         mc:Ignorable="d"
         Title="{x:Static p:Strings.TitleLoginWindow}" Height="360.902" Width="493.985">

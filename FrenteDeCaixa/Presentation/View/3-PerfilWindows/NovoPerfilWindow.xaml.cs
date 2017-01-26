@@ -1,23 +1,7 @@
-﻿using FrenteDeCaixa.Application;
-using FrenteDeCaixa.Application.Service;
-using FrenteDeCaixa.Domain;
-using FrenteDeCaixa.Domain.PerfilDeUsuario;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+﻿using System.Windows;
 using FrenteDeCaixa.Application.Service.PerfilDeUsuario;
 
-namespace FrenteDeCaixa.Presentation.PerfilWindows
+namespace FrenteDeCaixa.Presentation.View.PerfilWindows
 {
     /// <summary>
     /// Interaction logic for NovoPerfilWindow.xaml

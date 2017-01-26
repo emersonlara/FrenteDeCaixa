@@ -119,10 +119,10 @@
     <Compile Include="Infrastructure\Migrations\201612292254590_Initial.Designer.cs">
       <DependentUpon>201612292254590_Initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentation\PerfilWindows\NovoPerfilWindow.xaml.cs">
+    <Compile Include="Presentation\View\3-PerfilWindows\NovoPerfilWindow.xaml.cs">
       <DependentUpon>NovoPerfilWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Presentation\PerfilWindows\MainPerfisWindow.xaml.cs">
+    <Compile Include="Presentation\View\3-PerfilWindows\MainPerfisWindow.xaml.cs">
       <DependentUpon>MainPerfisWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Resources\Strings1.Designer.cs">
@@ -130,10 +130,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Strings.resx</DependentUpon>
     </Compile>
-    <Compile Include="Presentation\LoginWindow.xaml.cs">
+    <Compile Include="Presentation\View\1-Login\LoginWindow.xaml.cs">
       <DependentUpon>LoginWindow.xaml</DependentUpon>
     </Compile>
-    <Page Include="Presentation\CaixaWindow.xaml">
+    <Page Include="Presentation\View\2-Caixa\CaixaWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -158,19 +158,19 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Presentation\CaixaWindow.xaml.cs">
+    <Compile Include="Presentation\View\2-Caixa\CaixaWindow.xaml.cs">
       <DependentUpon>CaixaWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Presentation\LoginWindow.xaml">
+    <Page Include="Presentation\View\1-Login\LoginWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Presentation\PerfilWindows\NovoPerfilWindow.xaml">
+    <Page Include="Presentation\View\3-PerfilWindows\NovoPerfilWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Presentation\PerfilWindows\MainPerfisWindow.xaml">
+    <Page Include="Presentation\View\3-PerfilWindows\MainPerfisWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -202,7 +202,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Presentation\Style\" />
+    <Folder Include="Presentation\ViewModel\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Images\posIcon.png" />
