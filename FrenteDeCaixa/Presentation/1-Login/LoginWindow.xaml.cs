@@ -1,36 +1,35 @@
 using System.Linq;
 using System.Windows;
+using FrenteDeCaixa.Application.Service.Usuario;
 using FrenteDeCaixa.Infrastructure.Context;
 
-namespace FrenteDeCaixa.Presentation.View
+namespace FrenteDeCaixa.Presentation.Views
 {
     /// <summary>
     /// Interaction logic for LoginWindow.xaml
     /// </summary>
     public partial class LoginWindow : Window
     {
-        private EntidadesContext _context;
+        private UsuarioService UsuarioService { get; }
 
         public LoginWindow()
         {
             InitializeComponent();
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
-            _context = new EntidadesContext();
-        }
 
+            UsuarioService = new UsuarioService();
+        }
+        
         private void buttonEntrar_Click(object sender, RoutedEventArgs e)
         {
             var login = textBoxLogin.Text;
             var senha = textBoxSenha.Text;
+            var conectar = UsuarioService.Listar().
+                Any(x => x.Login == login && x.Senha == senha);
 
-            int contem = _context.Usuarios.
-                Where(x => x.Login == login && x.Senha == senha).Count();
-
-            if (contem > 0)
-            {
-                new CaixaWindow().Show();
-                this.Close();
-            }
+            if (!conectar) return;
+            new CaixaWindow().Show();
+            this.Close();
         }
     }
 }

@@ -1,7 +1,6 @@
 ﻿using System.Windows;
-using FrenteDeCaixa.Presentation.View.PerfilWindows;
 
-namespace FrenteDeCaixa.Presentation.View
+namespace FrenteDeCaixa.Presentation
 {
     /// <summary>
     /// Interaction logic for CaixaWindow.xaml

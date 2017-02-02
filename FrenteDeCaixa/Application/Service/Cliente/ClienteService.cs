@@ -86,7 +86,7 @@ namespace FrenteDeCaixa.Application.Service.Cliente
 
             var cliente = new ClienteBuilder()
                 .WithNome(_cliente.Nome)
-                .WithDocumentoDeIdentificacao(_cliente.DocumentoDeIdentificacao)
+                //.WithDocumentoDeIdentificacao(_cliente.DocumentoDeIdentificacao)
                 .WithId(_cliente.Id)
                 .WithTipo(_cliente.Tipo)
                 .WithExcluido(_cliente.Excluido)
@@ -103,7 +103,7 @@ namespace FrenteDeCaixa.Application.Service.Cliente
 
             var cliente = new ClienteBuilder()
                 .WithNome(_cliente.Nome)
-                .WithDocumentoDeIdentificacao(_cliente.DocumentoDeIdentificacao)
+                //.WithDocumentoDeIdentificacao(_cliente.DocumentoDeIdentificacao)
                 .WithId(_cliente.Id)
                 .WithTipo(_cliente.Tipo)
                 .WithExcluido(true)

@@ -7,7 +7,7 @@ namespace FrenteDeCaixa.Domain.Cliente
     {
         public Guid Id { get; set; }
         public string Nome { get; set; }
-        public DocumentoDeIdentificacaoDomain DocumentoDeIdentificacao { get; set; }
+        //public DocumentoDeIdentificacaoDomain DocumentoDeIdentificacao { get; set; }
         public string Tipo { get; set; }
         public bool Excluido { get; set; }
 
@@ -15,7 +15,7 @@ namespace FrenteDeCaixa.Domain.Cliente
         {
             Id = id;
             Nome = nome;
-            DocumentoDeIdentificacao = documentoDeIdentificacao;
+            //DocumentoDeIdentificacao = documentoDeIdentificacao;
             Tipo = tipo;
             Excluido = excluido;
         }

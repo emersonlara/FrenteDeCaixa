@@ -13,7 +13,6 @@ namespace FrenteDeCaixa.Infrastructure.ContextConfigs
 
             Property(x => x.Nome)
                 .IsRequired();
-                //.HasColumnAnnotation("Index", new IndexAnnotation(new[] { new IndexAttribute("Index") { IsUnique = true } }));
         }
     }
 }

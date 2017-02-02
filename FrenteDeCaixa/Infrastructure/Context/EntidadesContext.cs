@@ -1,5 +1,6 @@
 ﻿using System.Data.Entity;
 using FrenteDeCaixa.Domain.Cliente;
+using FrenteDeCaixa.Domain.DocumentoDeIdentificacao;
 using FrenteDeCaixa.Domain.FormaDePagamento;
 using FrenteDeCaixa.Domain.ItemVenda;
 using FrenteDeCaixa.Domain.PerfilDeUsuario;
@@ -9,7 +10,7 @@ using FrenteDeCaixa.Domain.Venda;
 
 namespace FrenteDeCaixa.Infrastructure.Context
 {
-    class EntidadesContext : DbContext
+    public class EntidadesContext : DbContext
     {
         public DbSet<UsuarioDomain> Usuarios { get; set; }
         public DbSet<FormaDePagamentoDomain> FormasDePagamentos { get; set; }

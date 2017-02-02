@@ -1,7 +1,7 @@
 ﻿using System.Windows;
 using FrenteDeCaixa.Application.Service.PerfilDeUsuario;
 
-namespace FrenteDeCaixa.Presentation.View.PerfilWindows
+namespace FrenteDeCaixa.Presentation
 {
     /// <summary>
     /// Interaction logic for PerfisWindow.xaml

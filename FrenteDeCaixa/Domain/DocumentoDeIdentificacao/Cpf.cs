@@ -2,7 +2,7 @@
 
 namespace FrenteDeCaixa.Domain.DocumentoDeIdentificacao
 {
-    class Cpf : DocumentoDeIdentificacaoDomain
+    public class Cpf : DocumentoDeIdentificacaoDomain
     {
     }
 }

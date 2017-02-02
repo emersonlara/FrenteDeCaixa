@@ -2,7 +2,7 @@
 
 namespace FrenteDeCaixa.Domain.DocumentoDeIdentificacao
 {
-    class Cnpj : DocumentoDeIdentificacaoDomain
+    public class Cnpj : DocumentoDeIdentificacaoDomain
     {
     }
 }

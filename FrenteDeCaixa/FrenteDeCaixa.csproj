@@ -115,25 +115,27 @@
     <Compile Include="Infrastructure\ContextConfigs\ItemVendaConfig.cs" />
     <Compile Include="Infrastructure\ContextConfigs\PerfilDeUsuarioConfig.cs" />
     <Compile Include="Infrastructure\ContextConfigs\VendaConfig.cs" />
-    <Compile Include="Infrastructure\Migrations\201612292254590_Initial.cs" />
-    <Compile Include="Infrastructure\Migrations\201612292254590_Initial.Designer.cs">
-      <DependentUpon>201612292254590_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\201702020106056_Initial.cs" />
+    <Compile Include="Migrations\201702020106056_Initial.Designer.cs">
+      <DependentUpon>201702020106056_Initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentation\View\3-PerfilWindows\NovoPerfilWindow.xaml.cs">
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Presentation\3-PerfilWindows\NovoPerfilWindow.xaml.cs">
       <DependentUpon>NovoPerfilWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Presentation\View\3-PerfilWindows\MainPerfisWindow.xaml.cs">
+    <Compile Include="Presentation\3-PerfilWindows\MainPerfisWindow.xaml.cs">
       <DependentUpon>MainPerfisWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Resources\Strings1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Strings.resx</DependentUpon>
     </Compile>
-    <Compile Include="Presentation\View\1-Login\LoginWindow.xaml.cs">
+    <Compile Include="Presentation\1-Login\LoginWindow.xaml.cs">
       <DependentUpon>LoginWindow.xaml</DependentUpon>
     </Compile>
-    <Page Include="Presentation\View\2-Caixa\CaixaWindow.xaml">
+    <Page Include="Presentation\2-Caixa\CaixaWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -147,7 +149,6 @@
     <Compile Include="Infrastructure\ContextConfigs\ProdutoConfig.cs" />
     <Compile Include="Infrastructure\ContextConfigs\UsuarioConfig.cs" />
     <Compile Include="Infrastructure\Context\EntidadesContext.cs" />
-    <Compile Include="Infrastructure\Migrations\Configuration.cs" />
     <Compile Include="Domain\Cliente\ClienteDomain.cs" />
     <Compile Include="Domain\FormaDePagamento\FormaDePagamentoDomain.cs" />
     <Compile Include="Domain\ItemVenda\ItemVendaDomain.cs" />
@@ -158,19 +159,19 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Presentation\View\2-Caixa\CaixaWindow.xaml.cs">
+    <Compile Include="Presentation\2-Caixa\CaixaWindow.xaml.cs">
       <DependentUpon>CaixaWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Presentation\View\1-Login\LoginWindow.xaml">
+    <Page Include="Presentation\1-Login\LoginWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Presentation\View\3-PerfilWindows\NovoPerfilWindow.xaml">
+    <Page Include="Presentation\3-PerfilWindows\NovoPerfilWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Presentation\View\3-PerfilWindows\MainPerfisWindow.xaml">
+    <Page Include="Presentation\3-PerfilWindows\MainPerfisWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -184,8 +185,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Infrastructure\Migrations\201612292254590_Initial.resx">
-      <DependentUpon>201612292254590_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201702020106056_Initial.resx">
+      <DependentUpon>201702020106056_Initial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Strings.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
@@ -201,9 +202,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Presentation\ViewModel\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="Resources\Images\posIcon.png" />
   </ItemGroup>
