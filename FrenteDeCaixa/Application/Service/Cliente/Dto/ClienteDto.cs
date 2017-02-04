@@ -1,5 +1,4 @@
 ﻿using System;
-using FrenteDeCaixa.Domain.Cliente;
 using FrenteDeCaixa.Domain.DocumentoDeIdentificacao;
 
 namespace FrenteDeCaixa.Application.Service.Cliente.Dto

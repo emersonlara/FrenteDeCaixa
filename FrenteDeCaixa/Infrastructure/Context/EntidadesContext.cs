@@ -19,5 +19,6 @@ namespace FrenteDeCaixa.Infrastructure.Context
         public DbSet<VendaDomain> Vendas { get; set; }
         public DbSet<ItemVendaDomain> ItensVendas { get; set; }
         public DbSet<ProdutoDomain> Produtos { get; set; }
+        public DbSet<DocumentoDeIdentificacaoDomain> DocumentoDeIdentificacao { get; set; }
     }
 }

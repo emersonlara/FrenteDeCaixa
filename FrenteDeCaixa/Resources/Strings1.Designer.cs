@@ -187,6 +187,15 @@ namespace FrenteDeCaixa.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to DocumentoDeIdentificacao.
+        /// </summary>
+        public static string DocumentoDeIdentificacaoDB {
+            get {
+                return ResourceManager.GetString("DocumentoDeIdentificacaoDB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to FormaDePagamento.
         /// </summary>
         public static string FormaDePagamentoDB {

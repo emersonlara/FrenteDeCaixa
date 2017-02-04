@@ -173,6 +173,10 @@
     <value>Cliente</value>
     <comment>Nome entidade Cliente</comment>
   </data>
+  <data name="DocumentoDeIdentificacaoDB" xml:space="preserve">
+    <value>DocumentoDeIdentificacao</value>
+    <comment>Nome entidade DocumentoDeIdentificacao</comment>
+  </data>
   <data name="FormaDePagamentoDB" xml:space="preserve">
     <value>FormaDePagamento</value>
     <comment>Nome entidade FormaDePagamento</comment>

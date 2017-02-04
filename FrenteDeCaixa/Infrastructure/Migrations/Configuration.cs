@@ -1,25 +1,26 @@
+using System;
+using System.Data.Entity.Migrations;
+using System.Linq;
 using FrenteDeCaixa.Domain.PerfilDeUsuario.Factory;
 using FrenteDeCaixa.Domain.Usuario.Factory;
+using FrenteDeCaixa.Infrastructure.Context;
 
-namespace FrenteDeCaixa.Migrations
+namespace FrenteDeCaixa.Infrastructure.Migrations
 {
-    using System;
-    using System.Data.Entity;
-    using System.Data.Entity.Migrations;
-    using System.Linq;
-
     internal sealed class Configuration : DbMigrationsConfiguration<FrenteDeCaixa.Infrastructure.Context.EntidadesContext>
     {
         public Configuration()
         {
+            this.MigrationsDirectory = "Infrastructure/Migrations";
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(FrenteDeCaixa.Infrastructure.Context.EntidadesContext context)
+        protected override void Seed(EntidadesContext context)
         {
             var perfilEntidadeDomain = new PerfilDeUsuarioBuilder()
                 .WithId(Guid.NewGuid())
                 .WithNome("Administrador")
+                .WithExcluido(false)
                 .Build();
             context.PerfisDeUsuarios.Add(perfilEntidadeDomain);
             context.SaveChanges();
@@ -32,6 +33,7 @@ namespace FrenteDeCaixa.Migrations
             .WithPerfil(perfil)
             .WithPerfilId(perfil.Id)
             .WithSenha("123")
+            .WithExcluido(false)
             .Build();
 
             context.Usuarios.Add(usuario);

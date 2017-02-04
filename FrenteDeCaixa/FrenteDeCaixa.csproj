@@ -111,15 +111,12 @@
     <Compile Include="Domain\Venda\Factory\VendaBuilder.cs" />
     <Compile Include="Domain\Venda\IVenda.cs" />
     <Compile Include="Domain\Venda\VendaDomain.cs" />
+    <Compile Include="Infrastructure\ContextConfigs\DocumentoDeIdentificacaoConfig.cs" />
     <Compile Include="Infrastructure\ContextConfigs\FormaDePagamentoConfig.cs" />
     <Compile Include="Infrastructure\ContextConfigs\ItemVendaConfig.cs" />
     <Compile Include="Infrastructure\ContextConfigs\PerfilDeUsuarioConfig.cs" />
     <Compile Include="Infrastructure\ContextConfigs\VendaConfig.cs" />
-    <Compile Include="Migrations\201702020106056_Initial.cs" />
-    <Compile Include="Migrations\201702020106056_Initial.Designer.cs">
-      <DependentUpon>201702020106056_Initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Infrastructure\Migrations\Configuration.cs" />
     <Compile Include="Presentation\3-PerfilWindows\NovoPerfilWindow.xaml.cs">
       <DependentUpon>NovoPerfilWindow.xaml</DependentUpon>
     </Compile>
@@ -185,9 +182,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Migrations\201702020106056_Initial.resx">
-      <DependentUpon>201702020106056_Initial.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Resources\Strings.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Strings1.Designer.cs</LastGenOutput>

@@ -3,7 +3,7 @@ using System.Windows;
 using FrenteDeCaixa.Application.Service.Usuario;
 using FrenteDeCaixa.Infrastructure.Context;
 
-namespace FrenteDeCaixa.Presentation.Views
+namespace FrenteDeCaixa.Presentation
 {
     /// <summary>
     /// Interaction logic for LoginWindow.xaml
@@ -24,9 +24,10 @@ namespace FrenteDeCaixa.Presentation.Views
         {
             var login = textBoxLogin.Text;
             var senha = textBoxSenha.Text;
+
             var conectar = UsuarioService.Listar().
                 Any(x => x.Login == login && x.Senha == senha);
-
+                
             if (!conectar) return;
             new CaixaWindow().Show();
             this.Close();
