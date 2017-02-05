@@ -6,7 +6,7 @@ namespace FrenteDeCaixa.Presentation
     /// <summary>
     /// Interaction logic for PerfisWindow.xaml
     /// </summary>
-    public partial class MainPerfisWindow : Window
+    public partial class MainPerfisWindow
     {
         public MainPerfisWindow()
         {

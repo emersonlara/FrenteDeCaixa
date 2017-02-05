@@ -1,4 +1,4 @@
-namespace FrenteDeCaixa.Infrastructure.Migrations
+namespace FrenteDeCaixa.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;

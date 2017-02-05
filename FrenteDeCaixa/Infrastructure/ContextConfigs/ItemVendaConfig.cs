@@ -13,6 +13,7 @@ namespace FrenteDeCaixa.Infrastructure.ContextConfigs
 
             Property(x => x.Quantidade).IsRequired();
             HasRequired(x => x.Produto);
+            Property(x => x.Excluido).IsRequired();
         }
     }
 }

@@ -1,20 +1,19 @@
 ﻿using System.Windows;
-using FrenteDeCaixa.Application.Service.PerfilDeUsuario;
 
 namespace FrenteDeCaixa.Presentation
 {
     /// <summary>
     /// Interaction logic for NovoPerfilWindow.xaml
     /// </summary>
-    public partial class NovoPerfilWindow : Window
+    public partial class NovoPerfilWindow
     {
-        private PerfilDeUsuarioService perfilService;
+        //private PerfilDeUsuarioService perfilService;
 
         public NovoPerfilWindow()
         {
             InitializeComponent();
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
-            perfilService = new PerfilDeUsuarioService();
+            //perfilService = new PerfilDeUsuarioService();
         }
 
         private void buttonNovo_Click(object sender, RoutedEventArgs e)
@@ -29,13 +28,13 @@ namespace FrenteDeCaixa.Presentation
                 };
                 perfilService.Salvar(perfil);
                 */
-                this.Close();
+                Close();
             }
         }
 
         private void buttonFechar_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            Close();
         }
     }
 }

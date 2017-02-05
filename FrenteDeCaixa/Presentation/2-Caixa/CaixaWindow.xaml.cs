@@ -5,12 +5,12 @@ namespace FrenteDeCaixa.Presentation
     /// <summary>
     /// Interaction logic for CaixaWindow.xaml
     /// </summary>
-    public partial class CaixaWindow : Window
+    public partial class CaixaWindow
     {
         public CaixaWindow()
         {
             InitializeComponent();
-            this.WindowState = WindowState.Maximized;
+            WindowState = WindowState.Maximized;
             labelTotal.Content += "R$ 0,00";
         }
 

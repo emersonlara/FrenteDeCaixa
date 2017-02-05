@@ -1,14 +1,13 @@
 using System.Linq;
 using System.Windows;
 using FrenteDeCaixa.Application.Service.Usuario;
-using FrenteDeCaixa.Infrastructure.Context;
 
 namespace FrenteDeCaixa.Presentation
 {
     /// <summary>
     /// Interaction logic for LoginWindow.xaml
     /// </summary>
-    public partial class LoginWindow : Window
+    public partial class LoginWindow
     {
         private UsuarioService UsuarioService { get; }
 
@@ -30,7 +29,7 @@ namespace FrenteDeCaixa.Presentation
                 
             if (!conectar) return;
             new CaixaWindow().Show();
-            this.Close();
+            Close();
         }
     }
 }

@@ -14,6 +14,7 @@ namespace FrenteDeCaixa.Infrastructure.ContextConfigs
             Property(x => x.ValorTotal).IsRequired();
             HasRequired(x => x.Usuario);
             HasRequired(x => x.FormaDePagamento);
+            Property(x => x.Excluido).IsRequired();
         }
     }
 }

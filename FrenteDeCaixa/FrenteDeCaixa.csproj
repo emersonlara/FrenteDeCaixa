@@ -117,6 +117,10 @@
     <Compile Include="Infrastructure\ContextConfigs\PerfilDeUsuarioConfig.cs" />
     <Compile Include="Infrastructure\ContextConfigs\VendaConfig.cs" />
     <Compile Include="Infrastructure\Migrations\Configuration.cs" />
+    <Compile Include="Infrastructure\Migrations\201702051838432_Initial.cs" />
+    <Compile Include="Infrastructure\Migrations\201702051838432_Initial.Designer.cs">
+      <DependentUpon>201702051838432_Initial.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation\3-PerfilWindows\NovoPerfilWindow.xaml.cs">
       <DependentUpon>NovoPerfilWindow.xaml</DependentUpon>
     </Compile>
@@ -182,6 +186,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="Infrastructure\Migrations\201702051838432_Initial.resx">
+      <DependentUpon>201702051838432_Initial.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resources\Strings.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Strings1.Designer.cs</LastGenOutput>
