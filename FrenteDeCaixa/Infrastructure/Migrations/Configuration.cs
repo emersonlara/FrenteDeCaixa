@@ -10,8 +10,8 @@ namespace FrenteDeCaixa.Infrastructure.Migrations
     {
         public Configuration()
         {
-            MigrationsDirectory = "Infrastructure/Migrations";
-            AutomaticMigrationsEnabled = false;
+            //MigrationsDirectory = "Infrastructure/Migrations";
+             AutomaticMigrationsEnabled = false;
         }
 
         protected override void Seed(Context.EntidadesContext context)

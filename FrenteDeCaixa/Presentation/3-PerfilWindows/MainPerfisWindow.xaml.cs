@@ -17,7 +17,7 @@ namespace FrenteDeCaixa.Presentation
 
         public void AtualizaTabela()
         {
-            PerfilDeUsuarioService perfilService = new PerfilDeUsuarioService();
+            var perfilService = new PerfilDeUsuarioService();
             DataGridPerfis.ItemsSource = perfilService.Listar();
         }
 

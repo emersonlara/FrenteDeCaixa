@@ -1,5 +1,6 @@
 using System.Linq;
 using System.Windows;
+using FrenteDeCaixa.Application.Mapper;
 using FrenteDeCaixa.Application.Service.Usuario;
 
 namespace FrenteDeCaixa.Presentation
@@ -10,9 +11,13 @@ namespace FrenteDeCaixa.Presentation
     public partial class LoginWindow
     {
         private UsuarioService UsuarioService { get; }
+        private AutoMapperConfig AutoMapperConfig { get; }
 
         public LoginWindow()
         {
+            AutoMapperConfig = new AutoMapperConfig();
+            AutoMapperConfig.RegisterMappings();
+
             InitializeComponent();
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
 
@@ -23,11 +28,11 @@ namespace FrenteDeCaixa.Presentation
         {
             var login = textBoxLogin.Text;
             var senha = textBoxSenha.Text;
-
+            /*
             var conectar = UsuarioService.Listar().
                 Any(x => x.Login == login && x.Senha == senha);
                 
-            if (!conectar) return;
+            if (!conectar) return;*/
             new CaixaWindow().Show();
             Close();
         }

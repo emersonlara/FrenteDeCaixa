@@ -1,4 +1,10 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
+using FrenteDeCaixa.Application.Service.PerfilDeUsuario;
+using FrenteDeCaixa.Application.Service.PerfilDeUsuario.Dto;
+using FrenteDeCaixa.Domain.PerfilDeUsuario;
+using FrenteDeCaixa.Domain.PerfilDeUsuario.Factory;
+using AutoMapper;
 
 namespace FrenteDeCaixa.Presentation
 {
@@ -7,29 +13,28 @@ namespace FrenteDeCaixa.Presentation
     /// </summary>
     public partial class NovoPerfilWindow
     {
-        //private PerfilDeUsuarioService perfilService;
+        private PerfilDeUsuarioService perfilService;
 
         public NovoPerfilWindow()
         {
             InitializeComponent();
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
-            //perfilService = new PerfilDeUsuarioService();
+            perfilService = new PerfilDeUsuarioService();
         }
 
         private void buttonNovo_Click(object sender, RoutedEventArgs e)
         {
-            if (!textBoxNome.Text.Equals(null))
-            {
-                /*
-                PerfilDeUsuarioDomain perfil = new PerfilDeUsuarioDomain()
-                {
-                    Id = Guid.NewGuid(),
-                    Nome = textBoxNome.Text
-                };
-                perfilService.Salvar(perfil);
-                */
-                Close();
-            }
+            var nome = textBoxNome.Text;
+            if (nome.Equals("")) return;
+            var perfil = new PerfilDeUsuarioBuilder()
+                .WithId(Guid.NewGuid())
+                .WithNome(nome)
+                .Build();
+
+            var perfilDto = Mapper.Map<PerfilDeUsuarioDomain, PerfilDeUsuarioDto> (perfil);
+            perfilService.Salvar(perfilDto);
+                
+            Close();
         }
 
         private void buttonFechar_Click(object sender, RoutedEventArgs e)

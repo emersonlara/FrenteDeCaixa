@@ -35,6 +35,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=5.2.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.5.2.0\lib\net45\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
       <Private>True</Private>
@@ -64,6 +68,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Application\Mapper\AutoMapperConfig.cs" />
+    <Compile Include="Application\Mapper\PerfilDeUsuarioMapper\DomainToDtoMappingProfile.cs" />
+    <Compile Include="Application\Mapper\PerfilDeUsuarioMapper\DtoToDomainMappingProfile.cs" />
     <Compile Include="Application\Service\Cliente\Dto\ClienteDto.cs" />
     <Compile Include="Application\Service\Cliente\Dto\IClienteDto.cs" />
     <Compile Include="Application\Service\Cliente\IClienteService.cs" />
@@ -120,6 +127,10 @@
     <Compile Include="Infrastructure\Migrations\201702051838432_Initial.cs" />
     <Compile Include="Infrastructure\Migrations\201702051838432_Initial.Designer.cs">
       <DependentUpon>201702051838432_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Infrastructure\Migrations\201702080034353_login.cs" />
+    <Compile Include="Infrastructure\Migrations\201702080034353_login.Designer.cs">
+      <DependentUpon>201702080034353_login.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentation\3-PerfilWindows\NovoPerfilWindow.xaml.cs">
       <DependentUpon>NovoPerfilWindow.xaml</DependentUpon>
@@ -188,6 +199,9 @@
     </Compile>
     <EmbeddedResource Include="Infrastructure\Migrations\201702051838432_Initial.resx">
       <DependentUpon>201702051838432_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Infrastructure\Migrations\201702080034353_login.resx">
+      <DependentUpon>201702080034353_login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Strings.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
