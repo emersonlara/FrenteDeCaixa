@@ -8,15 +8,13 @@ namespace FrenteDeCaixa.Application.Mapper.PerfilDeUsuarioMapper
     {
         protected override void Configure()
         {
-            var config = new MapperConfiguration(x =>
-            {
-                x.CreateMap<PerfilDeUsuarioDto, PerfilDeUsuarioDomain>();
-            });
-
-            AutoMapper.Mapper.Initialize(x =>
-            {
-                x.CreateMap<PerfilDeUsuarioDto, PerfilDeUsuarioDomain>();
-            });
+            CreateMap<PerfilDeUsuarioDto, PerfilDeUsuarioDomain>()
+                .ForMember(
+                dest => dest.Id,
+                ori => ori.MapFrom(x => x.Id))
+            .ForMember(
+                dest => dest.Nome,
+                ori => ori.MapFrom(x => x.Nome));
         }
     }
 }

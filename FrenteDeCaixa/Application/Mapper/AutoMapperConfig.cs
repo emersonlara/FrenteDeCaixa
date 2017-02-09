@@ -1,4 +1,5 @@
 ﻿using System;
+using AutoMapper;
 using FrenteDeCaixa.Application.Mapper.PerfilDeUsuarioMapper;
 using FrenteDeCaixa.Application.Service.PerfilDeUsuario.Dto;
 using FrenteDeCaixa.Domain.PerfilDeUsuario;
@@ -7,18 +8,16 @@ namespace FrenteDeCaixa.Application.Mapper
 {
     public class AutoMapperConfig
     {
+        public static IMapper Mapper;
+
         public void RegisterMappings()
         {
-            AutoMapper.Mapper.Initialize(x =>
+            var config = new MapperConfiguration(cfg =>
             {
-                x.AddProfile<DomainToDtoMappingProfile>();
-                x.AddProfile<DtoToDomainMappingProfile>();
-
-                //x.CreateMap<PerfilDeUsuarioDto, PerfilDeUsuarioDomain>();
+                cfg.AddProfile(new DomainToDtoMappingProfile());
+                cfg.AddProfile(new DtoToDomainMappingProfile());
             });
-            Console.WriteLine("AUTOMAPPER------------------------------------------------------------------------");
-
-
+            Mapper = config.CreateMapper();
         }
     }
 }

@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Windows;
+using FrenteDeCaixa.Application.Mapper;
 using FrenteDeCaixa.Application.Service.PerfilDeUsuario;
 using FrenteDeCaixa.Application.Service.PerfilDeUsuario.Dto;
 using FrenteDeCaixa.Domain.PerfilDeUsuario;
 using FrenteDeCaixa.Domain.PerfilDeUsuario.Factory;
-using AutoMapper;
 
 namespace FrenteDeCaixa.Presentation
 {
@@ -29,9 +29,11 @@ namespace FrenteDeCaixa.Presentation
             var perfil = new PerfilDeUsuarioBuilder()
                 .WithId(Guid.NewGuid())
                 .WithNome(nome)
+                .WithExcluido(false)
                 .Build();
 
-            var perfilDto = Mapper.Map<PerfilDeUsuarioDomain, PerfilDeUsuarioDto> (perfil);
+            var perfilDto = AutoMapperConfig.Mapper.Map<PerfilDeUsuarioDomain, PerfilDeUsuarioDto> (perfil);
+            Console.WriteLine("Id: " + perfil.Id + "\nNome:" + perfil.Nome+ "\nDto\nId:" + perfilDto.Id + "\nNome:" + perfilDto.Nome);
             perfilService.Salvar(perfilDto);
                 
             Close();
