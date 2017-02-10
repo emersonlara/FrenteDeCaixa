@@ -6,7 +6,8 @@ namespace FrenteDeCaixa.Application.Mapper.PerfilDeUsuarioMapper
 {
     public class DtoToDomainMappingProfile : Profile
     {
-        protected override void Configure()
+
+    protected override void Configure()
         {
             CreateMap<PerfilDeUsuarioDto, PerfilDeUsuarioDomain>()
                 .ForMember(

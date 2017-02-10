@@ -1,9 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Windows;
+﻿using System.Windows;
+using FrenteDeCaixa.Application.Mapper;
 using FrenteDeCaixa.Application.Service.PerfilDeUsuario;
+using FrenteDeCaixa.Application.Service.PerfilDeUsuario.Dto;
 using FrenteDeCaixa.Domain.PerfilDeUsuario;
 using FrenteDeCaixa.Domain.PerfilDeUsuario.Factory;
+using FrenteDeCaixa.Resources;
 
 namespace FrenteDeCaixa.Presentation
 {
@@ -43,6 +44,27 @@ namespace FrenteDeCaixa.Presentation
 
             new NovoPerfilWindow(perfil).ShowDialog();
             AtualizaTabela();
+        }
+
+        private void ButtonExcluir_Click(object sender, RoutedEventArgs e)
+        {
+            var coluna = (PerfilDeUsuarioDomain)DataGridPerfis.SelectedItem;
+
+            var perfil = new PerfilDeUsuarioBuilder()
+                .WithId(coluna.Id)
+                .WithNome(coluna.Nome)
+                .WithExcluido(coluna.Excluido)
+                .Build();
+
+            var result = MessageBox.Show(Strings.RemoverRegistro + " " + coluna.Nome + "?",
+                Strings.RemoverRegistroTittle, MessageBoxButton.YesNo);
+
+            if (result == MessageBoxResult.No) return;
+
+            var perfilDeUsuarioService = new PerfilDeUsuarioService();
+
+            var perfilDto = AutoMapperConfig.Mapper.Map<PerfilDeUsuarioDomain, PerfilDeUsuarioDto>(perfil);
+            perfilDeUsuarioService.Excluir(perfilDto);
         }
     }
 }

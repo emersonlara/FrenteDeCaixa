@@ -259,6 +259,24 @@ namespace FrenteDeCaixa.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Deseja realmente remover o registro.
+        /// </summary>
+        public static string RemoverRegistro {
+            get {
+                return ResourceManager.GetString("RemoverRegistro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Remover registro.
+        /// </summary>
+        public static string RemoverRegistroTittle {
+            get {
+                return ResourceManager.GetString("RemoverRegistroTittle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Senha:.
         /// </summary>
         public static string Senha {

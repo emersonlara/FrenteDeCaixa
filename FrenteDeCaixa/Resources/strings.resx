@@ -205,6 +205,14 @@
     <value>Produto</value>
     <comment>Nome entidade Produto</comment>
   </data>
+  <data name="RemoverRegistro" xml:space="preserve">
+    <value>Deseja realmente remover o registro</value>
+    <comment>Mensagem em MessageBox de exclusão</comment>
+  </data>
+  <data name="RemoverRegistroTittle" xml:space="preserve">
+    <value>Remover registro</value>
+    <comment>Mensagem de titulo em MessageBox de exclusão</comment>
+  </data>
   <data name="Senha" xml:space="preserve">
     <value>Senha:</value>
     <comment>Nome label LoginWindow</comment>

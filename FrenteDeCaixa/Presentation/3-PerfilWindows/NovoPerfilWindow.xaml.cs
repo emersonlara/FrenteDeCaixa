@@ -13,8 +13,8 @@ namespace FrenteDeCaixa.Presentation
     /// </summary>
     public partial class NovoPerfilWindow
     {
-        private PerfilDeUsuarioService perfilService;
-        private PerfilDeUsuarioDomain perfilEdicao;
+        private PerfilDeUsuarioService PerfilService;
+        private PerfilDeUsuarioDomain PerfilEdicao;
         private bool isEdicao;
 
         public NovoPerfilWindow()
@@ -22,7 +22,7 @@ namespace FrenteDeCaixa.Presentation
             InitializeComponent();
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
 
-            perfilService = new PerfilDeUsuarioService();
+            PerfilService = new PerfilDeUsuarioService();
             isEdicao = false;
         }
 
@@ -32,7 +32,7 @@ namespace FrenteDeCaixa.Presentation
             InitializeComponent();
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
 
-            perfilEdicao = perfil;
+            PerfilEdicao = perfil;
             textBoxNome.Text = perfil.Nome;
             isEdicao = true;
         }
@@ -44,9 +44,9 @@ namespace FrenteDeCaixa.Presentation
 
             if (isEdicao)
             {
-                perfilEdicao.Nome = nome;
-                var perfilDto = AutoMapperConfig.Mapper.Map<PerfilDeUsuarioDomain, PerfilDeUsuarioDto>(perfilEdicao);
-                perfilService.Alterar(perfilDto);
+                PerfilEdicao.Nome = nome;
+                var perfilDto = AutoMapperConfig.Mapper.Map<PerfilDeUsuarioDomain, PerfilDeUsuarioDto>(PerfilEdicao);
+                PerfilService.Alterar(perfilDto);
             }
             else
             {
@@ -61,7 +61,7 @@ namespace FrenteDeCaixa.Presentation
                 Console.WriteLine("Id: " + perfil.Id + "\nNome:" + perfil.Nome + "\n" +
                                   "Dto\nId:" + perfilDto.Id + "\nNome:" + perfilDto.Nome);
 
-                perfilService.Salvar(perfilDto);
+                PerfilService.Salvar(perfilDto);
             }
             Close();
         }
