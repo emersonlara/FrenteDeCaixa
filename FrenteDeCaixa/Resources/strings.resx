@@ -161,6 +161,10 @@
     <value>Produtos (F8)</value>
     <comment>Nome no botão Produtos no frente de caixa</comment>
   </data>
+  <data name="ButtonSalvar" xml:space="preserve">
+    <value>Salvar</value>
+    <comment>Nome no botão Salvar</comment>
+  </data>
   <data name="ButtonUsuarios" xml:space="preserve">
     <value>Usuarios (F6)</value>
     <comment>Nome no botão Usuarios no frente de caixa</comment>

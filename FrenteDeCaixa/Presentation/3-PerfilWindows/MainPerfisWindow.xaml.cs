@@ -1,5 +1,9 @@
-﻿using System.Windows;
+﻿using System;
+using System.Collections.Generic;
+using System.Windows;
 using FrenteDeCaixa.Application.Service.PerfilDeUsuario;
+using FrenteDeCaixa.Domain.PerfilDeUsuario;
+using FrenteDeCaixa.Domain.PerfilDeUsuario.Factory;
 
 namespace FrenteDeCaixa.Presentation
 {
@@ -24,6 +28,20 @@ namespace FrenteDeCaixa.Presentation
         private void buttonNovo_Click(object sender, RoutedEventArgs e)
         {
             new NovoPerfilWindow().ShowDialog();
+            AtualizaTabela();
+        }
+
+        private void ButtonAlterar_Click(object sender, RoutedEventArgs e)
+        {
+            var coluna = (PerfilDeUsuarioDomain) DataGridPerfis.SelectedItem;
+
+            var perfil = new PerfilDeUsuarioBuilder()
+                .WithId(coluna.Id)
+                .WithNome(coluna.Nome)
+                .WithExcluido(coluna.Excluido)
+                .Build();
+
+            new NovoPerfilWindow(perfil).ShowDialog();
             AtualizaTabela();
         }
     }

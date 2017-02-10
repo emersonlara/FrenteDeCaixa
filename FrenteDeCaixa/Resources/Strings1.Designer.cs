@@ -160,6 +160,15 @@ namespace FrenteDeCaixa.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Salvar.
+        /// </summary>
+        public static string ButtonSalvar {
+            get {
+                return ResourceManager.GetString("ButtonSalvar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Usuarios (F6).
         /// </summary>
         public static string ButtonUsuarios {

@@ -21,7 +21,7 @@
                 <ColumnDefinition Width="100*"/>
             </Grid.ColumnDefinitions>
             <Button x:Name="buttonFechar" Content="{x:Static p:Strings.ButtonFechar}" Grid.Column="2" Margin="5" Click="buttonFechar_Click"/>
-            <Button x:Name="buttonNovo" Content="{x:Static p:Strings.ButtonNovo}" Grid.Column="1" Margin="5" Click="buttonNovo_Click"/>
+            <Button x:Name="buttonNovo" Content="{x:Static p:Strings.ButtonSalvar}" Grid.Column="1" Margin="5" Click="buttonNovo_Click"/>
         </Grid>
         <Grid d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin">
             <Grid.RowDefinitions>
