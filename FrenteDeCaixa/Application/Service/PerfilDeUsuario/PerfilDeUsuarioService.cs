@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.Entity;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using FrenteDeCaixa.Application.Service.PerfilDeUsuario.Dto;
 using FrenteDeCaixa.Domain.PerfilDeUsuario;
@@ -34,9 +34,9 @@ namespace FrenteDeCaixa.Application.Service.PerfilDeUsuario
         {
             if (perfilDeUsuarioDto == null) return new PerfilDeUsuarioDto();
 
-            var perfilDeUsuario = CriarParaAlterar(perfilDeUsuarioDto);
+            var perfilDeUsuario = ProcurarParaCriar(perfilDeUsuarioDto);
 
-            Context.Entry(perfilDeUsuario).State = EntityState.Modified;
+            Context.PerfisDeUsuarios.AddOrUpdate(perfilDeUsuario);
             Context.SaveChanges();
 
             return perfilDeUsuarioDto;
@@ -46,9 +46,9 @@ namespace FrenteDeCaixa.Application.Service.PerfilDeUsuario
         {
             if (perfilDeUsuarioDto == null) return new PerfilDeUsuarioDto();
 
-            var perfilDeUsuario = CriarParaExcluir(perfilDeUsuarioDto);
+            var perfilDeUsuario = Context.PerfisDeUsuarios.FirstOrDefault(x => x.Id == perfilDeUsuarioDto.Id);
 
-            Context.Entry(perfilDeUsuario).State = EntityState.Modified;
+            if (perfilDeUsuario != null) Context.PerfisDeUsuarios.Remove(perfilDeUsuario);
             Context.SaveChanges();
 
             return perfilDeUsuarioDto;
@@ -70,33 +70,18 @@ namespace FrenteDeCaixa.Application.Service.PerfilDeUsuario
             return perfilDeUsuario;
         }
 
-        public PerfilDeUsuarioDomain CriarParaAlterar(PerfilDeUsuarioDto perfilDeUsuarioDto)
+        public PerfilDeUsuarioDomain ProcurarParaCriar(PerfilDeUsuarioDto perfilDeUsuarioDto)
         {
-            var _perfilDeUsuario = Context.PerfisDeUsuarios.FirstOrDefault(x => x.Id == perfilDeUsuarioDto.Id);
+            var perfil = Context.PerfisDeUsuarios.FirstOrDefault(x => x.Id == perfilDeUsuarioDto.Id);
 
-            if (_perfilDeUsuario == null) throw new ArgumentNullException(nameof(_perfilDeUsuario));
+            if (perfil == null) throw new ArgumentNullException(nameof(perfil));
 
             var perfilDeUsuario = new PerfilDeUsuarioBuilder()
-                .WithId(_perfilDeUsuario.Id)
-                .WithNome(_perfilDeUsuario.Nome)
-                .WithExcluido(_perfilDeUsuario.Excluido)
+                .WithId(perfil.Id)
+                .WithNome(perfilDeUsuarioDto.Nome)
+                .WithExcluido(perfilDeUsuarioDto.Excluido)
                 .Build();
-
-            return perfilDeUsuario;
-        }
-
-        public PerfilDeUsuarioDomain CriarParaExcluir(PerfilDeUsuarioDto perfilDeUsuarioDto)
-        {
-            var _perfilDeUsuario = Context.PerfisDeUsuarios.FirstOrDefault(x => x.Id == perfilDeUsuarioDto.Id);
-
-            if (_perfilDeUsuario == null) throw new ArgumentNullException(nameof(_perfilDeUsuario));
-
-            var perfilDeUsuario = new PerfilDeUsuarioBuilder()
-                .WithId(_perfilDeUsuario.Id)
-                .WithNome(_perfilDeUsuario.Nome)
-                .WithExcluido(true)
-                .Build();
-
+                
             return perfilDeUsuario;
         }
     }

@@ -6,16 +6,9 @@ namespace FrenteDeCaixa.Application.Mapper.PerfilDeUsuarioMapper
 {
     public class DtoToDomainMappingProfile : Profile
     {
-
-    protected override void Configure()
+        public DtoToDomainMappingProfile()
         {
-            CreateMap<PerfilDeUsuarioDto, PerfilDeUsuarioDomain>()
-                .ForMember(
-                dest => dest.Id,
-                ori => ori.MapFrom(x => x.Id))
-            .ForMember(
-                dest => dest.Nome,
-                ori => ori.MapFrom(x => x.Nome));
+            CreateMap<PerfilDeUsuarioDto, PerfilDeUsuarioDomain>();
         }
     }
 }

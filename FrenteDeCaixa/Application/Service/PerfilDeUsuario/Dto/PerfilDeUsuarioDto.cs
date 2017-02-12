@@ -4,7 +4,8 @@ namespace FrenteDeCaixa.Application.Service.PerfilDeUsuario.Dto
 {
     public class PerfilDeUsuarioDto : IPerfilDeUsuarioDto
     {
-        public Guid Id { get; }
-        public string Nome { get; }
+        public Guid Id { get; set; }
+        public string Nome { get; set; }
+        public bool Excluido { get; set; }
     }
 }

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Windows;
-using FrenteDeCaixa.Application.Mapper;
 using FrenteDeCaixa.Application.Service.PerfilDeUsuario;
 using FrenteDeCaixa.Application.Service.PerfilDeUsuario.Dto;
 using FrenteDeCaixa.Domain.PerfilDeUsuario;
@@ -14,7 +13,9 @@ namespace FrenteDeCaixa.Presentation
     public partial class NovoPerfilWindow
     {
         private PerfilDeUsuarioService PerfilService;
-        private PerfilDeUsuarioDomain PerfilEdicao;
+        private Guid Id;
+        private string Nome;
+        private bool Excluido;
         private bool isEdicao;
 
         public NovoPerfilWindow()
@@ -26,14 +27,17 @@ namespace FrenteDeCaixa.Presentation
             isEdicao = false;
         }
 
-        public NovoPerfilWindow(PerfilDeUsuarioDomain perfil)
+        public NovoPerfilWindow(Guid id, string nome, bool excluido)
         {
             //  Construtor de Edicao de Perfil
             InitializeComponent();
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            textBoxNome.Text = nome;
 
-            PerfilEdicao = perfil;
-            textBoxNome.Text = perfil.Nome;
+            PerfilService = new PerfilDeUsuarioService();
+            Id = id;
+            Nome = nome;
+            Excluido = excluido;
             isEdicao = true;
         }
 
@@ -44,8 +48,14 @@ namespace FrenteDeCaixa.Presentation
 
             if (isEdicao)
             {
-                PerfilEdicao.Nome = nome;
-                var perfilDto = AutoMapperConfig.Mapper.Map<PerfilDeUsuarioDomain, PerfilDeUsuarioDto>(PerfilEdicao);
+                var perfil = new PerfilDeUsuarioBuilder()
+                    .WithId(Id)
+                    .WithNome(nome)
+                    .WithExcluido(Excluido)
+                    .Build();
+
+                var perfilDto = AutoMapper.Mapper.Map<PerfilDeUsuarioDomain, PerfilDeUsuarioDto>(perfil);
+
                 PerfilService.Alterar(perfilDto);
             }
             else
@@ -56,10 +66,7 @@ namespace FrenteDeCaixa.Presentation
                     .WithExcluido(false)
                     .Build();
 
-                var perfilDto = AutoMapperConfig.Mapper.Map<PerfilDeUsuarioDomain, PerfilDeUsuarioDto>(perfil);
-
-                Console.WriteLine("Id: " + perfil.Id + "\nNome:" + perfil.Nome + "\n" +
-                                  "Dto\nId:" + perfilDto.Id + "\nNome:" + perfilDto.Nome);
+                var perfilDto = AutoMapper.Mapper.Map<PerfilDeUsuarioDomain, PerfilDeUsuarioDto>(perfil);
 
                 PerfilService.Salvar(perfilDto);
             }

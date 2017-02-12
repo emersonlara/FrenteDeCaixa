@@ -16,8 +16,6 @@ namespace FrenteDeCaixa.Presentation
         public LoginWindow()
         {
             AutoMapperConfig = new AutoMapperConfig();
-            AutoMapperConfig.RegisterMappings();
-
             InitializeComponent();
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
 

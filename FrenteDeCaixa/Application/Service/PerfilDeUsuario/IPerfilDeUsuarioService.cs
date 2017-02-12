@@ -11,7 +11,6 @@ namespace FrenteDeCaixa.Application.Service.PerfilDeUsuario
         IPerfilDeUsuarioDto Excluir(PerfilDeUsuarioDto perfilDeUsuarioDto);
         List<PerfilDeUsuarioDomain> Listar();
         PerfilDeUsuarioDomain CriarParaSalvar(PerfilDeUsuarioDto perfilDeUsuarioDto);
-        PerfilDeUsuarioDomain CriarParaAlterar(PerfilDeUsuarioDto perfilDeUsuarioDto);
-        PerfilDeUsuarioDomain CriarParaExcluir(PerfilDeUsuarioDto perfilDeUsuarioDto);
+        PerfilDeUsuarioDomain ProcurarParaCriar(PerfilDeUsuarioDto perfilDeUsuarioDto);
     }
 }

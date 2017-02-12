@@ -1,5 +1,4 @@
 ﻿using System.Windows;
-using FrenteDeCaixa.Application.Mapper;
 using FrenteDeCaixa.Application.Service.PerfilDeUsuario;
 using FrenteDeCaixa.Application.Service.PerfilDeUsuario.Dto;
 using FrenteDeCaixa.Domain.PerfilDeUsuario;
@@ -36,19 +35,14 @@ namespace FrenteDeCaixa.Presentation
         {
             var coluna = (PerfilDeUsuarioDomain) DataGridPerfis.SelectedItem;
 
-            var perfil = new PerfilDeUsuarioBuilder()
-                .WithId(coluna.Id)
-                .WithNome(coluna.Nome)
-                .WithExcluido(coluna.Excluido)
-                .Build();
-
-            new NovoPerfilWindow(perfil).ShowDialog();
+            new NovoPerfilWindow(coluna.Id, coluna.Nome, coluna.Excluido).ShowDialog();
             AtualizaTabela();
         }
 
         private void ButtonExcluir_Click(object sender, RoutedEventArgs e)
         {
-            var coluna = (PerfilDeUsuarioDomain)DataGridPerfis.SelectedItem;
+            var perfilDeUsuarioService = new PerfilDeUsuarioService();
+            var coluna = (PerfilDeUsuarioDomain) DataGridPerfis.SelectedItem;
 
             var perfil = new PerfilDeUsuarioBuilder()
                 .WithId(coluna.Id)
@@ -61,10 +55,9 @@ namespace FrenteDeCaixa.Presentation
 
             if (result == MessageBoxResult.No) return;
 
-            var perfilDeUsuarioService = new PerfilDeUsuarioService();
-
-            var perfilDto = AutoMapperConfig.Mapper.Map<PerfilDeUsuarioDomain, PerfilDeUsuarioDto>(perfil);
+            var perfilDto = AutoMapper.Mapper.Map<PerfilDeUsuarioDomain, PerfilDeUsuarioDto>(perfil);
             perfilDeUsuarioService.Excluir(perfilDto);
+            AtualizaTabela();
         }
     }
 }
