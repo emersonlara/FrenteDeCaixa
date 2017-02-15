@@ -15,7 +15,6 @@ namespace FrenteDeCaixa.Presentation
         private PerfilDeUsuarioService PerfilService;
         private Guid Id;
         private string Nome;
-        private bool Excluido;
         private bool isEdicao;
 
         public NovoPerfilWindow()
@@ -27,7 +26,7 @@ namespace FrenteDeCaixa.Presentation
             isEdicao = false;
         }
 
-        public NovoPerfilWindow(Guid id, string nome, bool excluido)
+        public NovoPerfilWindow(Guid id, string nome)
         {
             //  Construtor de Edicao de Perfil
             InitializeComponent();
@@ -37,7 +36,6 @@ namespace FrenteDeCaixa.Presentation
             PerfilService = new PerfilDeUsuarioService();
             Id = id;
             Nome = nome;
-            Excluido = excluido;
             isEdicao = true;
         }
 
@@ -51,7 +49,6 @@ namespace FrenteDeCaixa.Presentation
                 var perfil = new PerfilDeUsuarioBuilder()
                     .WithId(Id)
                     .WithNome(nome)
-                    .WithExcluido(Excluido)
                     .Build();
 
                 var perfilDto = AutoMapper.Mapper.Map<PerfilDeUsuarioDomain, PerfilDeUsuarioDto>(perfil);
@@ -63,7 +60,6 @@ namespace FrenteDeCaixa.Presentation
                 var perfil = new PerfilDeUsuarioBuilder()
                     .WithId(Guid.NewGuid())
                     .WithNome(nome)
-                    .WithExcluido(false)
                     .Build();
 
                 var perfilDto = AutoMapper.Mapper.Map<PerfilDeUsuarioDomain, PerfilDeUsuarioDto>(perfil);

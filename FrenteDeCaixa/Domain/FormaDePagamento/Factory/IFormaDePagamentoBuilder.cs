@@ -6,7 +6,6 @@ namespace FrenteDeCaixa.Domain.FormaDePagamento.Factory
     {
         FormaDePagamentoBuilder WithId(Guid id);
         FormaDePagamentoBuilder WithNome(string nome);
-        FormaDePagamentoBuilder WithExcluido(bool excluido);
         FormaDePagamentoDomain Build();
     }
 }

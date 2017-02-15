@@ -12,9 +12,8 @@ namespace FrenteDeCaixa.Domain.ItemVenda
         public Guid? ProdutoId { get; set; }
         public ProdutoDomain Produto { get; set; }
         public int Quantidade { get; set; }
-        public bool Excluido { get; set; }
 
-        public ItemVendaDomain(Guid id, Guid? vendaId, VendaDomain venda, Guid? produtoId, ProdutoDomain produto, int quantidade, bool excluido)
+        public ItemVendaDomain(Guid id, Guid? vendaId, VendaDomain venda, Guid? produtoId, ProdutoDomain produto, int quantidade)
         {
             Id = id;
             VendaId = vendaId;
@@ -22,7 +21,6 @@ namespace FrenteDeCaixa.Domain.ItemVenda
             ProdutoId = produtoId;
             Produto = produto;
             Quantidade = quantidade;
-            Excluido = excluido;
         }
     }
 }

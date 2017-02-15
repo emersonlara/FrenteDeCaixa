@@ -6,15 +6,13 @@ namespace FrenteDeCaixa.Domain.PerfilDeUsuario
     {
         public Guid Id { get; set; }
         public string Nome { get; set; }
-        public bool Excluido { get; set; }
 
         public PerfilDeUsuarioDomain() { }  //  EF estava reclamando de construtor sem parametros, verificar
 
-        public PerfilDeUsuarioDomain(Guid id, string nome, bool excluido)
+        public PerfilDeUsuarioDomain(Guid id, string nome)
         {
             Id = id;
             Nome = nome;
-            Excluido = excluido;
         }
     }
 }

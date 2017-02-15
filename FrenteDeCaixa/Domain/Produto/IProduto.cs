@@ -11,6 +11,5 @@ namespace FrenteDeCaixa.Domain.Produto
         ClienteDomain Fornecedor { get; set; }
         int Quantidade { get; set; }
         decimal Preco { get; set; }
-        bool Excluido { get; set; }
     }
 }

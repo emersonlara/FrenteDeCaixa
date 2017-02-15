@@ -72,7 +72,6 @@ namespace FrenteDeCaixa.Application.Service.Cliente
                 .WithDocumentoDeIdentificacao(clienteDto.DocumentoDeIdentificacao)
                 .WithId(Guid.NewGuid())
                 .WithTipo(clienteDto.Tipo)
-                .WithExcluido(false)
                 .Build();
 
             return cliente;
@@ -89,7 +88,6 @@ namespace FrenteDeCaixa.Application.Service.Cliente
                 //.WithDocumentoDeIdentificacao(_cliente.DocumentoDeIdentificacao)
                 .WithId(_cliente.Id)
                 .WithTipo(_cliente.Tipo)
-                .WithExcluido(_cliente.Excluido)
                 .Build();
 
             return cliente;
@@ -106,7 +104,6 @@ namespace FrenteDeCaixa.Application.Service.Cliente
                 //.WithDocumentoDeIdentificacao(_cliente.DocumentoDeIdentificacao)
                 .WithId(_cliente.Id)
                 .WithTipo(_cliente.Tipo)
-                .WithExcluido(true)
                 .Build();
 
             return cliente;

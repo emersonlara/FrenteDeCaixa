@@ -11,9 +11,8 @@ namespace FrenteDeCaixa.Domain.Produto
         public ClienteDomain Fornecedor { get; set; }
         public int Quantidade { get; set; }
         public decimal Preco { get; set; }
-        public bool Excluido { get; set; }
 
-        public ProdutoDomain(Guid id, string nome, Guid? fornecedorId, ClienteDomain fornecedor, int quantidade, decimal preco, bool excluido)
+        public ProdutoDomain(Guid id, string nome, Guid? fornecedorId, ClienteDomain fornecedor, int quantidade, decimal preco)
         {
             Id = id;
             Nome = nome;
@@ -21,7 +20,6 @@ namespace FrenteDeCaixa.Domain.Produto
             Fornecedor = fornecedor;
             Quantidade = quantidade;
             Preco = preco;
-            Excluido = excluido;
         }
     }
 }

@@ -72,7 +72,6 @@ namespace FrenteDeCaixa.Application.Service.ItemVenda
                 .WithProdutoId(itemVendaDto.ProdutoId)
                 .WithQuantidade(itemVendaDto.Quantidade)
                 .WithVendaId(itemVendaDto.VendaId)
-                .WithExcluido(false)
                 .Build();
 
             return itemVenda;
@@ -91,7 +90,6 @@ namespace FrenteDeCaixa.Application.Service.ItemVenda
                 .WithQuantidade(_itemVenda.Quantidade)
                 .WithVenda(_itemVenda.Venda)
                 .WithVendaId(_itemVenda.VendaId)
-                .WithExcluido(_itemVenda.Excluido)
                 .Build();
 
             return itemVenda;
@@ -109,8 +107,7 @@ namespace FrenteDeCaixa.Application.Service.ItemVenda
                 .WithProdutoId(_itemVenda.ProdutoId)
                 .WithQuantidade(_itemVenda.Quantidade)
                 .WithVenda(_itemVenda.Venda)
-                .WithVendaId(_itemVenda.VendaId)
-                .WithExcluido(true)
+                .WithVendaId(_itemVenda.VendaId)                
                 .Build();
 
             return itemVenda;

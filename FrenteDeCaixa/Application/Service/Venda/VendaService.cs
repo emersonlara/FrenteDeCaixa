@@ -71,8 +71,7 @@ namespace FrenteDeCaixa.Application.Service.Venda
                 .WithFormaDePagamentoId(vendaDto.FormaDePagamentoId)
                 .WithUsuario(vendaDto.Usuario)
                 .WithUsuarioId(vendaDto.UsuarioId)
-                .WithValorTotal(vendaDto.ValorTotal)
-                .WithExcluido(false)
+                .WithValorTotal(vendaDto.ValorTotal)                
                 .Build();
 
             return venda;
@@ -93,7 +92,6 @@ namespace FrenteDeCaixa.Application.Service.Venda
                 .WithUsuario(_venda.Usuario)
                 .WithUsuarioId(_venda.UsuarioId)
                 .WithValorTotal(_venda.ValorTotal)
-                .WithExcluido(_venda.Excluido)
                 .Build();
 
             return venda;
@@ -114,7 +112,6 @@ namespace FrenteDeCaixa.Application.Service.Venda
                 .WithUsuario(_venda.Usuario)
                 .WithUsuarioId(_venda.UsuarioId)
                 .WithValorTotal(_venda.ValorTotal)
-                .WithExcluido(true)
                 .Build();
 
             return venda;

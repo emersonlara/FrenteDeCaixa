@@ -6,7 +6,6 @@ namespace FrenteDeCaixa.Domain.FormaDePagamento.Factory
     {
         public Guid Id { get; set; }
         public string Nome { get; set; }
-        public bool Excluido { get; set; }
 
         public FormaDePagamentoBuilder WithId(Guid id)
         {
@@ -20,15 +19,9 @@ namespace FrenteDeCaixa.Domain.FormaDePagamento.Factory
             return this;
         }
 
-        public FormaDePagamentoBuilder WithExcluido(bool excluido)
-        {
-            Excluido = excluido;
-            return this;
-        }
-
         public FormaDePagamentoDomain Build()
         {
-            return new FormaDePagamentoDomain(Id, Nome, Excluido);
+            return new FormaDePagamentoDomain(Id, Nome);
         }
     }
 }

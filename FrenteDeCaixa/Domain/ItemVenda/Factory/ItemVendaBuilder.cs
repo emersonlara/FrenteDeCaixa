@@ -12,7 +12,6 @@ namespace FrenteDeCaixa.Domain.ItemVenda.Factory
         public Guid? ProdutoId { get; set; }
         public ProdutoDomain Produto { get; set; }
         public int Quantidade { get; set; }
-        public bool Excluido { get; set; }
 
         public ItemVendaBuilder WithId(Guid id)
         {
@@ -50,15 +49,9 @@ namespace FrenteDeCaixa.Domain.ItemVenda.Factory
             return this;
         }
 
-        public ItemVendaBuilder WithExcluido(bool excluido)
-        {
-            Excluido = excluido;
-            return this;
-        }
-
         public ItemVendaDomain Build()
         {
-            return new ItemVendaDomain (Id, VendaId, Venda, ProdutoId, Produto, Quantidade, Excluido);
+            return new ItemVendaDomain (Id, VendaId, Venda, ProdutoId, Produto, Quantidade);
         }
     }
 }

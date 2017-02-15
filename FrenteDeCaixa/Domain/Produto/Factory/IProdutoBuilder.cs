@@ -11,7 +11,6 @@ namespace FrenteDeCaixa.Domain.Produto.Factory
         ProdutoBuilder WithFornecedor(ClienteDomain fornecedor);
         ProdutoBuilder WithQuantidade(int quantidade);
         ProdutoBuilder WithPreco(decimal preco);
-        ProdutoBuilder WithExcluido(bool excluido);
         ProdutoDomain Build();
     }
 }

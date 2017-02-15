@@ -15,7 +15,6 @@ namespace FrenteDeCaixa.Domain.Venda.Factory
         public Guid? FormaDePagamentoId { get; set; }
         public FormaDePagamentoDomain FormaDePagamento { get; set; }
         public decimal ValorTotal { get; set; }
-        public bool Excluido { get; set; }
 
         public VendaBuilder WithId(Guid id)
         {
@@ -65,16 +64,10 @@ namespace FrenteDeCaixa.Domain.Venda.Factory
             return this;
         }
 
-        public VendaBuilder WithExcluido(bool excluido)
-        {
-            Excluido = excluido;
-            return this;
-        }
-
         public VendaDomain Build()
         {
             return new VendaDomain(Id, UsuarioId, Usuario, ClienteId,
-            Cliente, FormaDePagamentoId, FormaDePagamento, ValorTotal, Excluido);
+            Cliente, FormaDePagamentoId, FormaDePagamento, ValorTotal);
         }
     }
 }

@@ -19,7 +19,6 @@ namespace FrenteDeCaixa.Infrastructure.Migrations
             var perfilEntidadeDomain = new PerfilDeUsuarioBuilder()
                 .WithId(Guid.NewGuid())
                 .WithNome("Administrador")
-                .WithExcluido(false)
                 .Build();
             context.PerfisDeUsuarios.Add(perfilEntidadeDomain);
             context.SaveChanges();
@@ -34,7 +33,6 @@ namespace FrenteDeCaixa.Infrastructure.Migrations
                     .WithPerfil(perfil)
                     .WithPerfilId(perfil.Id)
                     .WithSenha("123")
-                    .WithExcluido(false)
                     .Build();
 
                 context.Usuarios.Add(usuario);

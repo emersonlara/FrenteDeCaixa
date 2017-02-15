@@ -15,7 +15,6 @@ namespace FrenteDeCaixa.Domain.Venda.Factory
         VendaBuilder WithFormaDePagamentoId(Guid? formaDePagamentoId);
         VendaBuilder WithFormaDePagamento(FormaDePagamentoDomain formaDePagamento);
         VendaBuilder WithValorTotal(decimal valorTotal);
-        VendaBuilder WithExcluido(bool excluido);
         VendaDomain Build();
     }
 }

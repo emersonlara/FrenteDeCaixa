@@ -6,7 +6,6 @@ namespace FrenteDeCaixa.Domain.PerfilDeUsuario.Factory
     {
         PerfilDeUsuarioBuilder WithId(Guid id);
         PerfilDeUsuarioBuilder WithNome(string nome);
-        PerfilDeUsuarioBuilder WithExcluido(bool excluido);
         PerfilDeUsuarioDomain Build();
     }
 }

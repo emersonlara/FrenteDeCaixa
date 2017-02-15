@@ -12,7 +12,6 @@ namespace FrenteDeCaixa.Domain.ItemVenda.Factory
         ItemVendaBuilder WithProdutoId(Guid? produtoId);
         ItemVendaBuilder WithProduto(ProdutoDomain produto);
         ItemVendaBuilder WithQuantidade(int quantidade);
-        ItemVendaBuilder WithExcluido(bool excluido);
         ItemVendaDomain Build();
     }
 }

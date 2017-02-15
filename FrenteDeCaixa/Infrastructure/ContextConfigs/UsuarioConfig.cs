@@ -14,7 +14,6 @@ namespace FrenteDeCaixa.Infrastructure.ContextConfigs
             Property(x => x.Login).IsRequired();
             Property(x => x.Senha).IsRequired();
             Property(x => x.Nome).IsRequired();
-            Property(x => x.Excluido).IsRequired();
             HasRequired(x => x.Perfil);
         }
     }

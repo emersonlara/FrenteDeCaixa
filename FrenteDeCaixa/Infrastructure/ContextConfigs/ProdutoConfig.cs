@@ -14,7 +14,6 @@ namespace FrenteDeCaixa.Infrastructure.ContextConfigs
             Property(x => x.Nome).IsRequired();
             Property(x => x.Quantidade).IsRequired();
             Property(x => x.Preco).IsRequired();
-            Property(x => x.Excluido).IsRequired();
 
             // HasRequired(x => x.Fornecedor); Produto de producao propria
         }

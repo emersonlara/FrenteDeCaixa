@@ -124,13 +124,9 @@
     <Compile Include="Infrastructure\ContextConfigs\PerfilDeUsuarioConfig.cs" />
     <Compile Include="Infrastructure\ContextConfigs\VendaConfig.cs" />
     <Compile Include="Infrastructure\Migrations\Configuration.cs" />
-    <Compile Include="Infrastructure\Migrations\201702051838432_Initial.cs" />
-    <Compile Include="Infrastructure\Migrations\201702051838432_Initial.Designer.cs">
-      <DependentUpon>201702051838432_Initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Infrastructure\Migrations\201702080034353_login.cs" />
-    <Compile Include="Infrastructure\Migrations\201702080034353_login.Designer.cs">
-      <DependentUpon>201702080034353_login.cs</DependentUpon>
+    <Compile Include="Infrastructure\Migrations\201702150003119_Initial.cs" />
+    <Compile Include="Infrastructure\Migrations\201702150003119_Initial.Designer.cs">
+      <DependentUpon>201702150003119_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentation\3-PerfilWindows\NovoPerfilWindow.xaml.cs">
       <DependentUpon>NovoPerfilWindow.xaml</DependentUpon>
@@ -197,11 +193,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Infrastructure\Migrations\201702051838432_Initial.resx">
-      <DependentUpon>201702051838432_Initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Infrastructure\Migrations\201702080034353_login.resx">
-      <DependentUpon>201702080034353_login.cs</DependentUpon>
+    <EmbeddedResource Include="Infrastructure\Migrations\201702150003119_Initial.resx">
+      <DependentUpon>201702150003119_Initial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Strings.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

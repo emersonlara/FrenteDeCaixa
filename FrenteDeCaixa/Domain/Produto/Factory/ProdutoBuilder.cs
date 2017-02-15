@@ -11,7 +11,6 @@ namespace FrenteDeCaixa.Domain.Produto.Factory
         public ClienteDomain Fornecedor { get; set; }
         public int Quantidade { get; set; }
         public decimal Preco { get; set; }
-        public bool Excluido { get; set; }
 
         public ProdutoBuilder WithId(Guid id)
         {
@@ -49,15 +48,9 @@ namespace FrenteDeCaixa.Domain.Produto.Factory
             return this;
         }
 
-        public ProdutoBuilder WithExcluido(bool excluido)
-        {
-            Excluido = excluido;
-            return this;
-        }
-
         public ProdutoDomain Build()
         {
-            return new ProdutoDomain(Id, Nome, FornecedorId, Fornecedor, Quantidade, Preco, Excluido);
+            return new ProdutoDomain(Id, Nome, FornecedorId, Fornecedor, Quantidade, Preco);
         }
     }
 }

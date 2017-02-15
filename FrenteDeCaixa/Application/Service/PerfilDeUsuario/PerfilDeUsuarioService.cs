@@ -64,7 +64,6 @@ namespace FrenteDeCaixa.Application.Service.PerfilDeUsuario
             var perfilDeUsuario = new PerfilDeUsuarioBuilder()
                 .WithId(Guid.NewGuid())
                 .WithNome(perfilDeUsuarioDto.Nome)
-                .WithExcluido(false)
                 .Build();
 
             return perfilDeUsuario;
@@ -79,7 +78,6 @@ namespace FrenteDeCaixa.Application.Service.PerfilDeUsuario
             var perfilDeUsuario = new PerfilDeUsuarioBuilder()
                 .WithId(perfil.Id)
                 .WithNome(perfilDeUsuarioDto.Nome)
-                .WithExcluido(perfilDeUsuarioDto.Excluido)
                 .Build();
                 
             return perfilDeUsuario;

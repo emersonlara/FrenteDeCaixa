@@ -68,7 +68,6 @@ namespace FrenteDeCaixa.Application.Service.Produto
                 .WithFornecedorId(produtoDto.FornecedorId)
                 .WithPreco(produtoDto.Preco)
                 .WithQuantidade(produtoDto.Quantidade)
-                .WithExcluido(false)
                 .Build();
 
             return produto;
@@ -87,7 +86,6 @@ namespace FrenteDeCaixa.Application.Service.Produto
                 .WithNome(_produto.Nome)
                 .WithPreco(_produto.Preco)
                 .WithQuantidade(_produto.Quantidade)
-                .WithExcluido(_produto.Excluido)
                 .Build();
 
             return produto;
@@ -106,7 +104,6 @@ namespace FrenteDeCaixa.Application.Service.Produto
                 .WithNome(_produto.Nome)
                 .WithPreco(_produto.Preco)
                 .WithQuantidade(_produto.Quantidade)
-                .WithExcluido(true)
                 .Build();
 
             return produto;

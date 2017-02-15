@@ -13,7 +13,6 @@ namespace FrenteDeCaixa.Infrastructure.ContextConfigs
 
             Property(x => x.Nome).IsRequired();
             Property(x => x.Tipo).IsRequired();
-            Property(x => x.Excluido).IsRequired();
             //HasRequired(x => x.DocumentoDeIdentificacao);
         }
     }

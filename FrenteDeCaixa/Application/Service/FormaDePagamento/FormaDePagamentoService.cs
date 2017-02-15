@@ -66,7 +66,6 @@ namespace FrenteDeCaixa.Application.Service.FormaDePagamento
             var formaDePagamento = new FormaDePagamentoBuilder()
                 .WithId(Guid.NewGuid())
                 .WithNome(formaDePagamentoDto.Nome)
-                .WithExcluido(false)
                 .Build();
 
             return formaDePagamento;
@@ -81,7 +80,6 @@ namespace FrenteDeCaixa.Application.Service.FormaDePagamento
             var formaDePagamento = new FormaDePagamentoBuilder()
                 .WithId(_formaDePagamento.Id)
                 .WithNome(_formaDePagamento.Nome)
-                .WithExcluido(_formaDePagamento.Excluido)
                 .Build();
 
             return formaDePagamento;
@@ -96,7 +94,6 @@ namespace FrenteDeCaixa.Application.Service.FormaDePagamento
             var formaDePagamento = new FormaDePagamentoBuilder()
                 .WithId(_formaDePagamento.Id)
                 .WithNome(_formaDePagamento.Nome)
-                .WithExcluido(true)
                 .Build();
 
             return formaDePagamento;

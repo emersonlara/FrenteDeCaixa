@@ -70,7 +70,6 @@ namespace FrenteDeCaixa.Application.Service.Usuario
                 .WithPerfil(usuarioDto.Perfil)
                 .WithPerfilId(usuarioDto.PerfilId)
                 .WithSenha(usuarioDto.Senha)
-                .WithExcluido(false)
                 .Build();
 
             return usuario;
@@ -89,7 +88,6 @@ namespace FrenteDeCaixa.Application.Service.Usuario
                 .WithPerfil(_usuario.Perfil)
                 .WithPerfilId(_usuario.PerfilId)
                 .WithSenha(_usuario.Senha)
-                .WithExcluido(_usuario.Excluido)
                 .Build();
 
             return usuario;
@@ -108,7 +106,6 @@ namespace FrenteDeCaixa.Application.Service.Usuario
                 .WithPerfil(_usuario.Perfil)
                 .WithPerfilId(_usuario.PerfilId)
                 .WithSenha(_usuario.Senha)
-                .WithExcluido(true)
                 .Build();
 
             return usuario;

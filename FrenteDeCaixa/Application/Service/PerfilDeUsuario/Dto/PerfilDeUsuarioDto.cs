@@ -6,6 +6,5 @@ namespace FrenteDeCaixa.Application.Service.PerfilDeUsuario.Dto
     {
         public Guid Id { get; set; }
         public string Nome { get; set; }
-        public bool Excluido { get; set; }
     }
 }

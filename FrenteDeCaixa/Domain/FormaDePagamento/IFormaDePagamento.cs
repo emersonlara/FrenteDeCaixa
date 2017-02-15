@@ -6,6 +6,5 @@ namespace FrenteDeCaixa.Domain.FormaDePagamento
     {
         Guid Id { get; set; }
         string Nome { get; set; }
-        bool Excluido { get; set; }
     }
 }

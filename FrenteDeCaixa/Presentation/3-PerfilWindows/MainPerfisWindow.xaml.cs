@@ -35,7 +35,7 @@ namespace FrenteDeCaixa.Presentation
         {
             var coluna = (PerfilDeUsuarioDomain) DataGridPerfis.SelectedItem;
 
-            new NovoPerfilWindow(coluna.Id, coluna.Nome, coluna.Excluido).ShowDialog();
+            new NovoPerfilWindow(coluna.Id, coluna.Nome).ShowDialog();
             AtualizaTabela();
         }
 
@@ -47,7 +47,6 @@ namespace FrenteDeCaixa.Presentation
             var perfil = new PerfilDeUsuarioBuilder()
                 .WithId(coluna.Id)
                 .WithNome(coluna.Nome)
-                .WithExcluido(coluna.Excluido)
                 .Build();
 
             var result = MessageBox.Show(Strings.RemoverRegistro + " " + coluna.Nome + "?",

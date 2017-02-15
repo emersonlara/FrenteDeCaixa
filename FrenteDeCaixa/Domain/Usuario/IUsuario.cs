@@ -11,6 +11,5 @@ namespace FrenteDeCaixa.Domain.Usuario
         string Nome { get; set; }
         Guid? PerfilId { get; set; }
         PerfilDeUsuarioDomain Perfil { get; set; }
-        bool Excluido { get; set; }
     }
 }

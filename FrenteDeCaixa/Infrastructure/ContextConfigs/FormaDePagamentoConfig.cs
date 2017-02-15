@@ -12,7 +12,6 @@ namespace FrenteDeCaixa.Infrastructure.ContextConfigs
             ToTable(Strings.FormaDePagamentoDB);
 
             Property(x => x.Nome).IsRequired();
-            Property(x => x.Excluido).IsRequired();
         }
     }
 }

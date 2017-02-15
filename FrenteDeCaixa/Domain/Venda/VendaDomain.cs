@@ -15,10 +15,9 @@ namespace FrenteDeCaixa.Domain.Venda
         public Guid? FormaDePagamentoId { get; set; }
         public FormaDePagamentoDomain FormaDePagamento { get; set; }
         public decimal ValorTotal { get; set; }
-        public bool Excluido { get; set; }
 
         public VendaDomain(Guid id, Guid? usuarioId, UsuarioDomain usuario, Guid? clienteId, 
-            ClienteDomain cliente, Guid? formaDePagamentoId, FormaDePagamentoDomain formaDePagamento, decimal valorTotal, bool excluido)
+            ClienteDomain cliente, Guid? formaDePagamentoId, FormaDePagamentoDomain formaDePagamento, decimal valorTotal)
         {
             Id = id;
             UsuarioId = usuarioId;
@@ -28,7 +27,6 @@ namespace FrenteDeCaixa.Domain.Venda
             FormaDePagamentoId = formaDePagamentoId;
             FormaDePagamento = formaDePagamento;
             ValorTotal = valorTotal;
-            Excluido = excluido;
         }
     }
 }

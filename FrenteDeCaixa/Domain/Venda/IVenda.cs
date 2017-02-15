@@ -15,6 +15,5 @@ namespace FrenteDeCaixa.Domain.Venda
         Guid? FormaDePagamentoId { get; set; }
         FormaDePagamentoDomain FormaDePagamento { get; set; }
         decimal ValorTotal { get; set; }
-        bool Excluido { get; set; }
     }
 }

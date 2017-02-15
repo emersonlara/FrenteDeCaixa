@@ -12,6 +12,5 @@ namespace FrenteDeCaixa.Domain.ItemVenda
         Guid? ProdutoId { get; set; }
         ProdutoDomain Produto { get; set; }
         int Quantidade { get; set; }
-        bool Excluido { get; set; }
     }
 }

@@ -1,4 +1,4 @@
-namespace FrenteDeCaixa.Migrations
+namespace FrenteDeCaixa.Infrastructure.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;
@@ -14,7 +14,6 @@ namespace FrenteDeCaixa.Migrations
                         Id = c.Guid(nullable: false),
                         Nome = c.String(),
                         Tipo = c.String(),
-                        Excluido = c.Boolean(nullable: false),
                         DocumentoDeIdentificacao_Id = c.Guid(),
                     })
                 .PrimaryKey(t => t.Id)
@@ -37,7 +36,6 @@ namespace FrenteDeCaixa.Migrations
                     {
                         Id = c.Guid(nullable: false),
                         Nome = c.String(),
-                        Excluido = c.Boolean(nullable: false),
                     })
                 .PrimaryKey(t => t.Id);
             
@@ -49,7 +47,6 @@ namespace FrenteDeCaixa.Migrations
                         VendaId = c.Guid(),
                         ProdutoId = c.Guid(),
                         Quantidade = c.Int(nullable: false),
-                        Excluido = c.Boolean(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.ProdutoDomains", t => t.ProdutoId)
@@ -66,7 +63,6 @@ namespace FrenteDeCaixa.Migrations
                         FornecedorId = c.Guid(),
                         Quantidade = c.Int(nullable: false),
                         Preco = c.Decimal(nullable: false, precision: 18, scale: 2),
-                        Excluido = c.Boolean(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.ClienteDomains", t => t.FornecedorId)
@@ -81,7 +77,6 @@ namespace FrenteDeCaixa.Migrations
                         ClienteId = c.Guid(),
                         FormaDePagamentoId = c.Guid(),
                         ValorTotal = c.Decimal(nullable: false, precision: 18, scale: 2),
-                        Excluido = c.Boolean(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.ClienteDomains", t => t.ClienteId)
@@ -100,7 +95,6 @@ namespace FrenteDeCaixa.Migrations
                         Senha = c.String(),
                         Nome = c.String(),
                         PerfilId = c.Guid(),
-                        Excluido = c.Boolean(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.PerfilDeUsuarioDomains", t => t.PerfilId)
@@ -112,7 +106,6 @@ namespace FrenteDeCaixa.Migrations
                     {
                         Id = c.Guid(nullable: false),
                         Nome = c.String(),
-                        Excluido = c.Boolean(nullable: false),
                     })
                 .PrimaryKey(t => t.Id);
             
