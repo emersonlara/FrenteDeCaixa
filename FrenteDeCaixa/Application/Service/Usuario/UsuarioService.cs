@@ -58,7 +58,7 @@ namespace FrenteDeCaixa.Application.Service.Usuario
 
         public List<UsuarioDomain> Listar()
         {
-            return (from usuario in Context.Usuarios.Include(x => x.Perfil) select usuario).ToList();
+            return (from usuario in Context.Usuarios.Include(x => x.PerfilDeUsuarioDomain) select usuario).ToList();
         }
 
         public UsuarioDomain CriarParaSalvar(UsuarioDto usuarioDto)
@@ -85,8 +85,8 @@ namespace FrenteDeCaixa.Application.Service.Usuario
                 .WithId(_usuario.Id)
                 .WithLogin(_usuario.Login)
                 .WithNome(_usuario.Nome)
-                .WithPerfil(_usuario.Perfil)
-                .WithPerfilId(_usuario.PerfilId)
+                .WithPerfil(_usuario.PerfilDeUsuarioDomain)
+                .WithPerfilId(_usuario.PerfilDeUsuarioDomainId)
                 .WithSenha(_usuario.Senha)
                 .Build();
 
@@ -103,8 +103,8 @@ namespace FrenteDeCaixa.Application.Service.Usuario
                 .WithId(_usuario.Id)
                 .WithLogin(_usuario.Login)
                 .WithNome(_usuario.Nome)
-                .WithPerfil(_usuario.Perfil)
-                .WithPerfilId(_usuario.PerfilId)
+                .WithPerfil(_usuario.PerfilDeUsuarioDomain)
+                .WithPerfilId(_usuario.PerfilDeUsuarioDomainId)
                 .WithSenha(_usuario.Senha)
                 .Build();
 

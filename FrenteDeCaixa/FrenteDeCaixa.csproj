@@ -124,9 +124,9 @@
     <Compile Include="Infrastructure\ContextConfigs\PerfilDeUsuarioConfig.cs" />
     <Compile Include="Infrastructure\ContextConfigs\VendaConfig.cs" />
     <Compile Include="Infrastructure\Migrations\Configuration.cs" />
-    <Compile Include="Infrastructure\Migrations\201702150003119_Initial.cs" />
-    <Compile Include="Infrastructure\Migrations\201702150003119_Initial.Designer.cs">
-      <DependentUpon>201702150003119_Initial.cs</DependentUpon>
+    <Compile Include="Infrastructure\Migrations\201702162132408_Initial.cs" />
+    <Compile Include="Infrastructure\Migrations\201702162132408_Initial.Designer.cs">
+      <DependentUpon>201702162132408_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentation\3-PerfilWindows\NovoPerfilWindow.xaml.cs">
       <DependentUpon>NovoPerfilWindow.xaml</DependentUpon>
@@ -139,6 +139,9 @@
     </Compile>
     <Compile Include="Presentation\5-ClienteWindow\MainClientesWindow.xaml.cs">
       <DependentUpon>MainClientesWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\6-ProdutoWindow\MainProdutoWindow.xaml.cs">
+      <DependentUpon>MainProdutoWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Presentation\7-FormaDePagamentoWindow\MainFormaDePagamentoWindow.xaml.cs">
       <DependentUpon>MainFormaDePagamentoWindow.xaml</DependentUpon>
@@ -200,6 +203,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Presentation\6-ProdutoWindow\MainProdutoWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Presentation\7-FormaDePagamentoWindow\MainFormaDePagamentoWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -214,8 +221,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Infrastructure\Migrations\201702150003119_Initial.resx">
-      <DependentUpon>201702150003119_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Infrastructure\Migrations\201702162132408_Initial.resx">
+      <DependentUpon>201702162132408_Initial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Strings.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
@@ -231,9 +238,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Presentation\6-ProdutoWindow\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="Resources\Images\posIcon.png" />
   </ItemGroup>

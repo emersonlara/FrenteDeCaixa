@@ -12,6 +12,8 @@ namespace FrenteDeCaixa.Domain.Produto
         public int Quantidade { get; set; }
         public decimal Preco { get; set; }
 
+        public ProdutoDomain() { }
+
         public ProdutoDomain(Guid id, string nome, Guid? fornecedorId, ClienteDomain fornecedor, int quantidade, decimal preco)
         {
             Id = id;

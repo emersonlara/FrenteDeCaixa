@@ -16,6 +16,8 @@ namespace FrenteDeCaixa.Domain.Venda
         public FormaDePagamentoDomain FormaDePagamento { get; set; }
         public decimal ValorTotal { get; set; }
 
+        public VendaDomain() { }
+
         public VendaDomain(Guid id, Guid? usuarioId, UsuarioDomain usuario, Guid? clienteId, 
             ClienteDomain cliente, Guid? formaDePagamentoId, FormaDePagamentoDomain formaDePagamento, decimal valorTotal)
         {

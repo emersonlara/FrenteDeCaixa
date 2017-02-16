@@ -10,6 +10,8 @@ namespace FrenteDeCaixa.Domain.Cliente
         public DocumentoDeIdentificacaoDomain DocumentoDeIdentificacao { get; set; }
         public string Tipo { get; set; }
 
+        public ClienteDomain() { }
+
         public ClienteDomain(Guid id, string nome, DocumentoDeIdentificacaoDomain documentoDeIdentificacao, string tipo)
         {
             Id = id;

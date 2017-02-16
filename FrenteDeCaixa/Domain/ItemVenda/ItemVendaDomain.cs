@@ -13,6 +13,8 @@ namespace FrenteDeCaixa.Domain.ItemVenda
         public ProdutoDomain Produto { get; set; }
         public int Quantidade { get; set; }
 
+        public ItemVendaDomain() { }
+
         public ItemVendaDomain(Guid id, Guid? vendaId, VendaDomain venda, Guid? produtoId, ProdutoDomain produto, int quantidade)
         {
             Id = id;

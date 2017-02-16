@@ -9,7 +9,7 @@ namespace FrenteDeCaixa.Application.Service.Usuario.Dto
         string Login { get; }
         string Senha { get; }
         string Nome { get; }
-        Guid? PerfilId { get; }
+        Guid PerfilId { get; }
         PerfilDeUsuarioDomain Perfil { get; }
     }
 }

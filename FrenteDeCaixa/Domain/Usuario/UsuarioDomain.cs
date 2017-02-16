@@ -9,17 +9,19 @@ namespace FrenteDeCaixa.Domain.Usuario
         public string Login { get; set; }
         public string Senha { get; set; }
         public string Nome { get; set; }
-        public Guid? PerfilId { get; set; }
-        public PerfilDeUsuarioDomain Perfil { get; set; }
+        public Guid PerfilDeUsuarioDomainId { get; set; }
+        public PerfilDeUsuarioDomain PerfilDeUsuarioDomain { get; set; }
 
-        public UsuarioDomain(Guid id, string login, string senha, string nome, Guid? perfilId, PerfilDeUsuarioDomain perfil)
+        public UsuarioDomain() { }
+
+        public UsuarioDomain(Guid id, string login, string senha, string nome, Guid perfilId, PerfilDeUsuarioDomain perfil)
         {
             Id = id;
             Login = login;
             Senha = senha;
             Nome = nome;
-            PerfilId = perfilId;
-            Perfil = perfil;
+            PerfilDeUsuarioDomainId = perfilId;
+            PerfilDeUsuarioDomain = perfil;
         }
     }
 }

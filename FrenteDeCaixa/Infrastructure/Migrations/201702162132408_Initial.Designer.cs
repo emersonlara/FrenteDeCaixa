@@ -13,7 +13,7 @@ namespace FrenteDeCaixa.Infrastructure.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201702150003119_Initial"; }
+            get { return "201702162132408_Initial"; }
         }
         
         string IMigrationMetadata.Source

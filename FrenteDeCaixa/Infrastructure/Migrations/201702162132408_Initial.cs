@@ -94,11 +94,11 @@ namespace FrenteDeCaixa.Infrastructure.Migrations
                         Login = c.String(),
                         Senha = c.String(),
                         Nome = c.String(),
-                        PerfilId = c.Guid(),
+                        PerfilDeUsuarioDomainId = c.Guid(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.PerfilDeUsuarioDomains", t => t.PerfilId)
-                .Index(t => t.PerfilId);
+                .ForeignKey("dbo.PerfilDeUsuarioDomains", t => t.PerfilDeUsuarioDomainId, cascadeDelete: true)
+                .Index(t => t.PerfilDeUsuarioDomainId);
             
             CreateTable(
                 "dbo.PerfilDeUsuarioDomains",
@@ -115,13 +115,13 @@ namespace FrenteDeCaixa.Infrastructure.Migrations
         {
             DropForeignKey("dbo.ItemVendaDomains", "VendaId", "dbo.VendaDomains");
             DropForeignKey("dbo.VendaDomains", "UsuarioId", "dbo.UsuarioDomains");
-            DropForeignKey("dbo.UsuarioDomains", "PerfilId", "dbo.PerfilDeUsuarioDomains");
+            DropForeignKey("dbo.UsuarioDomains", "PerfilDeUsuarioDomainId", "dbo.PerfilDeUsuarioDomains");
             DropForeignKey("dbo.VendaDomains", "FormaDePagamentoId", "dbo.FormaDePagamentoDomains");
             DropForeignKey("dbo.VendaDomains", "ClienteId", "dbo.ClienteDomains");
             DropForeignKey("dbo.ItemVendaDomains", "ProdutoId", "dbo.ProdutoDomains");
             DropForeignKey("dbo.ProdutoDomains", "FornecedorId", "dbo.ClienteDomains");
             DropForeignKey("dbo.ClienteDomains", "DocumentoDeIdentificacao_Id", "dbo.DocumentoDeIdentificacaoDomains");
-            DropIndex("dbo.UsuarioDomains", new[] { "PerfilId" });
+            DropIndex("dbo.UsuarioDomains", new[] { "PerfilDeUsuarioDomainId" });
             DropIndex("dbo.VendaDomains", new[] { "FormaDePagamentoId" });
             DropIndex("dbo.VendaDomains", new[] { "ClienteId" });
             DropIndex("dbo.VendaDomains", new[] { "UsuarioId" });

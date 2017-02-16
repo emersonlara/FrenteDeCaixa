@@ -9,7 +9,7 @@ namespace FrenteDeCaixa.Domain.Usuario.Factory
         public string Login { get; set; }
         public string Senha { get; set; }
         public string Nome { get; set; }
-        public Guid? PerfilId { get; set; }
+        public Guid PerfilId { get; set; }
         public PerfilDeUsuarioDomain Perfil { get; set; }
 
         public UsuarioBuilder WithId(Guid id)
@@ -36,7 +36,7 @@ namespace FrenteDeCaixa.Domain.Usuario.Factory
             return this;
         }
 
-        public UsuarioBuilder WithPerfilId(Guid? perfilId)
+        public UsuarioBuilder WithPerfilId(Guid perfilId)
         {
             PerfilId = perfilId;
             return this;

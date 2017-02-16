@@ -9,7 +9,7 @@ namespace FrenteDeCaixa.Domain.Usuario.Factory
         UsuarioBuilder WithLogin(string login);
         UsuarioBuilder WithSenha(string senha);
         UsuarioBuilder WithNome(string nome);
-        UsuarioBuilder WithPerfilId(Guid? perfilId);
+        UsuarioBuilder WithPerfilId(Guid perfilId);
         UsuarioBuilder WithPerfil(PerfilDeUsuarioDomain perfil);
         UsuarioDomain Build();
     }
