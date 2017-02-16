@@ -1,6 +1,7 @@
 ﻿using System.Windows;
 using FrenteDeCaixa.Presentation._4_UsuarioWindows;
 using FrenteDeCaixa.Presentation._5_ClienteWindow;
+using FrenteDeCaixa.Presentation._7_FormaDePagamentoWindow;
 
 namespace FrenteDeCaixa.Presentation
 {
@@ -29,6 +30,11 @@ namespace FrenteDeCaixa.Presentation
         private void buttonClientes_Click(object sender, RoutedEventArgs e)
         {
             new MainClientesWindow().ShowDialog();
+        }
+
+        private void buttonFormasDePagamento_Click(object sender, RoutedEventArgs e)
+        {
+            new MainFormaDePagamentoWindow();
         }
     }
 }

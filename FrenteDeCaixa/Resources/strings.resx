@@ -233,6 +233,10 @@
     <value>Clientes</value>
     <comment>Titulo MainCClienteWindow</comment>
   </data>
+  <data name="TitleFormaDePagamento" xml:space="preserve">
+    <value>Formas de Pagamento</value>
+    <comment>Titulo FormaDePagamentoWindow</comment>
+  </data>
   <data name="TitleLoginWindow" xml:space="preserve">
     <value>Frente de Caixa - Entrar</value>
     <comment>Titulo LoginWindow</comment>

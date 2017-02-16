@@ -22,7 +22,7 @@
             <Button x:Name="buttonUsuarios" Content="{x:Static p:Strings.ButtonUsuarios}" Margin="5" Click="buttonUsuarios_Click"/>
             <Button x:Name="buttonClientes" Content="{x:Static p:Strings.ButtonClientes}" Margin="5" Click="buttonClientes_Click"/>
             <Button x:Name="buttonProdutos" Content="{x:Static p:Strings.ButtonProdutos}" Margin="5"/>
-            <Button x:Name="buttonFormasDePagamento" Content="{x:Static p:Strings.ButtonFormasDePagamento}" Margin="5"/>
+            <Button x:Name="buttonFormasDePagamento" Content="{x:Static p:Strings.ButtonFormasDePagamento}" Margin="5" Click="buttonFormasDePagamento_Click"/>
             <Button x:Name="buttonVendas" Content="{x:Static p:Strings.ButtonVendas}" Margin="5"/>
         </UniformGrid>
         <Grid Grid.Column="1" Grid.Row="1" Margin="5">

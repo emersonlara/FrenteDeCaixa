@@ -322,6 +322,15 @@ namespace FrenteDeCaixa.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Formas de Pagamento.
+        /// </summary>
+        public static string TitleFormaDePagamento {
+            get {
+                return ResourceManager.GetString("TitleFormaDePagamento", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Frente de Caixa - Entrar.
         /// </summary>
         public static string TitleLoginWindow {
