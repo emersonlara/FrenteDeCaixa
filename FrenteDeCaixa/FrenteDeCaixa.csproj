@@ -134,6 +134,12 @@
     <Compile Include="Presentation\3-PerfilWindows\MainPerfisWindow.xaml.cs">
       <DependentUpon>MainPerfisWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Presentation\4-UsuarioWindows\MainUsuarioWindow.xaml.cs">
+      <DependentUpon>MainUsuarioWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\5-ClienteWindow\MainClientesWindow.xaml.cs">
+      <DependentUpon>MainClientesWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Resources\Strings1.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -180,6 +186,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Presentation\3-PerfilWindows\MainPerfisWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Presentation\4-UsuarioWindows\MainUsuarioWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Presentation\5-ClienteWindow\MainClientesWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -1,0 +1,38 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FrenteDeCaixa.Presentation._5_ClienteWindow"
+        xmlns:Resources="clr-namespace:FrenteDeCaixa.Resources" x:Class="FrenteDeCaixa.Presentation._5_ClienteWindow.MainClientesWindow"
+        mc:Ignorable="d"
+        Title="{x:Static Resources:Strings.TitleClientes}" Height="324.812" Width="516.541">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="191*"/>
+            <RowDefinition Height="30*"/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="37*"/>
+                <ColumnDefinition Width="9*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="ButtonBuscar" Content="{x:Static Resources:Strings.ButtonBuscar}" Grid.Column="1" Margin="5"/>
+            <TextBox x:Name="TextBoxBuscar" TextWrapping="Wrap" Margin="5"/>
+        </Grid>
+        <DataGrid x:Name="dataGridClientes" Grid.Row="1" Margin="5"/>
+        <Grid HorizontalAlignment="Left" Height="35" Margin="0" Grid.Row="2" VerticalAlignment="Top" Width="509">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="185*"/>
+                <ColumnDefinition Width="90*"/>
+                <ColumnDefinition Width="90*"/>
+                <ColumnDefinition Width="90*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="ButtonExcluir" Content="{x:Static Resources:Strings.ButtonExcluir}" Grid.Column="3" BorderThickness="1" Margin="5" />
+            <Button x:Name="ButtonAlterar" Content="{x:Static Resources:Strings.ButtonAlterar}" Grid.Column="2" Margin="5" />
+            <Button x:Name="ButtonNovo" Content="{x:Static Resources:Strings.ButtonNovo}" Margin="5" Grid.Column="1" />
+        </Grid>
+
+    </Grid>
+</Window>

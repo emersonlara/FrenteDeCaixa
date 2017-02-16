@@ -313,6 +313,15 @@ namespace FrenteDeCaixa.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Clientes.
+        /// </summary>
+        public static string TitleClientes {
+            get {
+                return ResourceManager.GetString("TitleClientes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Frente de Caixa - Entrar.
         /// </summary>
         public static string TitleLoginWindow {
@@ -336,6 +345,15 @@ namespace FrenteDeCaixa.Resources {
         public static string TitlePerfis {
             get {
                 return ResourceManager.GetString("TitlePerfis", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Usuarios.
+        /// </summary>
+        public static string TitleUsuarios {
+            get {
+                return ResourceManager.GetString("TitleUsuarios", resourceCulture);
             }
         }
         

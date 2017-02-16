@@ -19,8 +19,8 @@
         </Grid.ColumnDefinitions>
         <UniformGrid Grid.Row="2" Grid.Column="0" Margin="5" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin">
             <Button x:Name="buttonPerfis" Content="{x:Static p:Strings.ButtonPerfis}" Margin="5" Click="buttonPerfis_Click"/>
-            <Button x:Name="buttonUsuarios" Content="{x:Static p:Strings.ButtonUsuarios}" Margin="5"/>
-            <Button x:Name="buttonClientes" Content="{x:Static p:Strings.ButtonClientes}" Margin="5"/>
+            <Button x:Name="buttonUsuarios" Content="{x:Static p:Strings.ButtonUsuarios}" Margin="5" Click="buttonUsuarios_Click"/>
+            <Button x:Name="buttonClientes" Content="{x:Static p:Strings.ButtonClientes}" Margin="5" Click="buttonClientes_Click"/>
             <Button x:Name="buttonProdutos" Content="{x:Static p:Strings.ButtonProdutos}" Margin="5"/>
             <Button x:Name="buttonFormasDePagamento" Content="{x:Static p:Strings.ButtonFormasDePagamento}" Margin="5"/>
             <Button x:Name="buttonVendas" Content="{x:Static p:Strings.ButtonVendas}" Margin="5"/>

@@ -229,6 +229,10 @@
     <value>Frente de Caixa</value>
     <comment>Titulo CaixaWindow</comment>
   </data>
+  <data name="TitleClientes" xml:space="preserve">
+    <value>Clientes</value>
+    <comment>Titulo MainCClienteWindow</comment>
+  </data>
   <data name="TitleLoginWindow" xml:space="preserve">
     <value>Frente de Caixa - Entrar</value>
     <comment>Titulo LoginWindow</comment>
@@ -240,6 +244,10 @@
   <data name="TitlePerfis" xml:space="preserve">
     <value>Perfis</value>
     <comment>Titulo PerfisWindow</comment>
+  </data>
+  <data name="TitleUsuarios" xml:space="preserve">
+    <value>Usuarios</value>
+    <comment>TItulo MainUsuarioWindow</comment>
   </data>
   <data name="Total" xml:space="preserve">
     <value>Total: </value>

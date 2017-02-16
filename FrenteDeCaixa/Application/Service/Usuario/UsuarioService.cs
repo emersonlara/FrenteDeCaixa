@@ -58,7 +58,7 @@ namespace FrenteDeCaixa.Application.Service.Usuario
 
         public List<UsuarioDomain> Listar()
         {
-            return (from usuario in Context.Usuarios select usuario).ToList();
+            return (from usuario in Context.Usuarios.Include(x => x.Perfil) select usuario).ToList();
         }
 
         public UsuarioDomain CriarParaSalvar(UsuarioDto usuarioDto)

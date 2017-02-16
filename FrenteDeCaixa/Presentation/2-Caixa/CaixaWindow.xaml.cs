@@ -1,4 +1,6 @@
 ﻿using System.Windows;
+using FrenteDeCaixa.Presentation._4_UsuarioWindows;
+using FrenteDeCaixa.Presentation._5_ClienteWindow;
 
 namespace FrenteDeCaixa.Presentation
 {
@@ -17,6 +19,16 @@ namespace FrenteDeCaixa.Presentation
         private void buttonPerfis_Click(object sender, RoutedEventArgs e)
         {
             new MainPerfisWindow().ShowDialog();
+        }
+
+        private void buttonUsuarios_Click(object sender, RoutedEventArgs e)
+        {
+            new MainUsuarioWindow().ShowDialog();
+        }
+
+        private void buttonClientes_Click(object sender, RoutedEventArgs e)
+        {
+            new MainClientesWindow().ShowDialog();
         }
     }
 }
